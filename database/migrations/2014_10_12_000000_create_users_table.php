@@ -23,6 +23,8 @@ return new class extends Migration
             ->constrained()
             ->cascadeOnDelete()
             ->cascadeOnUpdate();
+            $table->string("town");
+            $table->string('country');
             $table->string('phone_number');
             $table->rememberToken();
             $table->boolean("isChoice")->default(0);
