@@ -151,7 +151,7 @@
                                 </div>
                                 <div>
                                     <a class="h6 mt-2 mt-sm-0" href="#">{{ auth()->user()->name }}</a>
-                                    <p class="small m-0">example@gmail.com</p>
+                                    <p class="small m-0">{{ auth()->user()->email }}</p>
                                 </div>
                             </div>
                         </li>
@@ -166,7 +166,7 @@
                             <form method="POST" action="{{ route('logout') }}" id="logout-form">
                                 @csrf
                               </form>
-                              <a class="dropdown-item bg-danger-soft-hover" onclick="event.preventDefault();
+                              <a style="cursor: pointer" class="dropdown-item bg-danger-soft-hover" onclick="event.preventDefault();
                               document.getElementById('logout-form').submit();"><i class="bi bi-power fa-fw me-2"></i>Deconnexion</a></li>
                     </ul>
                 </li>
