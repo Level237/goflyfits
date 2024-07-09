@@ -18,6 +18,7 @@ return new class extends Migration
             $table->text('description');
             $table->string('price');
             $table->string('size');
+            $table->string("source");
             $table->string('clothing_profile');
             $table->timestamps();
         });

@@ -2,10 +2,26 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Clothing extends Model
 {
     use HasFactory;
+
+    protected $fillable=[
+        "title",
+        'description',
+        'price',
+        'size',
+        'source',
+        'clothing_profile'
+    ];
+
+    public function categories():BelongsToMany
+    {
+        return $this->belongsToMany(Category::class);
+    }
 }

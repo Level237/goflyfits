@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Clothing;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Category extends Model
 {
@@ -11,4 +13,8 @@ class Category extends Model
     protected $fillable=[
         'category_title'
     ];
+
+    public function clothings():BelongsToMany{
+        return $this->belongsToMany(Clothing::class);
+    }
 }
