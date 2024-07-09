@@ -78,15 +78,15 @@
 	<link rel="stylesheet" href="css2-1?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap">
 
 	<!-- Plugins CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min-1.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons-1.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/tiny-slider/tiny-slider.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/choices/css/choices.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/flatpickr/css/flatpickr.min-1.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/glightbox/css/glightbox-1.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/font-awesome/css/all.min-1.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons-1.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/tiny-slider/tiny-slider.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/choices/css/choices.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/flatpickr/css/flatpickr.min-1.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/glightbox/css/glightbox-1.css') }}">
 
 	<!-- Theme CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 
 </head>
 
@@ -94,14 +94,10 @@
 
 <!-- Header START -->
 @include('layouts.Frontend.header')
-<!-- Header END -->
 
-<!-- **************** MAIN CONTENT START **************** -->
 @yield('content')
-<!-- **************** MAIN CONTENT END **************** -->
 
-<!-- =======================
-Footer START -->
+
 <footer class="bg-dark py-7">
 	<div class="container">
 		<div class="row mx-auto">
@@ -148,8 +144,8 @@ Footer START -->
 
 	</div>
 </footer>
-<!-- =======================
-Footer END -->
+
+
 
 <!-- Back to top -->
 <div class="back-top"></div>
