@@ -37,7 +37,7 @@
 					<li class="nav-item"> <a class="nav-link" href="admin-dashboard.html.htm">Contact</a> </li>
 
 					<!-- Nav item Link -->
-					<li class="nav-item"> <a class="nav-link" href="account-bookings.html.htm">Dashboard Client</a> </li>
+
 
 					<!-- Nav item link-->
 					<li class="nav-item dropdown">
