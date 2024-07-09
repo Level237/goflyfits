@@ -14,7 +14,6 @@ class AdminSeeder extends Seeder
     public function run(): void
     {
         User::create([
-            'id'=>1,
             'name'=>"Admin",
             'email'=>"admin@goflyfits.com",
             'role_id'=>1,
