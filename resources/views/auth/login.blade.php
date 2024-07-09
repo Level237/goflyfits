@@ -120,16 +120,17 @@ Main Content START -->
 								<p class="mb-0">New here?<a href="{{ route('register') }}"> Create an account</a></p>
 
 								<!-- Form START -->
-								<form class="mt-4 text-start">
+								<form method="POST" action="{{ route('login') }}" class="mt-4 text-start">
+                                    @csrf
 									<!-- Email -->
 									<div class="mb-3">
 										<label class="form-label">Enter email id</label>
-										<input type="email" class="form-control">
+										<input name="email" type="email" class="form-control">
 									</div>
 									<!-- Password -->
 									<div class="mb-3 position-relative">
 										<label class="form-label">Enter password</label>
-										<input class="form-control fakepassword" type="password" id="psw-input">
+										<input name="password" class="form-control fakepassword" type="password" id="psw-input">
 										<span class="position-absolute top-50 end-0 translate-middle-y p-0 mt-3">
 											<i class="fakepasswordicon fas fa-eye-slash cursor-pointer p-2"></i>
 										</span>
