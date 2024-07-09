@@ -18,10 +18,7 @@ return new class extends Migration
             $table->text('description');
             $table->string('price');
             $table->string('size');
-            $table->foreignIdFor(Category::class)
-            ->constrained()
-            ->restrictOnUpdate()
-            ->restrictOnDelete();
+            $table->string('clothing_profile');
             $table->timestamps();
         });
     }
