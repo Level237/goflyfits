@@ -51,8 +51,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="account-delete.html.htm"><i class="bi bi-trash fa-fw me-2"></i>Delete Profile</a>
                     </li>
+                    <form method="POST" action="{{ route('logout') }}" id="logout-form">
+                        @csrf
+                      </form>
                     <li class="nav-item">
-                        <a class="nav-link text-danger bg-danger-soft-hover" href="#"><i class="fas fa-sign-out-alt fa-fw me-2"></i>Sign Out</a>
+                        <a onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();" class="nav-link text-danger bg-danger-soft-hover" href="#"><i class="fas fa-sign-out-alt fa-fw me-2"></i>Sign Out</a>
                     </li>
                 </ul>
                 <!-- Sidebar menu item END -->
