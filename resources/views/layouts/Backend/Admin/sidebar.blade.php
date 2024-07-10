@@ -26,7 +26,7 @@
                     </a>
                     <!-- Submenu -->
                     <ul class="nav collapse flex-column" id="collapsebooking" data-bs-parent="#navbar-sidebar">
-                        <li class="nav-item"> <a class="nav-link" href="admin-booking-list.html.htm">Créer un look</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('admin.clothings.index') }}">Créer un look</a></li>
                         <li class="nav-item"> <a class="nav-link" href="admin-booking-detail.html.htm">Listes des look</a></li>
                     </ul>
                 </li>
@@ -34,7 +34,7 @@
                 <!-- Menu item -->
                 <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="collapse" href="#collapseguest" role="button" aria-expanded="false" aria-controls="collapseguest">
-                    Categorie
+                    Categories
                     </a>
                     <!-- Submenu -->
                     <ul class="nav collapse flex-column" id="collapseguest" data-bs-parent="#navbar-sidebar">

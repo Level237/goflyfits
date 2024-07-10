@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\Admin\ClothingController;
 use App\Http\Controllers\Backend\Admin\DashboardController;
 use App\Http\Controllers\Backend\Customer\DashboardController as CustomerDashboardController;
 use App\Http\Controllers\Frontend\HomeController;
@@ -24,7 +25,7 @@ Route::get('/',[HomeController::class,'index'])->name('homepage');
 
 Route::middleware(['auth','admin'])->name('admin.')->prefix('admin')->group(function(){
     Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard');
-
+    Route::resource('clothings',ClothingController::class);
     });
 
     Route::middleware(['auth','customer'])->name('customer.')->prefix('customer')->group(function(){
