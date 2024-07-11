@@ -67,7 +67,7 @@ Main content START -->
 								<!-- State -->
 								<div class="col-md-12">
 									<label class="form-label">Ville </label>
-									<select class="form-select js-choice" data-search-enabled="true">
+									<select name="source" class="form-select js-choice" data-search-enabled="true">
 										<option>Selectionnez une source</option>
 										<option value="douala">Douala</option>
 										<option value="yaoundé">Yaoundé</option>
@@ -97,35 +97,15 @@ Main content START -->
 								<!-- Car name -->
 								<div class="col-md-12">
 									<label class="form-label">Categorie</label>
-									<select multiple class="form-select js-choice" data-search-enabled="true">
-										<option>Selectionnez une source</option>
-										<option value="douala">Douala</option>
-										<option value="yaoundé">Yaoundé</option>
-										<option value="bafoussam">Bafoussam</option>
-										<option value="garoua">Garoua</option>
-                                        <option value="kribi">Kribi</option>
+									<select name="categories[]" multiple class="form-select js-choice" data-search-enabled="true">
+
+                                        @foreach ($categories as $categorie)
+                                            <option value="{{ $categorie->id }}">{{ $categorie->category_title }}</option>
+                                        @endforeach
 									</select>
 								</div>
 
 								<!-- State -->
-								<div class="col-md-6">
-									<label class="form-label">Car model</label>
-									<select class="form-select js-choice" data-search-enabled="true">
-										<option value="">Select item</option>
-										<option>Sedan</option>
-										<option>Micro</option>
-										<option>CUV</option>
-										<option>SUV</option>
-										<option>Pick up</option>
-										<option>Coupe</option>
-									</select>
-								</div>
-
-								<!-- Model Year -->
-								<div class="col-md-6">
-									<label class="form-label">Model Year</label>
-									<input class="form-control" type="text" placeholder="Enter car model year">
-								</div>
 
 								<!-- Image Gallery -->
 								<div class="col-12">
@@ -160,75 +140,7 @@ Main content START -->
 							</div>
 						</div>
 					</div>
-					<!-- Cab Detail END -->
 
-					<!-- Driver Detail START -->
-					<div class="card shadow">
-						<!-- Card header -->
-						<div class="card-header border-bottom">
-							<h5 class="mb-0">Driver Detail</h5>
-						</div>
-
-						<!-- Card body -->
-						<div class="card-body">
-							<div class="row g-3">
-								<!-- Select item -->
-								<div class="col-md-3">
-									<label class="form-label">Title</label>
-									<select class="form-select js-choice">
-										<option>Mr</option>
-										<option>Mrs</option>
-									</select>
-								</div>
-
-								<!-- Owner name -->
-								<div class="col-md-9">
-									<label class="form-label">Driver Name</label>
-									<div class="input-group">
-										<input type="text" class="form-control" placeholder="First name">
-										<input type="text" class="form-control" placeholder="Last name">
-									</div>
-								</div>
-
-								<!-- Contact number -->
-								<div class="col-md-6">
-									<label class="form-label">Contact Number</label>
-									<input class="form-control" type="text" placeholder="Enter contact number">
-								</div>
-
-								<!-- License number -->
-								<div class="col-md-6">
-									<label class="form-label">License Number</label>
-									<input class="form-control" type="email" placeholder="Enter license number">
-								</div>
-
-								<!-- State -->
-								<div class="col-md-6">
-									<label class="form-label">State</label>
-									<select class="form-select js-choice" data-search-enabled="true">
-										<option value="">Select state</option>
-										<option>India</option>
-										<option>Usa</option>
-										<option>Japan</option>
-										<option>United Kingdom</option>
-									</select>
-								</div>
-
-								<!-- City -->
-								<div class="col-md-6">
-									<label class="form-label">City</label>
-									<input class="form-control" type="text" placeholder="Enter city">
-								</div>
-
-								<!-- Address -->
-								<div class="col-12">
-									<label class="form-label">Address</label>
-									<textarea class="form-control" rows="2" placeholder="Enter keywords"></textarea>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Driver Detail END -->
 
 					<!-- Button -->
 					<div class="text-end">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ClothingController extends Controller
@@ -12,7 +13,7 @@ class ClothingController extends Controller
      */
     public function index()
     {
-        return view('admin.clothes.create');
+
     }
 
     /**
@@ -20,7 +21,8 @@ class ClothingController extends Controller
      */
     public function create()
     {
-        //
+        $categories=Category::all();
+        return view('admin.clothes.create',compact('categories'));
     }
 
     /**
