@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('price');
             $table->string('size');
             $table->string("source");
+            $table->string('slug');
             $table->string('clothing_profile');
             $table->timestamps();
         });

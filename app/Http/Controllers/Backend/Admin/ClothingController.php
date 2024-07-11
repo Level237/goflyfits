@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Clothing;
 use Illuminate\Http\Request;
 
 class ClothingController extends Controller
@@ -30,7 +31,23 @@ class ClothingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $clothing=new Clothing;
+        $clothing->title=$request->title;
+        $clothing->description=$request->description;
+        $clothing->price=$request->price;
+        $clothing->size=$request->size;
+        $clothing->source=$request->source;
+        $clothing->slug=$this->slugify($request->title);
+        $image_path = $request->file('image')->store('clothings', 'public');
+        $clothing->clothing_profile=$image_path;
+        if($clothing->save()){
+
+                foreach($request->categories as $categorie){
+
+                    $clothing->categories()->attach($categorie);
+                }
+                return to_route('admin.clothings.index');
+        }
     }
 
     /**
@@ -63,5 +80,17 @@ class ClothingController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    function slugify($string, $delimiter = '-') {
+        $oldLocale = setlocale(LC_ALL, '0');
+        setlocale(LC_ALL, 'en_US.UTF-8');
+        $clean = iconv('UTF-8', 'ASCII//TRANSLIT', $string);
+        $clean = preg_replace("/[^a-zA-Z0-9\/_|+ -]/", '', $clean);
+        $clean = strtolower($clean);
+        $clean = preg_replace("/[\/_|+ -]+/", $delimiter, $clean);
+        $clean = trim($clean, $delimiter);
+        setlocale(LC_ALL, $oldLocale);
+        return $clean;
     }
 }

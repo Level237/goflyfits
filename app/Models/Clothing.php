@@ -17,6 +17,7 @@ class Clothing extends Model
         'price',
         'size',
         'source',
+        'slug',
         'clothing_profile'
     ];
 
