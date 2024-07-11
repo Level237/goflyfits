@@ -110,32 +110,8 @@ Main content START -->
 								<!-- Image Gallery -->
 								<div class="col-12">
 									<label class="form-label">Upload image *</label>
-									<div class="dropzone dropzone-custom" data-dropzone='{"maxFiles": 5, "addRemoveLinks": false}'>
-										<div class="dz-message needsclick">
-											<i class="bi bi-upload display-3"></i>
-											<p>Drop files here or click to upload.</p>
-										</div>
-										<div class="dz-preview row g-4">
-											<div class="col-xl-2 col-md-4 col-sm-6">
-												<div class="card p-2 mb-0 shadow-none border position-relative h-100">
-													<!-- Image -->
-													<img data-dz-thumbnail="" src="#" class="rounded bg-light" alt="">
-													<!-- info -->
-													<div class="mt-2">
-														<a href="javascript:void(0);" class="text-muted fw-bold" data-dz-name=""></a>
-														<p class="mb-0 small" data-dz-size=""></p>
-													</div>
-													<!-- Close btn -->
-													<div class="position-absolute top-0 start-100 translate-middle">
-														<a href="#!" class="btn btn-danger rounded-circle icon-sm p-0" data-dz-remove="">
-															<i class="fas fa-times"></i>
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<p class="small mb-0 mt-2"><b>Note:</b> Only JPG, JPEG, and PNG. Our suggested dimensions are 600px * 450px. The larger image will be cropped to 4:3 to fit our thumbnails/previews.</p>
+									<input class="form-control" name="image" type="file" name="size" >
+
 								</div>
 							</div>
 						</div>
@@ -144,7 +120,7 @@ Main content START -->
 
 					<!-- Button -->
 					<div class="text-end">
-						<a href="listing-added.html.htm" class="btn btn-primary mb-0">Add listing</a>
+						<button type="submit"  class="btn btn-primary mb-0">Enregistrer</button>
 					</div>
 				</form>
 			</div>
