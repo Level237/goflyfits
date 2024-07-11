@@ -31,7 +31,7 @@ Main content START -->
 					<div class="card shadow">
 						<!-- Card header -->
 						<div class="card-header border-bottom">
-							<h5 class="mb-0">Owner Detail</h5>
+							<h5 class="mb-0">Detail</h5>
 						</div>
 
 						<!-- Card body -->
@@ -39,48 +39,46 @@ Main content START -->
 							<div class="row g-3">
 								<!-- Owner name -->
 								<div class="col-12">
-									<label class="form-label">Owner name</label>
+									<label class="form-label">Nom</label>
 									<div class="input-group">
-										<input type="text" class="form-control" placeholder="First name">
-										<input type="text" class="form-control" placeholder="Last name">
+										<input type="text" class="form-control" name="title" placeholder="Entrez le nom du vetement">
+
 									</div>
 								</div>
 
 								<!-- Contact number -->
 								<div class="col-md-6">
-									<label class="form-label">Contact number</label>
-									<input class="form-control" type="text" placeholder="Enter contact number">
+									<label class="form-label">Prix</label>
+									<input class="form-control" type="text" name="price" placeholder="Entrez le prix du vetement">
 								</div>
 
 								<!-- Email -->
 								<div class="col-md-6">
-									<label class="form-label">Email address</label>
-									<input class="form-control" type="email" placeholder="Enter email address">
+									<label class="form-label">Taille</label>
+									<input class="form-control" type="text" name="size" placeholder="Entrez la taille du vetement">
 								</div>
 
 								<!-- Address -->
 								<div class="col-12">
-									<label class="form-label">Address</label>
-									<textarea class="form-control" rows="2" placeholder="Enter keywords"></textarea>
+									<label class="form-label">Description</label>
+									<textarea class="form-control" name="description" rows="4" placeholder="Entrez une description du vetement"></textarea>
 								</div>
 
 								<!-- State -->
-								<div class="col-md-6">
-									<label class="form-label">State</label>
+								<div class="col-md-12">
+									<label class="form-label">Ville </label>
 									<select class="form-select js-choice" data-search-enabled="true">
-										<option value="">Select state</option>
-										<option>India</option>
-										<option>Usa</option>
-										<option>Japan</option>
-										<option>United Kingdom</option>
+										<option>Selectionnez une source</option>
+										<option value="douala">Douala</option>
+										<option value="yaoundé">Yaoundé</option>
+										<option value="bafoussam">Bafoussam</option>
+										<option value="garoua">Garoua</option>
+                                        <option value="kribi">Kribi</option>
 									</select>
 								</div>
 
 								<!-- City -->
-								<div class="col-md-6">
-									<label class="form-label">City</label>
-									<input class="form-control" type="text" placeholder="Enter city">
-								</div>
+
 							</div>
 						</div>
 					</div>
