@@ -31,7 +31,7 @@ Main content START -->
 					<div class="card shadow">
 						<!-- Card header -->
 						<div class="card-header border-bottom">
-							<h5 class="mb-0">Detail</h5>
+							<h5 class="mb-0">Detail vetement</h5>
 						</div>
 
 						<!-- Card body -->
@@ -88,37 +88,23 @@ Main content START -->
 					<div class="card shadow">
 						<!-- Card header -->
 						<div class="card-header border-bottom">
-							<h5 class="mb-0">Cab Detail</h5>
+							<h5 class="mb-0">Media & Categorie</h5>
 						</div>
 
 						<!-- Card body -->
 						<div class="card-body">
 							<div class="row g-3">
 								<!-- Car name -->
-								<div class="col-md-6">
-									<label class="form-label">Car name</label>
-									<input class="form-control" type="text" placeholder="Enter car name">
-								</div>
-
-								<!-- car type -->
-								<div class="col-md-6">
-									<label class="form-label">Car type *</label>
-									<div class="d-sm-flex">
-										<!-- Radio -->
-										<div class="form-check radio-bg-light me-4">
-											<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked="">
-											<label class="form-check-label" for="flexRadioDefault1">
-												Ac
-											</label>
-										</div>
-										<!-- Radio -->
-										<div class="form-check radio-bg-light me-4">
-											<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-											<label class="form-check-label" for="flexRadioDefault2">
-												Non Ac
-											</label>
-										</div>
-									</div>
+								<div class="col-md-12">
+									<label class="form-label">Categorie</label>
+									<select multiple class="form-select js-choice" data-search-enabled="true">
+										<option>Selectionnez une source</option>
+										<option value="douala">Douala</option>
+										<option value="yaoundé">Yaoundé</option>
+										<option value="bafoussam">Bafoussam</option>
+										<option value="garoua">Garoua</option>
+                                        <option value="kribi">Kribi</option>
+									</select>
 								</div>
 
 								<!-- State -->
