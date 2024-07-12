@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
             'town'=>"douala",
             'country'=>"cameroon",
             'phone_number'=>"690394365",
-            'isChoice'=>1,
+            'isChoice'=>0,
             'color'=>"red"
         ],
         );

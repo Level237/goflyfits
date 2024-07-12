@@ -20,7 +20,7 @@ class AdminSeeder extends Seeder
             'password'=>bcrypt('password'),
             'town'=>"douala",
             'country'=>"cameroon",
-            'phone_number'=>"690394365",
+            'phone_number'=>"691594365",
             'isChoice'=>1,
             'color'=>"green"
         ],

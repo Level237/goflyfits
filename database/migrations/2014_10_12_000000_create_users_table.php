@@ -25,7 +25,7 @@ return new class extends Migration
             ->cascadeOnUpdate();
             $table->string("town");
             $table->string('country');
-            $table->string('phone_number');
+            $table->string('phone_number')->unique();
             $table->rememberToken();
             $table->boolean("isChoice")->default(0);
             $table->string('color');
