@@ -40,7 +40,7 @@ GoFlyFits
                                     <select class="form-select js-choice" data-search-enabled="true">
                                         <option value="">Enter one category</option>
                                         @foreach ($categories as $category)
-                                        <option>{{ $category->category_title }}</option>
+                                        <option value="{{ $category->id }}">{{ $category->category_title }}</option>
                                         @endforeach
                                     </select>
                                     <!-- Icons -->
