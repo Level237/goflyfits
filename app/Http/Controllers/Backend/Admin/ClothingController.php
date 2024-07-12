@@ -14,8 +14,8 @@ class ClothingController extends Controller
      */
     public function index()
     {
-
-        return view('admin.clothes.index');
+        $clothes=Clothing::all();
+        return view('admin.clothes.index',compact('clothes'));
     }
 
     /**

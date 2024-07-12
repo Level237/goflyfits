@@ -54,379 +54,65 @@ Listes des vetements
                 <!-- Table head -->
                 <div class="bg-light rounded p-3 d-none d-lg-block">
                     <div class="row row-cols-7 g-4">
-                        <div class="col"><h6 class="mb-0">Booked by</h6></div>
-                        <div class="col"><h6 class="mb-0">Check-in</h6></div>
-                        <div class="col"><h6 class="mb-0">Check-out</h6></div>
-                        <div class="col"><h6 class="mb-0">Guest</h6></div>
-                        <div class="col"><h6 class="mb-0">Amount</h6></div>
-                        <div class="col"><h6 class="mb-0">Payment</h6></div>
+                        <div class="col"><h6 class="mb-0">Nom</h6></div>
+                        <div class="col"><h6 class="mb-0">Prix</h6></div>
+                        <div class="col"><h6 class="mb-0">Taille</h6></div>
+                        <div class="col"><h6 class="mb-0">Category</h6></div>
                         <div class="col"><h6 class="mb-0">Action</h6></div>
                     </div>
                 </div>
 
-                <!-- Table data -->
-                <div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Booked by:</small>
-                        <div class="d-flex align-items-center">
-                            <!-- Avatar -->
-                            <div class="avatar avatar-xs flex-shrink-0">
-                                <img class="avatar-img rounded-circle" src="assets/images/avatar/09.jpg" alt="avatar">
-                            </div>
-                            <!-- Info -->
-                            <div class="ms-2">
-                                <h6 class="mb-0 fw-light">Lori Stevens</h6>
-                            </div>
+              @foreach ($clothes as $cloth)
+              <div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
+                <!-- Data item -->
+                <div class="col">
+                    <small class="d-block d-lg-none">Booked by:</small>
+                    <div class="d-flex align-items-center">
+                        <!-- Avatar -->
+                        <div class="avatar avatar-xs flex-shrink-0">
+                            <img class="avatar-img rounded-circle" src="{{ Storage::url($cloth->clothing_profile) }}" alt="avatar">
+                        </div>
+                        <!-- Info -->
+                        <div class="ms-2">
+                            <h6 class="mb-0 fw-light">{{ $cloth->title }}</h6>
                         </div>
                     </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Check-in:</small>
-                        <h6 class="mb-0 fw-normal">18 Dec 2022</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Check-out:</small>
-                        <h6 class="mb-0 fw-normal">22 Dec 2022</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Guests:</small>
-                        <h6 class="mb-0 fw-normal">04</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Amount:</small>
-                        <h6 class="text-success mb-0">$1025</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Payment:</small>
-                        <div class="badge bg-success bg-opacity-10 text-success">Full payment</div>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col"><a href="#" class="btn btn-sm btn-light mb-0">View</a></div>
                 </div>
 
-                <!-- Table data -->
-                <div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Booked by:</small>
-                        <div class="d-flex align-items-center">
-                            <!-- Avatar -->
-                            <div class="avatar avatar-xs flex-shrink-0">
-                                <img class="avatar-img rounded-circle" src="assets/images/avatar/02.jpg" alt="avatar">
-                            </div>
-                            <!-- Info -->
-                            <div class="ms-2">
-                                <h6 class="mb-0 fw-light">Billy Vasquez</h6>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Check-in:</small>
-                        <h6 class="mb-0 fw-normal">23 Dec 2022</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Check-out:</small>
-                        <h6 class="mb-0 fw-normal">26 Dec 2022</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Guests:</small>
-                        <h6 class="mb-0 fw-normal">03</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Amount:</small>
-                        <h6 class="text-success mb-0">$847</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Payment:</small>
-                        <div class="badge bg-info bg-opacity-10 text-info">Half payment</div>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col"><a href="#" class="btn btn-sm btn-light mb-0">View</a></div>
+                <!-- Data item -->
+                <div class="col">
+                    <small class="d-block d-lg-none">Check-in:</small>
+                    <h6 class="text-success mb-0">{{ $cloth->price }}$</h6>
                 </div>
 
-                <!-- Table data -->
-                <div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4">
-                    <div class="bg-light px-2 py-4 text-center">
-                        <h6 class="mb-0">Booking Available (27 Dec to 1 Jan)</h6>
-                    </div>
+                <!-- Data item -->
+                <div class="col">
+                    <small class="d-block d-lg-none">Check-out:</small>
+                    <h6 class="mb-0 fw-normal">{{ $cloth->size }}</h6>
                 </div>
 
-                <!-- Table data -->
-                <div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Booked by:</small>
-                        <div class="d-flex align-items-center">
-                            <!-- Avatar -->
-                            <div class="avatar avatar-xs flex-shrink-0">
-                                <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="avatar">
-                            </div>
-                            <!-- Info -->
-                            <div class="ms-2">
-                                <h6 class="mb-0 fw-light">Carolyn Ortiz</h6>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Data item -->
+                <div class="col">
+                    <small class="d-block d-lg-none">Payment:</small>
+                    @foreach ($cloth->categories as $category)
 
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Check-in:</small>
-                        <h6 class="mb-0 fw-normal">2 Jan 2022</h6>
-                    </div>
+                        <div style="font-size: 12px" class="badge bg-primary bg-opacity-10 p-2 text-success">{{ $category->category_title }}</div>
 
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Check-out:</small>
-                        <h6 class="mb-0 fw-normal">5 Jan 2022</h6>
-                    </div>
 
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Guests:</small>
-                        <h6 class="mb-0 fw-normal">02</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Amount:</small>
-                        <h6 class="text-success mb-0">$900</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Payment:</small>
-                        <div class="badge bg-orange bg-opacity-10 text-orange">On Property</div>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col"><a href="#" class="btn btn-sm btn-light mb-0">View</a></div>
+                    @endforeach
                 </div>
 
-                <!-- Table data -->
-                <div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Booked by:</small>
-                        <div class="d-flex align-items-center">
-                            <!-- Avatar -->
-                            <div class="avatar avatar-xs flex-shrink-0">
-                                <img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt="avatar">
-                            </div>
-                            <!-- Info -->
-                            <div class="ms-2">
-                                <h6 class="mb-0 fw-light">Louis Ferguson</h6>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Data item -->
+                <div class="col">
 
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Check-in:</small>
-                        <h6 class="mb-0 fw-normal">6 Jan 2022</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Check-out:</small>
-                        <h6 class="mb-0 fw-normal">10 Jan 2022</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Guests:</small>
-                        <h6 class="mb-0 fw-normal">05</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Amount:</small>
-                        <h6 class="text-success mb-0">$1458</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Payment:</small>
-                        <div class="badge bg-success bg-opacity-10 text-success">Full payment</div>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col"><a href="#" class="btn btn-sm btn-light mb-0">View</a></div>
+                    <a href="#" class="btn btn-sm btn-light mb-0"><i class="fa-solid fa-edit"></i></a>
+                    <a href="#" class="btn btn-sm btn-light mb-0"><i class="fa-solid fa-eye"></i></a>
+                    <a href="#" class="btn btn-sm btn-light mb-0"><i class="fa-solid fa-trash"></i></a>
                 </div>
 
-                <!-- Table data -->
-                <div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Booked by:</small>
-                        <div class="d-flex align-items-center">
-                            <!-- Avatar -->
-                            <div class="avatar avatar-xs flex-shrink-0">
-                                <img class="avatar-img rounded-circle" src="assets/images/avatar/04.jpg" alt="avatar">
-                            </div>
-                            <!-- Info -->
-                            <div class="ms-2">
-                                <h6 class="mb-0 fw-light">Dennis Barrett</h6>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+              @endforeach
 
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Check-in:</small>
-                        <h6 class="mb-0 fw-normal">11 Jan 2022</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Check-out:</small>
-                        <h6 class="mb-0 fw-normal">14 Jan 2022</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Guests:</small>
-                        <h6 class="mb-0 fw-normal">02</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Amount:</small>
-                        <h6 class="text-success mb-0">$879</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Payment:</small>
-                        <div class="badge bg-info bg-opacity-10 text-info">Half payment</div>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col"><a href="#" class="btn btn-sm btn-light mb-0">View</a></div>
-                </div>
-
-                <!-- Table data -->
-                <div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Booked by:</small>
-                        <div class="d-flex align-items-center">
-                            <!-- Avatar -->
-                            <div class="avatar avatar-xs flex-shrink-0">
-                                <img class="avatar-img rounded-circle" src="assets/images/avatar/05.jpg" alt="avatar">
-                            </div>
-                            <!-- Info -->
-                            <div class="ms-2">
-                                <h6 class="mb-0 fw-light">Frances Guerrero</h6>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Check-in:</small>
-                        <h6 class="mb-0 fw-normal">15 Jan 2022</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Check-out:</small>
-                        <h6 class="mb-0 fw-normal">19 Jan 2022</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Guests:</small>
-                        <h6 class="mb-0 fw-normal">04</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Amount:</small>
-                        <h6 class="text-success mb-0">$1254</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Payment:</small>
-                        <div class="badge bg-success bg-opacity-10 text-success">Full payment</div>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col"><a href="#" class="btn btn-sm btn-light mb-0">View</a></div>
-                </div>
-
-                <!-- Table data -->
-                <div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Booked by:</small>
-                        <div class="d-flex align-items-center">
-                            <!-- Avatar -->
-                            <div class="avatar avatar-xs flex-shrink-0">
-                                <img class="avatar-img rounded-circle" src="assets/images/avatar/06.jpg" alt="avatar">
-                            </div>
-                            <!-- Info -->
-                            <div class="ms-2">
-                                <h6 class="mb-0 fw-light">Carolyn Ortiz</h6>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Check-in:</small>
-                        <h6 class="mb-0 fw-normal">20 Jan 2022</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Check-out:</small>
-                        <h6 class="mb-0 fw-normal">25 Jan 2022</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Guests:</small>
-                        <h6 class="mb-0 fw-normal">03</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Amount:</small>
-                        <h6 class="text-success mb-0">$1080</h6>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col">
-                        <small class="d-block d-lg-none">Payment:</small>
-                        <div class="badge bg-success bg-opacity-10 text-success">Full payment</div>
-                    </div>
-
-                    <!-- Data item -->
-                    <div class="col"><a href="#" class="btn btn-sm btn-light mb-0">View</a></div>
-                </div>
             </div>
             <!-- Card body END -->
 
