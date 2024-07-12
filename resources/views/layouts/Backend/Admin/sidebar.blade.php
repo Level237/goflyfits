@@ -38,8 +38,8 @@
                     </a>
                     <!-- Submenu -->
                     <ul class="nav collapse flex-column" id="collapseguest" data-bs-parent="#navbar-sidebar">
-                        <li class="nav-item"> <a class="nav-link" href="admin-guest-list.html">Créer une categorie</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="admin-guest-detail.html.htm">Listes des categories</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('admin.categories.create') }}">Créer une categorie</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('admin.categories.index') }}">Listes des categories</a></li>
                     </ul>
                 </li>
 
