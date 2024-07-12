@@ -83,7 +83,7 @@ Listes des categories
                     <small class="d-block d-lg-none">Payment:</small>
 
 
-                        <div style="font-size: 12px" class="badge bg-primary bg-opacity-10 p-2 text-success">{{ count($category->clothings) }} look</div>
+                        <div style="font-size: 13px" class="badge bg-primary bg-opacity-10 p-2 text-success">{{ count($category->clothings) }} look</div>
                 </div>
 
                 <!-- Data item -->
