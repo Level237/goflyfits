@@ -64,7 +64,9 @@ class ClothingController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $categories=Category::all();
+        $clothing=Clothing::find($id);
+        return view('admin.clothes.edit',compact('clothing','categories'));
     }
 
     /**

@@ -105,7 +105,7 @@ Listes des vetements
                 <!-- Data item -->
                 <div class="col">
 
-                    <a href="#" class="btn btn-sm btn-light mb-0"><i class="fa-solid fa-edit"></i></a>
+                    <a href="{{ route('admin.clothings.edit',$cloth->id) }}" class="btn btn-sm btn-light mb-0"><i class="fa-solid fa-edit"></i></a>
                     <a href="#" class="btn btn-sm btn-light mb-0"><i class="fa-solid fa-eye"></i></a>
                     <a href="#" class="btn btn-sm btn-light mb-0"><i class="fa-solid fa-trash"></i></a>
                 </div>
