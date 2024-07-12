@@ -28,7 +28,8 @@ class User extends Authenticatable
         'country',
         'phone_number',
         'isChoice',
-        'role_id'
+        'role_id',
+        'color'
     ];
 
     /**

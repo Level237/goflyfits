@@ -137,18 +137,20 @@
                 <!-- Profile dropdown START -->
                 <li class="nav-item ms-3 dropdown">
                     <!-- Avatar -->
-                    <a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button" data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img class="avatar-img rounded-2" src="{{ asset('assets/images/avatar/01.jpg') }}" alt="avatar">
-                    </a>
+
+                    <div  class="avatar href="#" id="profileDropdown" role="button" data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false"">
+                        <div style="background: {{ auth()->user()->color }}" class="avatar-img rounded-circle text-white"><span class="position-absolute top-50 start-50 translate-middle fw-bold">{{ auth()->user()->name[0] }}{{ auth()->user()->name[1] }}</span></div>
+                      </div>
+
 
                     <ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3" aria-labelledby="profileDropdown">
                         <!-- Profile info -->
                         <li class="px-3 mb-3">
                             <div class="d-flex align-items-center">
                                 <!-- Avatar -->
-                                <div class="avatar me-3">
-                                    <img class="avatar-img rounded-circle shadow" src="{{ asset('assets/images/avatar/01.jpg') }}" alt="avatar">
-                                </div>
+                                <div  class="avatar href="#" id="profileDropdown" role="button" data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false"">
+                                    <div style="background: {{ auth()->user()->color }}" class="avatar-img rounded-circle text-white"><span class="position-absolute top-50 start-50 translate-middle fw-bold">{{ auth()->user()->name[0] }}{{ auth()->user()->name[1] }}</span></div>
+                                  </div>
                                 <div>
                                     <a class="h6 mt-2 mt-sm-0" href="#">{{ auth()->user()->name }}</a>
                                     <p class="small m-0">{{ auth()->user()->email }}</p>

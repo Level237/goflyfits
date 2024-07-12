@@ -28,6 +28,7 @@ return new class extends Migration
             $table->string('phone_number');
             $table->rememberToken();
             $table->boolean("isChoice")->default(0);
+            $table->string('color');
             $table->timestamps();
         });
     }

@@ -40,12 +40,27 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'color'=>$this->randomColor()
         ]);
 
         event(new Registered($user));
 
         Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME);
+        if(auth()->user()->role_id===1){
+            return to_route('admin.dashboard');
+        }
+        if(auth()->user()->role_id===2){
+            return to_route("customer.dashboard");
+        }
+    }
+
+    public function randomColor(){
+        $colors = array("red", "orange", "green", "brown", "chocolate","crimson","darkmagenta","mediumslateblue","tomato");
+
+        $randomIndex = array_rand($colors);
+        $randomColor = $colors[$randomIndex];
+
+        return $randomColor;
     }
 }
