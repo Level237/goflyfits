@@ -23,7 +23,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[HomeController::class,'index'])->name('homepage');
 Route::post('step-one/personal-information',[AuthStepController::class,'stepOne'])->name('stepOne');
 Route::get('step-one/personal-information',[AuthStepController::class,'stepOneView'])->name('stepOneView');
-
+Route::post('step-two/user-preference',[AuthStepController::class,'stepTwo'])->name('stepTwo');
+Route::get('step-two/user-preference',[AuthStepController::class,'stepTwoView'])->name('stepTwoView');
 
 Route::middleware(['auth','admin'])->name('admin.')->prefix('admin')->group(function(){
     Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard');

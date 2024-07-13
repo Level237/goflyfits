@@ -104,36 +104,23 @@ Main banner START -->
 	<div class="container">
 		<!-- Content and form START -->
 		<div class="row g-4">
-			<div class="col-lg-6">
+			<div class="col-lg-6 ">
 				<!-- Title -->
-				<h1>Parlez nous de vous</h1>
+				<h1>Vos préferences</h1>
 
 				<!-- Contact form -->
-				<form method="POST" action="{{ route('stepTwo') }}" class="mt-4">
-                    @csrf
-					<!-- Name -->
-					<div class="mb-2 form-control-bg-light">
-						<label class="form-label">Quel est votre nom? *</label>
-						<input type="text" name="name" class="form-control">
-					</div>
-					<!-- Email -->
-					<div class="mb-2 form-control-bg-light">
-						<label class="form-label">Quel est votre numéro de téléphone? *</label>
-						<input type="text" name="phone_number" class="form-control">
-					</div>
+				<form class="mt-8">
 					<!-- Message -->
 					<div class="mb-2 form-control-bg-light">
-						<label class="form-label">Quel est votre ville de résidence? *</label>
-						<select  class="form-control" name="town" id="">
-                            <option value="douala">Douala</option>
-                            <option value="yaoundé">Yaoundé</option>
-                            <option value="bafoussam">Bafoussam</option>
-                            <option value="garoua">Garoua</option>
-                            <option value="ebolowa">Ebolowa</option>
+						<label class="form-label">Quel sont vos préferences de style? *</label>
+						<select  class="form-control" name="preferences" id="">
+                            @foreach ($categories as $category)
+                            <option value="{{ $category->id }}">{{ $category->category_title }}</option>
+                            @endforeach
                         </select>
 					</div>
 					<!-- Button -->
-					<div><button type="submit" class="btn mt-4 btn-lg btn-primary mb-0" type="button">Suivant</button></div>
+					<div><button class="btn mt-4 btn-lg btn-primary mb-0" type="button">Suivant</button></div>
 				</form>
 			</div>
 
