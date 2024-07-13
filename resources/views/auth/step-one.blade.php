@@ -89,7 +89,12 @@
 <body style="overflow-y: hidden">
 
 
-
+    <!-- Pre loader -->
+    <div class="preloader">
+        <div class="preloader-item">
+            <div class="spinner-grow text-primary"></div>
+        </div>
+    </div>
 <!-- **************** MAIN CONTENT START **************** -->
 <main>
 
@@ -108,22 +113,22 @@ Main banner START -->
 					<!-- Name -->
 					<div class="mb-2 form-control-bg-light">
 						<label class="form-label">Quel est votre nom? *</label>
-						<input type="text" class="form-control">
+						<input type="text" name="name" class="form-control">
 					</div>
 					<!-- Email -->
 					<div class="mb-2 form-control-bg-light">
 						<label class="form-label">Quel est votre numéro de téléphone? *</label>
-						<input type="email" class="form-control">
+						<input type="text" name="phone_number" class="form-control">
 					</div>
 					<!-- Message -->
 					<div class="mb-2 form-control-bg-light">
 						<label class="form-label">Quel est votre ville de résidence? *</label>
-						<select class="form-control" name="" id="">
+						<select  class="form-control" name="town" id="">
                             <option value="douala">Douala</option>
-                            <option value="douala">Yaoundé</option>
-                            <option value="douala">Bafoussam</option>
-                            <option value="douala">Garoua</option>
-                            <option value="douala">Ebolowa</option>
+                            <option value="yaoundé">Yaoundé</option>
+                            <option value="bafoussam">Bafoussam</option>
+                            <option value="garoua">Garoua</option>
+                            <option value="ebolowa">Ebolowa</option>
                         </select>
 					</div>
 					<!-- Button -->

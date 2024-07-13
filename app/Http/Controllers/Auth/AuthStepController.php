@@ -12,6 +12,7 @@ class AuthStepController extends Controller
         $email=$request->email;
         $password=$request->password;
         Session::put('email',$email);
+        Session::put('password',$email);
         return to_route("stepOneView");
     }
 
