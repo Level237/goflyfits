@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthStepController;
 use App\Http\Controllers\Backend\Admin\CategoryController;
 use App\Http\Controllers\Backend\Admin\ClothingController;
 use App\Http\Controllers\Backend\Admin\DashboardController;
@@ -20,8 +21,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[HomeController::class,'index'])->name('homepage');
-
-
+Route::post('step-one/personal-information',[AuthStepController::class,'stepOne'])->name('stepOne');
+Route::get('step-one/personal-information',[AuthStepController::class,'stepOneView'])->name('stepOneView');
 
 
 Route::middleware(['auth','admin'])->name('admin.')->prefix('admin')->group(function(){

@@ -24,7 +24,7 @@ return new class extends Migration
             ->cascadeOnDelete()
             ->cascadeOnUpdate();
             $table->string("town");
-            $table->string('country');
+            $table->string('country')->default("cameroon");
             $table->string('phone_number')->unique();
             $table->rememberToken();
             $table->boolean("isChoice")->default(0);

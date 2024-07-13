@@ -120,16 +120,13 @@ Main Content START -->
 								<p class="mb-0">Already a member?<a href="{{ route('login') }}"> Log in</a></p>
 
 								<!-- Form START -->
-								<form action="{{ route('register') }}" method="POST" class="mt-4 text-start">
+								<form action="{{ route('stepOne') }}" method="POST" class="mt-2 text-start">
                                     @csrf
-                                    <div class="mb-3">
-										<label class="form-label">Enter name</label>
-										<input name="name" type="text" class="form-control">
-									</div>
+
 									<!-- Email -->
 									<div class="mb-3">
 										<label class="form-label">Enter email id</label>
-										<input name="email" type="email" class="form-control">
+										<input  name="email" type="email" class="form-control">
 									</div>
 									<!-- Password -->
 									<div class="mb-3 position-relative">
@@ -150,7 +147,7 @@ Main Content START -->
 										<label class="form-check-label" for="rememberCheck">Keep me signed in</label>
 									</div>
 									<!-- Button -->
-									<div><button type="submit" class="btn btn-primary w-100 mb-0">Sign up</button></div>
+									<div><button type="submit" class="btn btn-primary w-100 mb-0">Enregistrer</button></div>
 
 
 
