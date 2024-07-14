@@ -85,6 +85,7 @@ class AuthStepController extends Controller
             'town'=>$town,
             'phone_number'=>$phone_number,
             'color'=>$this->randomColor(),
+            'isChoice'=>1,
             'role_id'=>2
         ]);
         foreach($preferences as $preference){
