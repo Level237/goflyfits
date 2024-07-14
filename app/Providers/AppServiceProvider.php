@@ -25,6 +25,11 @@ class AppServiceProvider extends ServiceProvider
             $view->with('categories', $categories);
             $view->with('available_locales', config('app.available_locales'));
         });
+        view()->composer('layouts.Frontend.header-sticky', function ($view) {
+            $categories=Category::all();
+            $view->with('categories', $categories);
+            $view->with('available_locales', config('app.available_locales'));
+        });
 
     }
 }

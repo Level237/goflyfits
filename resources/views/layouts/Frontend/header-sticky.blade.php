@@ -1,4 +1,4 @@
-<header class="header-transparent">
+<header class="navbar-light header-sticky">
 	<!-- Logo Nav START -->
 	<nav class="navbar navbar-dark navbar-expand-xl">
 		<div class="container">
