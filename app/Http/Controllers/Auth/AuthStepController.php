@@ -4,8 +4,12 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\User;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Auth;
 
 class AuthStepController extends Controller
 {
@@ -14,6 +18,10 @@ class AuthStepController extends Controller
         if(Session::has('email') && Session::has('password')){
             Session::forget("email");
             Session::forget("password");
+            Session::forget("phone_number");
+            Session::forget("name");
+            Session::forget('preferences');
+            Session::forget('town');
        }else{
         $email=$request->email;
         $password=$request->password;
@@ -63,9 +71,49 @@ class AuthStepController extends Controller
 }
 
     public function stepFinal(Request $request){
-        Session::put('preferences',$request->preferences);
-        Session::save();
+        if(Session::has('email') && Session::has('password')){
+            $name=Session::get('name');
+        $email=Session::get('email');
+        $password=Session::get('password');
+        $phone_number=Session::get('phone_number');
+        $town=Session::get('town');
+        $preferences=$request->preferences;
+        $user = User::create([
+            'name' => $name,
+            'email' => $email,
+            'password' => Hash::make($password),
+            'town'=>$town,
+            'phone_number'=>$phone_number,
+            'color'=>$this->randomColor(),
+            'role_id'=>2
+        ]);
+        foreach($preferences as $preference){
+            $user->preferences()->attach($preference);
+        }
 
-        return to_route('register.user');
+
+        event(new Registered($user));
+
+        Auth::login($user);
+
+        if(auth()->user()->role_id===1){
+            return to_route('admin.dashboard');
+        }
+        if(auth()->user()->role_id===2){
+            return to_route("customer.dashboard");
+        }
+        }else{
+
+            return to_route('register');
+        }
+    }
+
+    public function randomColor(){
+        $colors = array("red", "orange", "green", "brown", "chocolate","crimson","darkmagenta","mediumslateblue","tomato");
+
+        $randomIndex = array_rand($colors);
+        $randomColor = $colors[$randomIndex];
+
+        return $randomColor;
     }
 }

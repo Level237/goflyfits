@@ -25,7 +25,7 @@ Route::post('step-one/personal-information',[AuthStepController::class,'stepOne'
 Route::get('step-one/personal-information',[AuthStepController::class,'stepOneView'])->name('stepOneView');
 Route::post('step-two/user-preference',[AuthStepController::class,'stepTwo'])->name('stepTwo');
 Route::get('step-two/user-preference',[AuthStepController::class,'stepTwoView'])->name('stepTwoView');
-
+Route::post('step-final',[AuthStepController::class,"stepFinal"])->name("stepFinal");
 Route::middleware(['auth','admin'])->name('admin.')->prefix('admin')->group(function(){
     Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard');
     Route::resource('clothings',ClothingController::class);

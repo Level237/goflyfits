@@ -109,7 +109,8 @@ Main banner START -->
 				<h1>Préferences Utilisateurs</h1>
 
 				<!-- Contact form -->
-				<form class="mt-8">
+				<form method="POST" action="{{ route('stepFinal') }}" class="mt-8">
+                    @csrf
 					<!-- Message -->
 					<div class="mb-2 form-control-bg-light">
 						<label class="form-label">Quels sont vos préferences de style? *</label>
@@ -121,7 +122,7 @@ Main banner START -->
                         </select>
 					</div>
 					<!-- Button -->
-					<div><button class="btn mt-4 btn-lg btn-primary mb-0" type="button">Suivant</button></div>
+					<div><button  class="btn mt-4 btn-lg btn-primary mb-0" type="submit">Suivant</button></div>
 				</form>
 			</div>
 
