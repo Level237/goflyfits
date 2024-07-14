@@ -13,29 +13,32 @@ class AuthStepController extends Controller
         $email=$request->email;
         $password=$request->password;
         Session::put('email',$email);
-        Session::put('password',$email);
+        Session::save();
+        Session::put('password',$password);
+        Session::save();
         return to_route("stepOneView");
     }
 
     public function stepOneView(){
-        //if(Session::has('email') && Session::has('password')){
-            //return view('auth.step-one');
-        //}else{
-            //return to_route("register");
-        //}
-        return view('auth.step-one');
+        if(Session::has('email') && Session::has('password')){
+           return view('auth.step-one');
+      }else{
+            return to_route("register");
+       }
     }
 
     public function stepTwo(Request $request){
-        $name=$request->name;
-        $phone_number=$request->phone_number;
-        $town=$request->town;
-        Session::put('name',$name);
-        Session::put('phone_number',$phone_number);
-        Session::put('town',$town);
-
-        return to_route('stepTwoView');
-
+        if(Session::has('email') && Session::has('password')){
+            $name=$request->name;
+            $phone_number=$request->phone_number;
+            $town=$request->town;
+            Session::put('name',$name);
+            Session::put('phone_number',$phone_number);
+            Session::put('town',$town);
+            return to_route('stepTwoView');
+       }else{
+             return to_route("register");
+        }
     }
 
     public function stepTwoView(){

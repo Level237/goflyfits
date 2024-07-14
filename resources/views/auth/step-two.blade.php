@@ -80,7 +80,7 @@
 	<!-- Plugins CSS -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/font-awesome/css/all.min-1.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons-1.css') }}">
-
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/choices/css/choices.min.css') }}">
 	<!-- Theme CSS -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 
@@ -113,9 +113,10 @@ Main banner START -->
 					<!-- Message -->
 					<div class="mb-2 form-control-bg-light">
 						<label class="form-label">Quel sont vos préferences de style? *</label>
-						<select  class="form-control" name="preferences" id="">
-                            @foreach ($categories as $category)
-                            <option value="{{ $category->id }}">{{ $category->category_title }}</option>
+						<select name="preferences[]" multiple class="form-select js-choice" data-search-enabled="true">
+
+                            @foreach ($categories as $categorie)
+                                <option value="{{ $categorie->id }}">{{ $categorie->category_title }}</option>
                             @endforeach
                         </select>
 					</div>
@@ -388,7 +389,7 @@ Footer END -->
 
 <!-- Bootstrap JS -->
 <script src="{{ asset('assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
-
+<script src="{{ asset('assets/vendor/choices/js/choices.min.js') }}"></script>
 <!-- ThemeFunctions -->
 <script src="{{ asset('assets/js/functions.js') }}"></script>
 
