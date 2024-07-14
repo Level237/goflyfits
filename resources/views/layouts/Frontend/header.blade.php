@@ -23,8 +23,32 @@
 
 					<!-- Nav item Listing -->
 					<li class="nav-item">
-						<a class="nav-link " href="sign-in.html.htm">Category</a>
+						<a class="nav-link " href="sign-in.html.htm">Clothings</a>
 
+					</li>
+                    <li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="listingMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Listings</a>
+						<ul class="dropdown-menu" aria-labelledby="listingMenu">
+							<!-- Dropdown submenu -->
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">Par Category</a>
+								<ul class="dropdown-menu" data-bs-popper="none">
+                                    @foreach ($categories as $category)
+                                    <li> <a class="dropdown-item" href="index.html-1.htm">{{ $category->category_title }}</a></li>
+                                    @endforeach
+								</ul>
+							</li>
+
+							<!-- Dropdown submenu -->
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">Par Ville</a>
+								<ul class="dropdown-menu" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="index-flight.html.htm">douala</a></li>
+									<li> <a class="dropdown-item" href="flight-list.html.htm">yaoundé</a></li>
+								</ul>
+							</li>
+							<li> <a class="dropdown-item" href="booking-confirm.html.htm">All Clothings</a></li>
+						</ul>
 					</li>
 					<li class="">
 						<a class="nav-link" href="sign-up.html.htm">A propos</a>
