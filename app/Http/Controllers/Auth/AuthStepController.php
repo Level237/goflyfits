@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\Session;
 class AuthStepController extends Controller
 {
     public function stepOne(Request $request){
+
+        if(Session::has('email') && Session::has('password')){
+            Session::forget("email");
+            Session::forget("password");
+       }else{
         $email=$request->email;
         $password=$request->password;
         Session::put('email',$email);
@@ -17,6 +22,8 @@ class AuthStepController extends Controller
         Session::put('password',$password);
         Session::save();
         return to_route("stepOneView");
+       }
+
     }
 
     public function stepOneView(){
@@ -33,8 +40,11 @@ class AuthStepController extends Controller
             $phone_number=$request->phone_number;
             $town=$request->town;
             Session::put('name',$name);
+            Session::save();
             Session::put('phone_number',$phone_number);
+            Session::save();
             Session::put('town',$town);
+            Session::save();
             return to_route('stepTwoView');
        }else{
              return to_route("register");
@@ -42,8 +52,20 @@ class AuthStepController extends Controller
     }
 
     public function stepTwoView(){
+        if(Session::has("email")&& Session::has("password") && Session::has("name")){
+            $categories=Category::all();
+            return view('auth.step-two',compact('categories'));
+        }
 
-        $categories=Category::all();
-        return view('auth.step-two',compact('categories'));
+    else{
+        return to_route('register');
+    }
+}
+
+    public function stepFinal(Request $request){
+        Session::put('preferences',$request->preferences);
+        Session::save();
+
+        return to_route('register.user');
     }
 }

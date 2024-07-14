@@ -106,13 +106,13 @@ Main banner START -->
 		<div class="row g-4">
 			<div class="col-lg-6 ">
 				<!-- Title -->
-				<h1>Vos préferences</h1>
+				<h1>Préferences Utilisateurs</h1>
 
 				<!-- Contact form -->
 				<form class="mt-8">
 					<!-- Message -->
 					<div class="mb-2 form-control-bg-light">
-						<label class="form-label">Quel sont vos préferences de style? *</label>
+						<label class="form-label">Quels sont vos préferences de style? *</label>
 						<select name="preferences[]" multiple class="form-select js-choice" data-search-enabled="true">
 
                             @foreach ($categories as $categorie)
