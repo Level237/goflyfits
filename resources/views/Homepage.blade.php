@@ -56,9 +56,10 @@ GoFlyFits
                                 <div class="form-mix-icon-input form-size-lg">
                                     <select class="form-select js-choice" data-search-enabled="true">
                                         <option value="">Search your position</option>
-                                        <option>San Jacinto, USA</option>
-                                        <option>North Dakota, Canada</option>
-                                        <option>West Virginia, Paris</option>
+                                        <option value="douala">Douala</option>
+                                        <option value="yaoundé">Yaoundé</option>
+                                        <option value="garoua">Garoua</option>
+                                        <option value="bafoussam">Bafoussam</option>
                                     </select>
                                     <!-- Icons -->
                                     <span class="position-absolute top-50 start-0 translate-middle ps-5"><i class="bi bi-geo-alt fs-5"></i></span>
