@@ -231,22 +231,27 @@ GoFlyFits
 
             <div class="row g-4">
                 <!-- Card item -->
+                @foreach ($clothings as $clothing)
                 <div class="col-sm-6 col-lg-4 col-xl-3">
                     <div class="card shadow h-100">
-                        <div class="position-relative">
+                        <div class="position-relative rounded" style="background: url({{ Storage::url($clothing->clothing_profile) }});background-size:cover;background-repeat:no-repeat;background-position:top">
                             <!-- Image -->
-                            <img src="assets/images/category/directory/01.jpg" class="card-img-top" alt="Card image">
-                            <!-- Overlay -->
-                            <div class="card-img-overlay p-3 z-index-1">
-                                <div class="badge text-bg-dark"><i class="fa-solid fa-building-columns fa-fw text-warning"></i> Museum</div>
-                                <div class="badge text-bg-success">Open</div>
-                            </div>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
                         </div>
 
                         <!-- Card body START -->
                         <div class="card-body">
                             <!-- Title -->
-                            <h5 class="card-title me-2"><a href="directory-detail.html.htm">Portland New Art Museum</a></h5>
+                            <h5 class="card-title me-2"><a href="directory-detail.html.htm">{{ $clothing->title }}</a></h5>
 
                             <!-- Address and Contact -->
                             <ul class="list-group list-group-borderless mb-0">
@@ -270,275 +275,8 @@ GoFlyFits
                         </div>
                     </div>
                 </div>
+                @endforeach
 
-                <!-- Card item -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="card shadow h-100">
-                        <div class="position-relative">
-                            <!-- Image -->
-                            <img src="assets/images/category/directory/02.jpg" class="card-img-top" alt="Card image">
-                            <!-- Overlay -->
-                            <div class="card-img-overlay p-3 z-index-1">
-                                <div class="badge text-bg-dark"><i class="fa-solid fa-bag-shopping fa-fw text-warning"></i> Shopping</div>
-                                <div class="badge text-bg-success">Open</div>
-                            </div>
-                        </div>
-
-                        <!-- Card body START -->
-                        <div class="card-body">
-                            <div class="badge bg-danger bg-opacity-10 text-danger mb-2">Recommended</div>
-                            <!-- Title -->
-                            <h5 class="card-title me-2"><a href="directory-detail.html.htm">JP Shopping Mall in California</a></h5>
-
-                            <!-- Content -->
-                            <p class="mb-0">Starts at <span class="text-success">$449</span> for 1 person</p>
-                        </div>
-                        <!-- Card body END -->
-
-                        <!-- Card footer START-->
-                        <div class="card-footer border-top">
-                            <!-- Buttons -->
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="directory-detail.html.htm" class="btn btn-link p-0 mb-0">View detail<i class="bi bi-arrow-right ms-1"></i></a>
-                                <a href="#" class="h6 mb-0 z-index-2"><i class="fa-solid fa-heart text-danger"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card item -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="card shadow h-100">
-                        <div class="position-relative">
-                            <!-- Image -->
-                            <img src="assets/images/category/hotel/4by3/02.jpg" class="card-img-top" alt="Card image">
-                            <!-- Overlay -->
-                            <div class="card-img-overlay p-3 z-index-1">
-                                <div class="badge text-bg-dark"><i class="fa-solid fa-hotel fa-fw text-warning"></i> Hotel</div>
-                                <div class="badge text-bg-success">Open</div>
-                            </div>
-                        </div>
-
-                        <!-- Card body START -->
-                        <div class="card-body">
-                            <!-- Title -->
-                            <h5 class="card-title me-2"><a href="directory-detail.html.htm">Courtyard by Marriott New York</a></h5>
-
-                            <!-- Address and Contact -->
-                            <ul class="list-group list-group-borderless mb-0">
-                                <li class="list-group-item small pb-0">
-                                    <i class="bi bi-pin-map-fill fa-fw h6 small mb-0"></i> W Century Blvd, Los Angeles
-                                </li>
-                                <li class="list-group-item small pb-0">
-                                    <i class="bi bi-telephone-fill fa-fw h6 small mb-0"></i> +(125) 548 996
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- Card body END -->
-
-                        <!-- Card footer START-->
-                        <div class="card-footer border-top">
-                            <!-- Buttons -->
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="directory-detail.html.htm" class="btn btn-link p-0 mb-0">View detail<i class="bi bi-arrow-right ms-1"></i></a>
-                                <a href="#" class="h6 mb-0 z-index-2"><i class="fa-regular fa-heart"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card item -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="card shadow h-100">
-                        <div class="position-relative">
-                            <!-- Image -->
-                            <img src="assets/images/category/directory/03.jpg" class="card-img-top" alt="Card image">
-                            <!-- Overlay -->
-                            <div class="card-img-overlay p-3 z-index-1">
-                                <div class="badge text-bg-dark"><i class="fa-solid fa-spa fa-fw text-warning"></i> Spa</div>
-                                <div class="badge text-bg-danger">Closed</div>
-                            </div>
-                        </div>
-
-                        <!-- Card body START -->
-                        <div class="card-body">
-                            <div class="badge bg-danger bg-opacity-10 text-danger mb-2">Recommended</div>
-                            <!-- Title -->
-                            <h5 class="card-title me-2"><a href="directory-detail.html.htm">Emperor Resort & Spa</a></h5>
-
-                            <!-- Content -->
-                            <p class="mb-0">Starts at <span class="text-success">$350</span> for 1 person</p>
-                        </div>
-                        <!-- Card body END -->
-
-                        <!-- Card footer START-->
-                        <div class="card-footer border-top">
-                            <!-- Buttons -->
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="directory-detail.html.htm" class="btn btn-link p-0 mb-0">View detail<i class="bi bi-arrow-right ms-1"></i></a>
-                                <a href="#" class="h6 mb-0 z-index-2"><i class="fa-regular fa-heart"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card item -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="card shadow h-100">
-                        <div class="position-relative">
-                            <!-- Image -->
-                            <img src="assets/images/category/directory/04.jpg" class="card-img-top" alt="Card image">
-                            <!-- Overlay -->
-                            <div class="card-img-overlay p-3 z-index-1">
-                                <div class="badge text-bg-dark"><i class="fa-solid fa-dumbbell fa-fw text-warning"></i> Gym</div>
-                                <div class="badge text-bg-success">Open</div>
-                            </div>
-                        </div>
-
-                        <!-- Card body START -->
-                        <div class="card-body">
-                            <!-- Title -->
-                            <h5 class="card-title me-2"><a href="directory-detail.html.htm">Phoenix Power Gym</a></h5>
-
-                            <!-- Address and Contact -->
-                            <ul class="list-group list-group-borderless mb-0">
-                                <li class="list-group-item small pb-0">
-                                    <i class="bi bi-pin-map-fill fa-fw h6 small mb-0"></i> W Century Blvd, Los Angeles
-                                </li>
-                                <li class="list-group-item small pb-0">
-                                    <i class="bi bi-telephone-fill fa-fw h6 small mb-0"></i> +(125) 548 996
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- Card body END -->
-
-                        <!-- Card footer START-->
-                        <div class="card-footer border-top">
-                            <!-- Buttons -->
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="directory-detail.html.htm" class="btn btn-link p-0 mb-0">View detail<i class="bi bi-arrow-right ms-1"></i></a>
-                                <a href="#" class="h6 mb-0 z-index-2"><i class="fa-solid fa-heart text-danger"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card item -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="card shadow h-100">
-                        <div class="position-relative">
-                            <!-- Image -->
-                            <img src="assets/images/category/hotel/4by3/08.jpg" class="card-img-top" alt="Card image">
-                            <!-- Overlay -->
-                            <div class="card-img-overlay p-3 z-index-1">
-                                <div class="badge text-bg-dark"><i class="fa-solid fa-hotel fa-fw text-warning"></i> Hotel</div>
-                                <div class="badge text-bg-success">Open</div>
-                            </div>
-                        </div>
-
-                        <!-- Card body START -->
-                        <div class="card-body">
-                            <!-- Title -->
-                            <h5 class="card-title me-2"><a href="directory-detail.html.htm">Park Plaza Lodge Hotel</a></h5>
-
-                            <!-- Address and Contact -->
-                            <ul class="list-group list-group-borderless mb-0">
-                                <li class="list-group-item small pb-0">
-                                    <i class="bi bi-pin-map-fill fa-fw h6 small mb-0"></i> W Century Blvd, Los Angeles
-                                </li>
-                                <li class="list-group-item small pb-0">
-                                    <i class="bi bi-telephone-fill fa-fw h6 small mb-0"></i> +(125) 548 996
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- Card body END -->
-
-                        <!-- Card footer START-->
-                        <div class="card-footer border-top">
-                            <!-- Buttons -->
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="directory-detail.html.htm" class="btn btn-link p-0 mb-0">View detail<i class="bi bi-arrow-right ms-1"></i></a>
-                                <a href="#" class="h6 mb-0 z-index-2"><i class="fa-regular fa-heart"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card item -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="card shadow h-100">
-                        <div class="position-relative">
-                            <!-- Image -->
-                            <img src="assets/images/category/directory/05.jpg" class="card-img-top" alt="Card image">
-                            <!-- Overlay -->
-                            <div class="card-img-overlay p-3 z-index-1">
-                                <div class="badge text-bg-dark"><i class="fa-solid fa-car fa-fw text-warning"></i> Automotive</div>
-                                <div class="badge text-bg-success">Open</div>
-                            </div>
-                        </div>
-
-                        <!-- Card body START -->
-                        <div class="card-body">
-                            <div class="badge bg-danger bg-opacity-10 text-danger mb-2">Recommended</div>
-                            <!-- Title -->
-                            <h5 class="card-title me-2"><a href="directory-detail.html.htm">Car Service & Repair</a></h5>
-
-                            <!-- Content -->
-                            <p class="mb-0">Starts at <span class="text-success">$599</span> for 1 person</p>
-                        </div>
-                        <!-- Card body END -->
-
-                        <!-- Card footer START-->
-                        <div class="card-footer border-top">
-                            <!-- Buttons -->
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="directory-detail.html.htm" class="btn btn-link p-0 mb-0">View detail<i class="bi bi-arrow-right ms-1"></i></a>
-                                <a href="#" class="h6 mb-0 z-index-2"><i class="fa-regular fa-heart"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card item -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="card shadow h-100">
-                        <div class="position-relative">
-                            <!-- Image -->
-                            <img src="assets/images/category/directory/06.jpg" class="card-img-top" alt="Card image">
-                            <!-- Overlay -->
-                            <div class="card-img-overlay p-3 z-index-1">
-                                <div class="badge text-bg-dark"><i class="fa-solid fa-champagne-glasses fa-fw text-warning"></i> Restaurant</div>
-                                <div class="badge text-bg-danger">Closed</div>
-                            </div>
-                        </div>
-
-                        <!-- Card body START -->
-                        <div class="card-body">
-                            <!-- Title -->
-                            <h5 class="card-title me-2"><a href="directory-detail.html.htm">El Torero Restaurant & Bar</a></h5>
-
-                            <!-- Address and Contact -->
-                            <ul class="list-group list-group-borderless mb-0">
-                                <li class="list-group-item small pb-0">
-                                    <i class="bi bi-pin-map-fill fa-fw h6 small mb-0"></i> W Century Blvd, Los Angeles
-                                </li>
-                                <li class="list-group-item small pb-0">
-                                    <i class="bi bi-telephone-fill fa-fw h6 small mb-0"></i> +(125) 548 996
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- Card body END -->
-
-                        <!-- Card footer START-->
-                        <div class="card-footer border-top">
-                            <!-- Buttons -->
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="directory-detail.html.htm" class="btn btn-link p-0 mb-0">View detail<i class="bi bi-arrow-right ms-1"></i></a>
-                                <a href="#" class="h6 mb-0 z-index-2"><i class="fa-regular fa-heart"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
