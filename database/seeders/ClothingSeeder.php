@@ -16,7 +16,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing1",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>45,
+            "price"=>"45",
             "size"=>"L",
             "source"=>"douala",
             'slug'=>"clothing1",
@@ -26,7 +26,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing2",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>55,
+            "price"=>"55",
             "size"=>"M",
             "source"=>"douala",
             'slug'=>"clothing2",
@@ -36,7 +36,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing3",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>85,
+            "price"=>"85",
             "size"=>"XL",
             "source"=>"douala",
             'slug'=>"clothing3",
@@ -45,7 +45,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing4",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>45,
+            "price"=>"45",
             "size"=>"XL",
             "source"=>"yaoundé",
             'slug'=>"clothing4",
@@ -55,7 +55,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing5",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>75,
+            "price"=>"75",
             "size"=>"XL",
             "source"=>"yaoundé",
             'slug'=>"clothing5",
@@ -65,7 +65,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing6",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>55,
+            "price"=>"55",
             "size"=>"XL",
             "source"=>"yaoundé",
             'slug'=>"clothing6",
@@ -75,7 +75,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing7",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>85,
+            "price"=>"85",
             "size"=>"XL",
             "source"=>"douala",
             'slug'=>"clothing7",
@@ -85,7 +85,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing8",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>95,
+            "price"=>"95",
             "size"=>"XL",
             "source"=>"yaoundé",
             'slug'=>"clothing8",
@@ -95,7 +95,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing9",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>75,
+            "price"=>"75",
             "size"=>"M",
             "source"=>"yaoundé",
             'slug'=>"clothing9",
@@ -105,7 +105,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing10",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>47,
+            "price"=>"47",
             "size"=>"XL",
             "source"=>"yaoundé",
             'slug'=>"clothing10",
@@ -115,7 +115,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing11",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>45,
+            "price"=>"45",
             "size"=>"M",
             "source"=>"yaoundé",
             'slug'=>"clothing11",
@@ -125,7 +125,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing12",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>86,
+            "price"=>"86",
             "size"=>"L",
             "source"=>"yaoundé",
             'slug'=>"clothing12",
@@ -134,7 +134,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing13",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>45,
+            "price"=>"45",
             "size"=>"XL",
             "source"=>"yaoundé",
             'slug'=>"clothing13",
@@ -144,7 +144,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing14",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>85,
+            "price"=>"85",
             "size"=>"L",
             "source"=>"yaoundé",
             'slug'=>"clothing14",
@@ -154,7 +154,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing15",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>67,
+            "price"=>"67",
             "size"=>"M",
             "source"=>"yaoundé",
             'slug'=>"clothing15",
@@ -164,7 +164,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing16",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>45,
+            "price"=>"45",
             "size"=>"XL",
             "source"=>"yaoundé",
             'slug'=>"clothing16",
@@ -174,7 +174,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing17",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>85,
+            "price"=>"85",
             "size"=>"L",
             "source"=>"yaoundé",
             'slug'=>"clothing17",
@@ -184,7 +184,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing18",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>78,
+            "price"=>"78",
             "size"=>"L",
             "source"=>"yaoundé",
             'slug'=>"clothing18",
@@ -194,7 +194,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing19",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>78,
+            "price"=>"78",
             "size"=>"M",
             "source"=>"yaoundé",
             'slug'=>"clothing19",
@@ -204,7 +204,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing20",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>45,
+            "price"=>"45",
             "size"=>"XXL",
             "source"=>"douala",
             'slug'=>"clothing20",
@@ -214,7 +214,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing21",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>19,
+            "price"=>"19",
             "size"=>"XL",
             "source"=>"douala",
             'slug'=>"clothing21",
@@ -224,7 +224,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing22",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>45,
+            "price"=>"45",
             "size"=>"L",
             "source"=>"douala",
             'slug'=>"clothing22",
@@ -234,7 +234,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing23",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>45,
+            "price"=>"45",
             "size"=>"XXL",
             "source"=>"douala",
             'slug'=>"clothing23",
@@ -244,7 +244,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing24",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>45,
+            "price"=>"45",
             "size"=>"XXL",
             "source"=>"douala",
             'slug'=>"clothing24",
@@ -254,7 +254,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing25",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>45,
+            "price"=>"45",
             "size"=>"XXL",
             "source"=>"douala",
             'slug'=>"clothing25",
@@ -264,7 +264,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing26",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>45,
+            "price"=>"45",
             "size"=>"L",
             "source"=>"douala",
             'slug'=>"clothing26",
@@ -274,7 +274,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing27",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>45,
+            "price"=>"45",
             "size"=>"M",
             "source"=>"douala",
             'slug'=>"clothing27",
@@ -284,7 +284,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing28",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>45,
+            "price"=>"45",
             "size"=>"L",
             "source"=>"douala",
             'slug'=>"clothing28",
@@ -294,7 +294,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing29",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>56,
+            "price"=>"56",
             "size"=>"XL",
             "source"=>"douala",
             'slug'=>"clothing29",
@@ -304,7 +304,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing30",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>34,
+            "price"=>"34",
             "size"=>"XXL",
             "source"=>"douala",
             'slug'=>"clothing30",
@@ -314,7 +314,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing31",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>56,
+            "price"=>"56",
             "size"=>"L",
             "source"=>"bafoussam",
             'slug'=>"clothing31",
@@ -324,7 +324,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing32",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>56,
+            "price"=>"56",
             "size"=>"L",
             "source"=>"bafoussam",
             'slug'=>"clothing32",
@@ -334,7 +334,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing33",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>56,
+            "price"=>"56",
             "size"=>"L",
             "source"=>"bafoussam",
             'slug'=>"clothing33",
@@ -344,7 +344,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing34",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>56,
+            "price"=>"56",
             "size"=>"L",
             "source"=>"bafoussam",
             'slug'=>"clothing34",
@@ -354,7 +354,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing35",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>56,
+            "price"=>"56",
             "size"=>"L",
             "source"=>"bafoussam",
             'slug'=>"clothing35",
@@ -364,7 +364,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing36",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>56,
+            "price"=>"56",
             "size"=>"XL",
             "source"=>"bafoussam",
             'slug'=>"clothing36",
@@ -374,7 +374,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing37",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>56,
+            "price"=>"56",
             "size"=>"M",
             "source"=>"bafoussam",
             'slug'=>"clothing37",
@@ -384,7 +384,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing38",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>56,
+            "price"=>"56",
             "size"=>"L",
             "source"=>"bafoussam",
             'slug'=>"clothing38",
@@ -394,7 +394,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing39",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>56,
+            "price"=>"56",
             "size"=>"XL",
             "source"=>"bafoussam",
             'slug'=>"clothing39",
@@ -404,7 +404,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing40",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>56,
+            "price"=>"56",
             "size"=>"XL",
             "source"=>"bafoussam",
             'slug'=>"clothing41",
@@ -414,7 +414,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing42",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>56,
+            "price"=>"56",
             "size"=>"XL",
             "source"=>"bafoussam",
             'slug'=>"clothing42",
@@ -424,7 +424,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing43",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>56,
+            "price"=>"56",
             "size"=>"XL",
             "source"=>"bafoussam",
             'slug'=>"clothing43",
@@ -434,7 +434,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing44",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>67,
+            "price"=>"67",
             "size"=>"XL",
             "source"=>"bafoussam",
             'slug'=>"clothing44",
@@ -444,7 +444,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing45",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>56,
+            "price"=>"56",
             "size"=>"XL",
             "source"=>"bafoussam",
             'slug'=>"clothing45",
@@ -454,7 +454,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing46",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>56,
+            "price"=>"56",
             "size"=>"XL",
             "source"=>"bafoussam",
             'slug'=>"clothing46",
@@ -464,7 +464,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing47",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>89,
+            "price"=>"89",
             "size"=>"XL",
             "source"=>"bafoussam",
             'slug'=>"clothing47",
@@ -474,7 +474,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing48",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>89,
+            "price"=>"89",
             "size"=>"L",
             "source"=>"bafoussam",
             'slug'=>"clothing48",
@@ -484,7 +484,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing49",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>89,
+            "price"=>"89",
             "size"=>"L",
             "source"=>"bafoussam",
             'slug'=>"clothing49",
@@ -494,7 +494,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing50",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>76,
+            "price"=>"76",
             "size"=>"M",
             "source"=>"yaoundé",
             'slug'=>"clothing50",
@@ -504,7 +504,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing51",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>89,
+            "price"=>"89",
             "size"=>"L",
             "source"=>"yaoundé",
             'slug'=>"clothing51",
@@ -514,7 +514,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing52",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>56,
+            "price"=>"56",
             "size"=>"XXL",
             "source"=>"yaoundé",
             'slug'=>"clothing52",
@@ -524,7 +524,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing53",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>89,
+            "price"=>"89",
             "size"=>"L",
             "source"=>"yaoundé",
             'slug'=>"clothing53",
@@ -534,7 +534,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing54",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>89,
+            "price"=>"89",
             "size"=>"XL",
             "source"=>"yaoundé",
             'slug'=>"clothing54",
@@ -544,7 +544,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing55",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>89,
+            "price"=>"89",
             "size"=>"L",
             "source"=>"yaoundé",
             'slug'=>"clothing55",
@@ -554,7 +554,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing56",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>89,
+            "price"=>"89",
             "size"=>"L",
             "source"=>"yaoundé",
             'slug'=>"clothing56",
@@ -564,7 +564,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing57",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>59,
+            "price"=>"59",
             "size"=>"L",
             "source"=>"yaoundé",
             'slug'=>"clothing57",
@@ -574,7 +574,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing58",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>89,
+            "price"=>"89",
             "size"=>"L",
             "source"=>"yaoundé",
             'slug'=>"clothing58",
@@ -584,7 +584,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing59",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>89,
+            "price"=>"89",
             "size"=>"M",
             "source"=>"yaoundé",
             'slug'=>"clothing59",
@@ -594,7 +594,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing60",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>89,
+            "price"=>"89",
             "size"=>"M",
             "source"=>"yaoundé",
             'slug'=>"clothing60",
@@ -604,7 +604,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing61",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>89,
+            "price"=>"89",
             "size"=>"M",
             "source"=>"douala",
             'slug'=>"clothing61",
@@ -614,7 +614,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing62",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>67,
+            "price"=>"67",
             "size"=>"M",
             "source"=>"douala",
             'slug'=>"clothing62",
@@ -624,7 +624,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing62",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>89,
+            "price"=>"89",
             "size"=>"M",
             "source"=>"douala",
             'slug'=>"clothing62",
@@ -634,7 +634,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing63",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>89,
+            "price"=>"89",
             "size"=>"M",
             "source"=>"douala",
             'slug'=>"clothing63",
@@ -644,7 +644,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing64",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>39,
+            "price"=>"39",
             "size"=>"M",
             "source"=>"douala",
             'slug'=>"clothing64",
@@ -653,7 +653,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing65",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>89,
+            "price"=>"89",
             "size"=>"M",
             "source"=>"douala",
             'slug'=>"clothing65",
@@ -663,7 +663,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing66",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>56,
+            "price"=>"56",
             "size"=>"XL",
             "source"=>"douala",
             'slug'=>"clothing66",
@@ -673,7 +673,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing67",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>34,
+            "price"=>"34",
             "size"=>"M",
             "source"=>"douala",
             'slug'=>"clothing67",
@@ -683,7 +683,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing68",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>89,
+            "price"=>"89",
             "size"=>"XL",
             "source"=>"douala",
             'slug'=>"clothing68",
@@ -693,7 +693,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing69",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>67,
+            "price"=>"67",
             "size"=>"XL",
             "source"=>"douala",
             'slug'=>"clothing69",
@@ -703,7 +703,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing70",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>89,
+            "price"=>"89",
             "size"=>"XL",
             "source"=>"douala",
             'slug'=>"clothing70",
@@ -713,7 +713,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing71",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>89,
+            "price"=>"89",
             "size"=>"M",
             "source"=>"bafoussam",
             'slug'=>"clothing71",
@@ -723,7 +723,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing71",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>89,
+            "price"=>"89",
             "size"=>"M",
             "source"=>"bafoussam",
             'slug'=>"clothing71",
@@ -733,7 +733,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing72",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>78,
+            "price"=>"78",
             "size"=>"M",
             "source"=>"bafoussam",
             'slug'=>"clothing72",
@@ -743,7 +743,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing73",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>30,
+            "price"=>"30",
             "size"=>"M",
             "source"=>"bafoussam",
             'slug'=>"clothing73",
@@ -753,7 +753,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing74",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>89,
+            "price"=>"89",
             "size"=>"M",
             "source"=>"bafoussam",
             'slug'=>"clothing74",
@@ -763,7 +763,7 @@ class ClothingSeeder extends Seeder
         Clothing::create([
             "title"=>"clothing75",
             'description'=>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sunt neque, et, obcaecati repellendus velit ratione aliquid facilis sequi quisquam voluptatibus optio nisi perspiciatis repellat nostrum tempora fugit dolores quae.",
-            "price"=>89,
+            "price"=>"89",
             "size"=>"M",
             "source"=>"bafoussam",
             'slug'=>"clothing75",
