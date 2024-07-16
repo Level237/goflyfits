@@ -17,7 +17,7 @@ All Clothings
                 <!-- Banner title -->
                 <div class="row my-2 my-xl-5">
                     <div class="col-md-8 mx-auto">
-                        <h1 class="text-center text-white">150 Hotels in New York</h1>
+                        <h1 class="text-center text-white">{{ count($clothings) }} clothings</h1>
                     </div>
                 </div>
 
@@ -435,6 +435,7 @@ All Clothings
         <div class="container">
             <div class="row g-4">
 
+                @foreach ($clothings as $clothing)
                 <!-- Card item START -->
                 <div class="col-md-6 col-xl-4">
                     <div class="card shadow p-2 pb-0 h-100">
@@ -444,20 +445,18 @@ All Clothings
                         </div>
 
                         <!-- Slider START -->
-                        <div class="tiny-slider arrow-round arrow-xs arrow-dark rounded-2 overflow-hidden">
+                        <div style="background: url({{ Storage::url($clothing->clothing_profile) }});background-size:cover;background-repeat:no-repeat;background-position:top" class="tiny-slider arrow-round arrow-xs arrow-dark rounded-2">
                             <div class="tiny-slider-inner" data-autoplay="false" data-arrow="true" data-dots="false" data-items="1">
                                 <!-- Image item -->
-                                <div><img src="assets/images/category/hotel/4by3/09.jpg" alt="Card image"></div>
 
-                                <!-- Image item -->
-                                <div><img src="assets/images/category/hotel/4by3/02.jpg" alt="Card image"></div>
-
-                                <!-- Image item -->
-                                <div><img src="assets/images/category/hotel/4by3/03.jpg" alt="Card image"></div>
-
-                                <!-- Image item -->
-                                <div><img src="assets/images/category/hotel/4by3/01.jpg" alt="Card image"></div>
                             </div>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
                         </div>
                         <!-- Slider END -->
 
@@ -500,376 +499,8 @@ All Clothings
                         </div>
                     </div>
                 </div>
-                <!-- Card item END -->
+                @endforeach
 
-                <!-- Card item START -->
-                <div class="col-md-6 col-xl-4">
-                    <div class="card shadow p-2 pb-0 h-100">
-                        <!-- Image -->
-                        <img src="assets/images/category/hotel/4by3/10.jpg" class="rounded-2" alt="Card image">
-
-                        <!-- Card body START -->
-                        <div class="card-body px-3 pb-0">
-                            <!-- Rating and cart -->
-                            <div class="d-flex justify-content-between mb-3">
-                                <a href="#" class="badge bg-dark text-white"><i class="bi fa-fw bi-star-fill me-2 text-warning"></i>4.0</a>
-                                <a href="#" class="h6 mb-0 z-index-2"><i class="bi fa-fw bi-bookmark"></i></a>
-                            </div>
-
-                            <!-- Title -->
-                            <h5 class="card-title"><a href="hotel-detail.html.htm">Courtyard by Marriott New York </a></h5>
-
-                            <!-- List -->
-                            <ul class="nav nav-divider mb-2 mb-sm-3">
-                                <li class="nav-item">Air Conditioning</li>
-                                <li class="nav-item">Wifi</li>
-                                <li class="nav-item">Pool</li>
-                                <li class="nav-item">More+</li>
-                            </ul>
-                        </div>
-                        <!-- Card body END -->
-
-                        <!-- Card footer START-->
-                        <div class="card-footer pt-0">
-                            <!-- Price and Button -->
-                            <div class="d-sm-flex justify-content-sm-between align-items-center">
-                                <!-- Price -->
-                                <div class="d-flex align-items-center">
-                                    <h5 class="fw-normal text-success mb-0 me-1">$1200</h5>
-                                    <span class="mb-0 me-2">/day</span>
-                                </div>
-                                <!-- Button -->
-                                <div class="mt-2 mt-sm-0 z-index-2">
-                                    <a href="hotel-detail.html.htm" class="btn btn-sm btn-primary-soft mb-0 w-100">View Detail<i class="bi bi-arrow-right ms-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card item END -->
-
-                <!-- Card item START -->
-                <div class="col-md-6 col-xl-4">
-                    <div class="card shadow p-2 pb-0 h-100">
-                        <!-- Image -->
-                        <img src="assets/images/category/hotel/4by3/08.jpg" class="rounded-2" alt="Card image">
-
-                        <!-- Card body START -->
-                        <div class="card-body px-3 pb-0">
-                            <!-- Rating and cart -->
-                            <div class="d-flex justify-content-between mb-3">
-                                <a href="#" class="badge bg-dark text-white"><i class="bi fa-fw bi-star-fill me-2 text-warning"></i>4.8</a>
-                                <a href="#" class="h6 mb-0 z-index-2"><i class="bi fa-fw bi-bookmark-fill text-danger"></i></a>
-                            </div>
-
-                            <!-- Title -->
-                            <h5 class="card-title"><a href="hotel-detail.html.htm">Club Quarters Hotel</a></h5>
-
-                            <!-- List -->
-                            <ul class="nav nav-divider mb-2 mb-sm-3">
-                                <li class="nav-item">Air Conditioning</li>
-                                <li class="nav-item">Wifi</li>
-                                <li class="nav-item">Kitchen</li>
-                                <li class="nav-item">Pool</li>
-                            </ul>
-                        </div>
-                        <!-- Card body END -->
-
-                        <!-- Card footer START-->
-                        <div class="card-footer pt-0">
-                            <!-- Price and Button -->
-                            <div class="d-sm-flex justify-content-sm-between align-items-center">
-                                <!-- Price -->
-                                <div class="d-flex align-items-center">
-                                    <h5 class="fw-normal text-success mb-0 me-1">$980</h5>
-                                    <span class="mb-0 me-2">/day</span>
-                                </div>
-                                <!-- Button -->
-                                <div class="mt-2 mt-sm-0 z-index-2">
-                                    <a href="hotel-detail.html.htm" class="btn btn-sm btn-primary-soft mb-0 w-100">View Detail<i class="bi bi-arrow-right ms-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card item END -->
-
-                <!-- Card item START -->
-                <div class="col-md-6 col-xl-4">
-                    <div class="card shadow p-2 pb-0 h-100">
-                        <!-- Image -->
-                        <img src="assets/images/category/hotel/4by3/07.jpg" class="rounded-2" alt="Card image">
-
-                        <!-- Card body START -->
-                        <div class="card-body px-3 pb-0">
-                            <!-- Rating and cart -->
-                            <div class="d-flex justify-content-between mb-3">
-                                <a href="#" class="badge bg-dark text-white"><i class="bi fa-fw bi-star-fill me-2 text-warning"></i>4.8</a>
-                                <a href="#" class="h6 mb-0 z-index-2"><i class="bi fa-fw bi-bookmark-fill text-danger"></i></a>
-                            </div>
-
-                            <!-- Title -->
-                            <h5 class="card-title"><a href="hotel-detail.html.htm">Beverly Hills Marriott</a></h5>
-
-                            <!-- List -->
-                            <ul class="nav nav-divider mb-2 mb-sm-3">
-                                <li class="nav-item">Air Conditioning</li>
-                                <li class="nav-item">Wifi</li>
-                                <li class="nav-item">Kitchen</li>
-                                <li class="nav-item">Pool</li>
-                            </ul>
-                        </div>
-                        <!-- Card body END -->
-
-                        <!-- Card footer START-->
-                        <div class="card-footer pt-0">
-                            <!-- Price and Button -->
-                            <div class="d-sm-flex justify-content-sm-between align-items-center">
-                                <!-- Price -->
-                                <div class="d-flex align-items-center">
-                                    <h5 class="fw-normal text-success mb-0 me-1">$1400</h5>
-                                    <span class="mb-0 me-2">/day</span>
-                                </div>
-                                <!-- Button -->
-                                <div class="mt-2 mt-sm-0">
-                                    <a href="hotel-detail.html.htm" class="btn btn-sm btn-primary-soft mb-0 w-100">View Detail<i class="bi bi-arrow-right ms-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card item END -->
-
-                <!-- Card item START -->
-                <div class="col-md-6 col-xl-4">
-                    <div class="card shadow p-2 pb-0 h-100">
-                        <!-- Image -->
-                        <img src="assets/images/category/hotel/4by3/02.jpg" class="rounded-2" alt="Card image">
-
-                        <!-- Card body START -->
-                        <div class="card-body px-3 pb-0">
-                            <!-- Rating and cart -->
-                            <div class="d-flex justify-content-between mb-3">
-                                <a href="#" class="badge bg-dark text-white"><i class="bi fa-fw bi-star-fill me-2 text-warning"></i>4.5</a>
-                                <a href="#" class="h6 mb-0 z-index-2"><i class="bi fa-fw bi-bookmark"></i></a>
-                            </div>
-
-                            <!-- Title -->
-                            <h5 class="card-title"><a href="hotel-detail.html.htm">Courtyard by Marriott New York </a></h5>
-
-                            <!-- List -->
-                            <ul class="nav nav-divider mb-2 mb-sm-3">
-                                <li class="nav-item">Air Conditioning</li>
-                                <li class="nav-item">Wifi</li>
-                                <li class="nav-item">Kitchen</li>
-                                <li class="nav-item">Pool</li>
-                            </ul>
-                        </div>
-                        <!-- Card body END -->
-
-                        <!-- Card footer START-->
-                        <div class="card-footer pt-0">
-                            <!-- Price and Button -->
-                            <div class="d-sm-flex justify-content-sm-between align-items-center">
-                                <!-- Price -->
-                                <div class="d-flex align-items-center">
-                                    <h5 class="fw-normal text-success mb-0 me-1">$680</h5>
-                                    <span class="mb-0 me-2">/day</span>
-                                </div>
-                                <!-- Button -->
-                                <div class="mt-2 mt-sm-0">
-                                    <a href="hotel-detail.html.htm" class="btn btn-sm btn-primary-soft mb-0 w-100">View Detail<i class="bi bi-arrow-right ms-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card item END -->
-
-                <!-- Card item START -->
-                <div class="col-md-6 col-xl-4">
-                    <div class="card shadow p-2 pb-0 h-100">
-                        <!-- Image -->
-                        <img src="assets/images/category/hotel/4by3/05.jpg" class="rounded-2" alt="Card image">
-
-                        <!-- Card body START -->
-                        <div class="card-body px-3 pb-0">
-                            <!-- Rating and cart -->
-                            <div class="d-flex justify-content-between mb-3">
-                                <a href="#" class="badge bg-dark text-white"><i class="bi fa-fw bi-star-fill me-2 text-warning"></i>4.4</a>
-                                <a href="#" class="h6 mb-0 z-index-2"><i class="bi fa-fw bi-bookmark"></i></a>
-                            </div>
-
-                            <!-- Title -->
-                            <h5 class="card-title"><a href="hotel-detail.html.htm">Park Plaza Lodge Hotel</a></h5>
-
-                            <!-- List -->
-                            <ul class="nav nav-divider mb-2 mb-sm-3">
-                                <li class="nav-item">Air Conditioning</li>
-                                <li class="nav-item">Wifi</li>
-                                <li class="nav-item">Kitchen</li>
-                                <li class="nav-item">More+</li>
-                            </ul>
-                        </div>
-                        <!-- Card body END -->
-
-                        <!-- Card footer START-->
-                        <div class="card-footer pt-0">
-                            <!-- Price and Button -->
-                            <div class="d-sm-flex justify-content-sm-between align-items-center">
-                                <!-- Price -->
-                                <div class="d-flex align-items-center">
-                                    <h5 class="fw-normal text-success mb-0 me-1">$740</h5>
-                                    <span class="mb-0 me-2">/day</span>
-                                </div>
-                                <!-- Button -->
-                                <div class="mt-2 mt-sm-0">
-                                    <a href="hotel-detail.html.htm" class="btn btn-sm btn-primary-soft mb-0 w-100">View Detail<i class="bi bi-arrow-right ms-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <!-- Card item END -->
-
-                <!-- Card item START -->
-                <div class="col-md-6 col-xl-4">
-                    <div class="card shadow p-2 pb-0 h-100">
-                        <!-- Image -->
-                        <img src="assets/images/category/hotel/4by3/04.jpg" class="rounded-2" alt="Card image">
-
-                        <!-- Card body START -->
-                        <div class="card-body px-3 pb-0">
-                            <!-- Rating and cart -->
-                            <div class="d-flex justify-content-between mb-3">
-                                <a href="#" class="badge bg-dark text-white"><i class="bi fa-fw bi-star-fill me-2 text-warning"></i>4.0</a>
-                                <a href="#" class="h6 mb-0 z-index-2"><i class="bi fa-fw bi-bookmark"></i></a>
-                            </div>
-
-                            <!-- Title -->
-                            <h5 class="card-title"><a href="hotel-detail.html.htm">Royal Beach Resort</a></h5>
-
-                            <!-- List -->
-                            <ul class="nav nav-divider mb-2 mb-sm-3">
-                                <li class="nav-item">Air Conditioning</li>
-                                <li class="nav-item">Wifi</li>
-                                <li class="nav-item">Kitchen</li>
-                                <li class="nav-item">Pool</li>
-                            </ul>
-                        </div>
-                        <!-- Card body END -->
-
-                        <!-- Card footer START-->
-                        <div class="card-footer pt-0">
-                            <!-- Price and Button -->
-                            <div class="d-sm-flex justify-content-sm-between align-items-center">
-                                <!-- Price -->
-                                <div class="d-flex align-items-center">
-                                    <h5 class="fw-normal text-success mb-0 me-1">$570</h5>
-                                    <span class="mb-0 me-2">/day</span>
-                                </div>
-                                <!-- Button -->
-                                <div class="mt-2 mt-sm-0">
-                                    <a href="hotel-detail.html.htm" class="btn btn-sm btn-primary-soft mb-0 w-100">View Detail<i class="bi bi-arrow-right ms-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card item END -->
-
-                <!-- Card item START -->
-                <div class="col-md-6 col-xl-4">
-                    <div class="card shadow p-2 pb-0 h-100">
-                        <!-- Image -->
-                        <img src="assets/images/category/hotel/4by3/03.jpg" class="rounded-2" alt="Card image">
-
-                        <!-- Card body START -->
-                        <div class="card-body px-3 pb-0">
-                            <!-- Rating and cart -->
-                            <div class="d-flex justify-content-between mb-3">
-                                <a href="#" class="badge bg-dark text-white"><i class="bi fa-fw bi-star-fill me-2 text-warning"></i>3.8</a>
-                                <a href="#" class="h6 mb-0 z-index-2"><i class="bi fa-fw bi-bookmark-fill text-danger"></i></a>
-                            </div>
-
-                            <!-- Title -->
-                            <h5 class="card-title"><a href="hotel-detail.html.htm">Pride moon Village Resort & Spa</a></h5>
-
-                            <!-- List -->
-                            <ul class="nav nav-divider mb-2 mb-sm-3">
-                                <li class="nav-item">Air Conditioning</li>
-                                <li class="nav-item">Wifi</li>
-                                <li class="nav-item">Kitchen</li>
-                                <li class="nav-item">Pool</li>
-                            </ul>
-                        </div>
-                        <!-- Card body END -->
-
-                        <!-- Card footer START-->
-                        <div class="card-footer pt-0">
-                            <!-- Price and Button -->
-                            <div class="d-sm-flex justify-content-sm-between align-items-center">
-                                <!-- Price -->
-                                <div class="d-flex align-items-center">
-                                    <h5 class="fw-normal text-success mb-0 me-1">$896</h5>
-                                    <span class="mb-0 me-2">/day</span>
-                                </div>
-                                <!-- Button -->
-                                <div class="mt-2 mt-sm-0">
-                                    <a href="hotel-detail.html.htm" class="btn btn-sm btn-primary-soft mb-0 w-100">View Detail<i class="bi bi-arrow-right ms-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card item END -->
-
-                <!-- Card item START -->
-                <div class="col-md-6 col-xl-4">
-                    <div class="card shadow p-2 pb-0 h-100">
-                        <!-- Image -->
-                        <img src="assets/images/category/hotel/4by3/01.jpg" class="rounded-2" alt="Card image">
-
-                        <!-- Card body START -->
-                        <div class="card-body px-3 pb-0">
-                            <!-- Rating and cart -->
-                            <div class="d-flex justify-content-between mb-3">
-                                <a href="#" class="badge bg-dark text-white"><i class="bi fa-fw bi-star-fill me-2 text-warning"></i>4.0</a>
-                                <a href="#" class="h6 mb-0 z-index-2"><i class="bi fa-fw bi-bookmark"></i></a>
-                            </div>
-
-                            <!-- Title -->
-                            <h5 class="card-title"><a href="hotel-detail.html.htm">Carina Beach Resort</a></h5>
-
-                            <!-- List -->
-                            <ul class="nav nav-divider mb-2 mb-sm-3">
-                                <li class="nav-item">Air Conditioning</li>
-                                <li class="nav-item">Wifi</li>
-                                <li class="nav-item">Kitchen</li>
-                                <li class="nav-item">Pool</li>
-                            </ul>
-                        </div>
-                        <!-- Card body END -->
-
-                        <!-- Card footer START-->
-                        <div class="card-footer pt-0">
-                            <!-- Price and Button -->
-                            <div class="d-sm-flex justify-content-sm-between align-items-center">
-                                <!-- Price -->
-                                <div class="d-flex align-items-center">
-                                    <h5 class="fw-normal text-success mb-0 me-1">$475</h5>
-                                    <span class="mb-0 me-2">/day</span>
-                                </div>
-                                <!-- Button -->
-                                <div class="mt-2 mt-sm-0">
-                                    <a href="hotel-detail.html.htm" class="btn btn-sm btn-primary-soft mb-0 w-100">View Detail<i class="bi bi-arrow-right ms-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card item END -->
 
             </div> <!-- Row END -->
 

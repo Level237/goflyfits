@@ -234,17 +234,13 @@ GoFlyFits
                 @foreach ($clothings as $clothing)
                 <div class="col-sm-6 col-lg-4 col-xl-3">
                     <div class="card shadow h-100">
-                        <div class="position-relative rounded" style="background: url({{ Storage::url($clothing->clothing_profile) }});background-size:cover;background-repeat:no-repeat;background-position:top">
+                        <div class="position-relative">
                             <!-- Image -->
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <div style="z-index: 888;background:#00000033;position:absolute;inset:0" class="absolute">
-
+                            <img src="{{ Storage::url($clothing->clothing_profile) }}" class="card-img-top" alt="Card image">
+                            <!-- Overlay -->
+                            <div class="card-img-overlay p-3 z-index-1">
+                                <div class="badge text-bg-dark"><i class="fa-solid fa-building-columns fa-fw text-warning"></i> Museum</div>
+                                <div class="badge text-bg-success">Open</div>
                             </div>
                         </div>
 
@@ -265,10 +261,6 @@ GoFlyFits
                                     </div>
                                     <div style="font-size: 11px" class="badge bg-primary bg-opacity-10 p-2 text-success">{{ $clothing->categories[0]->category_title }}</div>
                                 </div>
-
-
-
-
 
                                 <li class="list-group-item small pb-0">
 

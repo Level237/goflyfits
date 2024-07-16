@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Clothing;
 use Illuminate\Http\Request;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class ClothingController extends Controller
 {
@@ -35,12 +36,13 @@ class ClothingController extends Controller
         $clothing=new Clothing;
         $clothing->title=$request->title;
         $clothing->description=$request->description;
+        $resizeImageAndGetImageName=$this->resizeImage($request->file("image"));
         $clothing->price=$request->price;
         $clothing->size=$request->size;
         $clothing->source=$request->source;
         $clothing->slug=$this->slugify($request->title);
-        $image_path = $request->file('image')->store('clothings', 'public');
-        $clothing->clothing_profile=$image_path;
+        //$image_path = $request->file('image')->store('clothings', 'public');
+        $clothing->clothing_profile="clothings/".$resizeImageAndGetImageName;
         if($clothing->save()){
 
                 foreach($request->categories as $categorie){
@@ -51,6 +53,15 @@ class ClothingController extends Controller
         }
     }
 
+    public function resizeImage($image){
+        $image_name = uniqid() .'.'. $image->getClientOriginalExtension();
+        $path = public_path('storage/clothings/');
+        $imgx = Image::make($image);
+        $imgx->resize(600, 500, function ($constraint) {
+
+        })->save($path.'/'.$image_name);
+        return $image_name;
+    }
     /**
      * Display the specified resource.
      */
