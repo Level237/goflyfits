@@ -43,8 +43,8 @@
 							<li class="dropdown-submenu dropend">
 								<a class="dropdown-item dropdown-toggle" href="#">Par Ville</a>
 								<ul class="dropdown-menu" data-bs-popper="none">
-									<li> <a class="dropdown-item" href="index-flight.html.htm">douala</a></li>
-									<li> <a class="dropdown-item" href="flight-list.html.htm">yaoundé</a></li>
+									<li> <a class="dropdown-item" href="clothings?town=douala">douala</a></li>
+									<li> <a class="dropdown-item" href="clothings?town=yaoundé">yaoundé</a></li>
 								</ul>
 							</li>
 							<li> <a class="dropdown-item" href="{{ route('all.clothing') }}">All Clothings</a></li>

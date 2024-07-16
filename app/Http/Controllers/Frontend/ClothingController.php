@@ -20,12 +20,18 @@ class ClothingController extends Controller
 
     public function getClothing(Request $request){
 
-        $category=Category::where("category_title",$request->category)->first();
-        $category_name=$category->category_title;
-        $clothings=Clothing::join('category_clothing','category_clothing.clothing_id','clothing.id')
-        ->join('categories','categories.id','category_clothing.category_id')
-        ->where('category_clothing.category_id',$category->id)
-        ->get();
+        if($request->category){
+            $category=Category::where("category_title",$request->category)->first();
+            $category_name=$category->category_title;
+            $clothings=Clothing::join('category_clothing','category_clothing.clothing_id','clothing.id')
+            ->join('categories','categories.id','category_clothing.category_id')
+            ->where('category_clothing.category_id',$category->id)
+            ->get();
+        }
+        if($request->town){
+            $category_name=null;
+            $clothings=Clothing::where('source',$request->town)->get();
+        }
         //$clothing=Clothing::find(15);
 
         //return $clothing->categories;
