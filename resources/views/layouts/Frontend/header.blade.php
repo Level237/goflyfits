@@ -3,7 +3,7 @@
 	<nav class="navbar navbar-dark navbar-expand-xl">
 		<div class="container">
 			<!-- Logo START -->
-			<a class="navbar-brand" href="index.html-1.htm">
+			<a class="navbar-brand" href="{{ route('homepage') }}">
 				<img class="navbar-brand-item" src="assets/images/logo-light.svg" alt="logo">
 			</a>
 			<!-- Logo END -->
@@ -34,7 +34,7 @@
 								<a class="dropdown-item dropdown-toggle" href="#">Par Category</a>
 								<ul class="dropdown-menu" data-bs-popper="none">
                                     @foreach ($categories as $category)
-                                    <li> <a class="dropdown-item" href="index.html-1.htm">{{ $category->category_title }}</a></li>
+                                    <li> <a class="dropdown-item" href="clothings?category={{ $category->category_title }}">{{ $category->category_title }}</a></li>
                                     @endforeach
 								</ul>
 							</li>

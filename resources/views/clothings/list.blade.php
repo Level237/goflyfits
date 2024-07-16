@@ -464,9 +464,16 @@ All Clothings
 
                             <!-- List -->
                             <div class="grid-cols-3">
-                                @foreach ($clothing->categories as $category)
-                                <div style="margin-bottom: 6px;font-size:12px" class="badge bg-dark text-white">{{ $category->category_title }}</div>
-                                @endforeach
+
+                                @if(isset($category_name))
+                                    <div style="margin-bottom: 6px;font-size:12px" class="badge bg-dark text-white">{{ $clothing->category_title }}</div>
+                                @else
+                                    @foreach ($clothing->categories as $category)
+
+                                    <div style="margin-bottom: 6px;font-size:12px" class="badge bg-dark text-white">{{ $category->category_title }}</div>
+
+                                    @endforeach
+                                @endif
                             </div>
                         </div>
                         <!-- Card body END -->
