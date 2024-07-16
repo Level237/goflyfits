@@ -33,7 +33,8 @@ Route::post('step-final',[AuthStepController::class,"stepFinal"])->name("stepFin
 //List and search clothing
 Route::get('all/clothings',[FrontendClothingController::class,'allClothing'])->name('all.clothing');
 
-
+//Detail clothing
+Route::get('clothing/{slug}',[ClothingController::class,'show'])->name('clothing.show');
 
 Route::middleware(['auth','admin'])->name('admin.')->prefix('admin')->group(function(){
     Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard');

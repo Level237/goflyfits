@@ -20,7 +20,7 @@ class ClothingCategorySeeder extends Seeder
 // Populate the pivot table
 Clothing::all()->each(function ($clothings) use ($category) {
     $clothings->categories()->attach(
-        $category->random(rand(1, 8))->pluck('id')->toArray()
+        $category->random(rand(1, 3))->pluck('id')->toArray()
     );
 });
     }

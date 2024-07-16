@@ -243,9 +243,9 @@ GoFlyFits
                             <br/>
                             <br/>
                             <br/>
-                            <br/>
-                            <br/>
-                            <br/>
+                            <div style="z-index: 888;background:#00000033;position:absolute;inset:0" class="absolute">
+
+                            </div>
                         </div>
 
                         <!-- Card body START -->
@@ -256,10 +256,22 @@ GoFlyFits
                             <!-- Address and Contact -->
                             <ul class="list-group list-group-borderless mb-0">
                                 <li class="list-group-item small pb-0">
-                                    <i class="bi bi-pin-map-fill fa-fw h6 small mb-0"></i> W Century Blvd, Los Angeles
+                                    <i class="bi bi-pin-map-fill fa-fw h6 small mb-0"></i> {{ $clothing->source }}
                                 </li>
+                                <div style="justify-content:space-between" class="d-flex mt-2">
+
+                                    <div class="class="list-group-item small pb-0"">
+                                        <i class="bi bi-pin-map-fill fa-fw h6 small mb-0"></i>Taille: {{ $clothing->size }}
+                                    </div>
+                                    <div style="font-size: 11px" class="badge bg-primary bg-opacity-10 p-2 text-success">{{ $clothing->categories[0]->category_title }}</div>
+                                </div>
+
+
+
+
+
                                 <li class="list-group-item small pb-0">
-                                    <i class="bi bi-telephone-fill fa-fw h6 small mb-0"></i> +(125) 548 996
+
                                 </li>
                             </ul>
                         </div>

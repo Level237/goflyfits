@@ -12,5 +12,7 @@ class ClothingController extends Controller
         return view('clothings.list');
     }
 
+    public function show(){
 
+    }
 }
