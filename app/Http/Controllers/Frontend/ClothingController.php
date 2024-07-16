@@ -10,7 +10,9 @@ class ClothingController extends Controller
 {
     public function allClothing(){
 
-        $clothings=Clothing::all();
+        $clothings=Clothing::query()
+        ->orderBy('id','desc')
+        ->get();
         return view('clothings.list',compact('clothings'));
     }
 

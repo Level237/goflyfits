@@ -440,23 +440,14 @@ All Clothings
                 <div class="col-md-6 col-xl-4">
                     <div class="card shadow p-2 pb-0 h-100">
                         <!-- Overlay item -->
-                        <div class="position-absolute top-0 start-0 z-index-1 m-4">
-                            <div class="badge bg-danger text-white">30% Off</div>
-                        </div>
+
 
                         <!-- Slider START -->
-                        <div style="background: url({{ Storage::url($clothing->clothing_profile) }});background-size:cover;background-repeat:no-repeat;background-position:top" class="tiny-slider arrow-round arrow-xs arrow-dark rounded-2">
+                        <div class="tiny-slider arrow-round arrow-xs arrow-dark rounded-2 overflow-hidden">
                             <div class="tiny-slider-inner" data-autoplay="false" data-arrow="true" data-dots="false" data-items="1">
                                 <!-- Image item -->
-
+                                <div><img src="{{ Storage::url($clothing->clothing_profile) }}" alt="Card image"></div>
                             </div>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
                         </div>
                         <!-- Slider END -->
 
@@ -469,27 +460,26 @@ All Clothings
                             </div>
 
                             <!-- Title -->
-                            <h5 class="card-title"><a href="hotel-detail.html.htm">Hotel Baljees Regency</a></h5>
+                            <h5 class="card-title"><a href="hotel-detail.html.htm">{{ $clothing->title }}</a></h5>
 
                             <!-- List -->
-                            <ul class="nav nav-divider mb-2 mb-sm-3">
-                                <li class="nav-item">Air Conditioning</li>
-                                <li class="nav-item">Wifi</li>
-                                <li class="nav-item">Kitchen</li>
-                                <li class="nav-item">Pool</li>
-                            </ul>
+                            <div class="grid-cols-3">
+                                @foreach ($clothing->categories as $category)
+                                <div style="margin-bottom: 6px;font-size:12px" class="badge bg-dark text-white">{{ $category->category_title }}</div>
+                                @endforeach
+                            </div>
                         </div>
                         <!-- Card body END -->
 
                         <!-- Card footer START-->
-                        <div class="card-footer pt-0">
+                        <div class="card-footer pt-0 mt-2">
                             <!-- Price and Button -->
                             <div class="d-sm-flex justify-content-sm-between align-items-center">
                                 <!-- Price -->
                                 <div class="d-flex align-items-center">
-                                    <h5 class="fw-normal text-success mb-0 me-1">$750</h5>
+                                    <h5 class="fw-normal text-success mb-0 me-1">${{ $clothing->price }}</h5>
                                     <span class="mb-0 me-2">/day</span>
-                                    <span class="text-decoration-line-through">$1000</span>
+
                                 </div>
                                 <!-- Button -->
                                 <div class="mt-2 mt-sm-0">
