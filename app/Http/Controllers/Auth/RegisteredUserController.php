@@ -44,7 +44,8 @@ class RegisteredUserController extends Controller
             'town'=>$town,
             'phone_number'=>$phone_number,
             'color'=>$this->randomColor(),
-            'role_id'=>2
+            'role_id'=>2,
+            'isChoice'=>1
         ]);
         foreach($preferences as $preference){
             $user->preferences()->attach($preference);

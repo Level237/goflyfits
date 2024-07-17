@@ -233,7 +233,7 @@ GoFlyFits
                 <!-- Card item -->
 
                 @auth
-                    @if(auth()->user()->preferences)
+                    @if(count(auth()->user()->preferences)>0)
 
                     @endif
                 @endauth
