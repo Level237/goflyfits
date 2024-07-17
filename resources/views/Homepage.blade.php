@@ -232,11 +232,6 @@ GoFlyFits
             <div class="row g-4">
                 <!-- Card item -->
 
-                @auth
-                    @if(count(auth()->user()->preferences)>0)
-
-                    @endif
-                @endauth
                 @foreach ($clothings as $clothing)
                 <div class="col-sm-6 col-lg-4 col-xl-3">
                     <div class="card shadow h-100">
@@ -262,7 +257,12 @@ GoFlyFits
                                     <div class="class="list-group-item small pb-0"">
                                         <i class="bi bi-pin-map-fill fa-fw h6 small mb-0"></i>Taille: {{ $clothing->size }}
                                     </div>
+                                    @if($isPreferences)
+                                    <div style="font-size: 11px" class="badge bg-primary bg-opacity-10 p-2 text-success">{{ $clothing->category_title }}</div>
+                                    @else
                                     <div style="font-size: 11px" class="badge bg-primary bg-opacity-10 p-2 text-success">{{ $clothing->categories[0]->category_title }}</div>
+                                    @endif
+
                                 </div>
 
                                 <li class="list-group-item small pb-0">

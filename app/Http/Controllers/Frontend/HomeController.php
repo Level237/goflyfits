@@ -9,12 +9,23 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
 
-        $clothings=Clothing::inRandomOrder()->take(8)->get();
         $categories=Category::all();
+        if($request->session()->has("preferences")){
+            $clothings=Clothing::join('category_clothing','category_clothing.clothing_id','clothing.id')
+            ->join('categories','categories.id','category_clothing.category_id')
+            ->whereIn('category_clothing.category_id',$request->session()->get('preferences'))
+            ->inRandomOrder()->take(8)
+            ->get();
+            $isPreferences=true;
+        }else{
+            $clothings=Clothing::inRandomOrder()->take(8)->get();
+            $isPreferences=false;
+        }
 
-        //return count(auth()->user()->preferences);
-        return view('Homepage',compact('categories','clothings'));
+
+        //return $clothings;
+        return view('Homepage',compact('categories','clothings','isPreferences'));
     }
 }

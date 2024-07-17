@@ -33,6 +33,14 @@ class AuthenticatedSessionController extends Controller
             return to_route('admin.dashboard');
         }
         if(auth()->user()->role_id===2){
+            $preferenceArray=[];
+            if(isset(auth()->user()->preferences)){
+                foreach(auth()->user()->preferences as $preferences){
+                    array_push($preferenceArray,$preferences->id);
+                }
+                $request->session()->put("preferences",$preferenceArray);
+            }
+
             return to_route("customer.dashboard");
         }
     }

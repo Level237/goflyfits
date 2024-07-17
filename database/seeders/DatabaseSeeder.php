@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -25,5 +26,9 @@ class DatabaseSeeder extends Seeder
         $this->call(CategorySeeder::class);
         $this->call(ClothingSeeder::class);
         $this->call(ClothingCategorySeeder::class);
+
+        $path = 'database/sql_files/category_user.sql';
+        DB::unprepared(file_get_contents($path));
+        $this->command->info('category table seeded!');
     }
 }
