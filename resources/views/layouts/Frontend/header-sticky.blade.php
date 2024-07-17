@@ -59,7 +59,14 @@
 
 					<!-- Nav item Link -->
 					<li class="nav-item"> <a class="nav-link" href="admin-dashboard.html.htm">Contact</a> </li>
-
+                    @auth
+                    @if(auth()->user()->role_id===1)
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard</a> </li>
+                    @endif
+                    @if(auth()->user()->role_id===2)
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('customer.dashboard') }}">Dashboard</a> </li>
+                @endif
+                @endauth
 					<!-- Nav item Link -->
 
 
@@ -175,7 +182,12 @@
 						<li><a class="dropdown-item" href="#"><i class="bi bi-heart fa-fw me-2"></i>My Wishlist</a></li>
 						<li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Settings</a></li>
 						<li><a class="dropdown-item" href="#"><i class="bi bi-info-circle fa-fw me-2"></i>Help Center</a></li>
-						<li><a class="dropdown-item bg-danger-soft-hover" href="#"><i class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
+						<li>
+                            <form method="POST" action="{{ route('logout') }}" id="logout-form">
+                                @csrf
+                              </form>
+                              <a style="cursor: pointer" class="dropdown-item bg-danger-soft-hover" onclick="event.preventDefault();
+                              document.getElementById('logout-form').submit();"><i class="bi bi-power fa-fw me-2"></i>Deconnexion</a></li>
 					</ul>
 				</li>
                 @endauth
