@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\Admin\CategoryController;
 use App\Http\Controllers\Backend\Admin\ClothingController;
 use App\Http\Controllers\Backend\Admin\DashboardController;
 use App\Http\Controllers\Backend\Customer\DashboardController as CustomerDashboardController;
+use App\Http\Controllers\Backend\Customer\PreferenceController;
 use App\Http\Controllers\Frontend\ClothingController as FrontendClothingController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\ProfileController;
@@ -45,6 +46,7 @@ Route::middleware(['auth','admin'])->name('admin.')->prefix('admin')->group(func
 
     Route::middleware(['auth','customer'])->name('customer.')->prefix('customer')->group(function(){
         Route::get('dashboard',[CustomerDashboardController::class,'index'])->name('dashboard');
+        Route::get('preferences',[PreferenceController::class,'index'])->name('preferences');
         });
 
 

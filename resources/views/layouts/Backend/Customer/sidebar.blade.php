@@ -31,10 +31,10 @@
                 <!-- Sidebar menu item START -->
                 <ul class="nav nav-pills-primary-soft flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" href="account-profile.html.htm"><i class="bi bi-person fa-fw me-2"></i>My Profile</a>
+                        <a class="nav-link active" href="{{ route('customer.dashboard') }}"><i class="bi bi-person fa-fw me-2"></i>Profil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="account-bookings.html.htm"><i class="bi bi-ticket-perforated fa-fw me-2"></i>My Bookings</a>
+                        <a class="nav-link" href="{{ route('customer.preferences') }}"><i class="bi bi-ticket-perforated fa-fw me-2"></i>Mes préferences</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="account-travelers.html.htm"><i class="bi bi-people fa-fw me-2"></i>Travelers</a>
