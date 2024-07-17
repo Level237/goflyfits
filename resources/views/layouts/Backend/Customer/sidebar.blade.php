@@ -20,11 +20,11 @@
                 <!-- Avatar and content -->
                 <div class="text-center mb-3">
                     <!-- Avatar -->
-                    <div class="avatar avatar-xl mb-2">
-                        <img class="avatar-img rounded-circle border border-2 border-white" src="assets/images/avatar/01.jpg" alt="">
-                    </div>
-                    <h6 class="mb-0">Jacqueline Miller</h6>
-                    <a href="#" class="text-reset text-primary-hover small">hello@gmail.com</a>
+                    <div  class="avatar avatar-xl mb-2">
+                        <div style="background: {{ auth()->user()->color }}" class="avatar-img rounded-circle text-white"><span class="position-absolute top-50 start-50 translate-middle fw-bold">{{ auth()->user()->name[0] }}{{ auth()->user()->name[1] }}</span></div>
+                      </div>
+                    <h6 class="mb-0">{{ auth()->user()->name }}</h6>
+                    <a href="#" class="text-reset text-primary-hover small">{{ auth()->user()->email }}</a>
                     <hr>
                 </div>
 

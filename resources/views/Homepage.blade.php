@@ -231,6 +231,12 @@ GoFlyFits
 
             <div class="row g-4">
                 <!-- Card item -->
+
+                @auth
+                    @if(auth()->user()->preferences)
+
+                    @endif
+                @endauth
                 @foreach ($clothings as $clothing)
                 <div class="col-sm-6 col-lg-4 col-xl-3">
                     <div class="card shadow h-100">
@@ -239,8 +245,7 @@ GoFlyFits
                             <img src="{{ Storage::url($clothing->clothing_profile) }}" class="card-img-top" alt="Card image">
                             <!-- Overlay -->
                             <div class="card-img-overlay p-3 z-index-1">
-                                <div class="badge text-bg-dark"><i class="fa-solid fa-building-columns fa-fw text-warning"></i> Museum</div>
-                                <div class="badge text-bg-success">Open</div>
+                                <div class="badge text-bg-dark"><i class="fa-solid fa-map fa-fw text-warning mx-2"></i>{{ $clothing->source }}</div>
                             </div>
                         </div>
 
@@ -251,9 +256,7 @@ GoFlyFits
 
                             <!-- Address and Contact -->
                             <ul class="list-group list-group-borderless mb-0">
-                                <li class="list-group-item small pb-0">
-                                    <i class="bi bi-pin-map-fill fa-fw h6 small mb-0"></i> {{ $clothing->source }}
-                                </li>
+
                                 <div style="justify-content:space-between" class="d-flex mt-2">
 
                                     <div class="class="list-group-item small pb-0"">

@@ -14,7 +14,7 @@ class HomeController extends Controller
         $clothings=Clothing::inRandomOrder()->take(8)->get();
         $categories=Category::all();
 
-        //return $clothings;
+        //return count(auth()->user()->preferences);
         return view('Homepage',compact('categories','clothings'));
     }
 }
