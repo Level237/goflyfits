@@ -490,7 +490,7 @@ All Clothings
                                 </div>
                                 <!-- Button -->
                                 <div class="mt-2 mt-sm-0">
-                                    <a href="hotel-detail.html.htm" class="btn btn-sm btn-primary-soft mb-0 w-100">View Detail<i class="bi bi-arrow-right ms-2"></i></a>
+                                    <a href="{{ route('clothing.show',$clothing->slug) }}" class="btn btn-sm btn-primary-soft mb-0 w-100">View Detail<i class="bi bi-arrow-right ms-2"></i></a>
                                 </div>
                             </div>
                         </div>

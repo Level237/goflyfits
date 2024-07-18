@@ -65,9 +65,10 @@ class ClothingController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $slug)
     {
-        //
+        $clothing=Clothing::where('slug',$slug)->first();
+        return view('clothings.detail',compact('clothing'));
     }
 
     /**

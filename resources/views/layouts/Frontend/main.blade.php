@@ -159,6 +159,7 @@
 
 <!-- Vendors -->
 <script src="{{ asset('assets/vendor/choices/js/choices.min.js') }}"></script>
+<script src="{{ asset('assets/vendor/sticky-js/sticky.min.js') }}"></script>
 <script src="{{ asset('assets/vendor/tiny-slider/tiny-slider.js') }}"></script>
 <script src="{{ asset('assets/vendor/flatpickr/js/flatpickr.min.js') }}"></script>
 <script src="{{ asset('assets/vendor/glightbox/js/glightbox.js') }}"></script>
