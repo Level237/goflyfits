@@ -55,7 +55,7 @@ Préferences utilisateur
 
                         <!-- Button -->
                         <div class="mt-2 mt-md-0">
-                            <a href="#" class="btn btn-primary-soft mb-0">Modifier vos préferences</a>
+                            <a href="{{ route('customer.preferences.edit') }}" class="btn btn-primary-soft mb-0">Modifier vos préferences</a>
                         </div>
                     </div>
 

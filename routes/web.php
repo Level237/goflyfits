@@ -47,6 +47,8 @@ Route::middleware(['auth','admin'])->name('admin.')->prefix('admin')->group(func
     Route::middleware(['auth','customer'])->name('customer.')->prefix('customer')->group(function(){
         Route::get('dashboard',[CustomerDashboardController::class,'index'])->name('dashboard');
         Route::get('preferences',[PreferenceController::class,'index'])->name('preferences');
+        Route::put('preferences',[PreferenceController::class,'update'])->name('preferences.update');
+        Route::get('preferences/edit',[PreferenceController::class,'edit'])->name('preferences.edit');
         });
 
 

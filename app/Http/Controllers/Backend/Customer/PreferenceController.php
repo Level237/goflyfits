@@ -19,4 +19,18 @@ class PreferenceController extends Controller
             $categories=Category::whereIn("id",$categoriesPreferences)->get();
         return view('customer.preferences.index',compact('clothings','categories'));
     }
+
+    public function edit(Request $request){
+        $categoriesPreferences=$request->session()->get('preferences');
+        $categoriesSelected=Category::whereIn("id",$categoriesPreferences)->get();
+        $categories=Category::whereNotIn("id",$categoriesPreferences)->get();
+
+        //return $categories;
+        return view('customer.preferences.edit',compact('categories','categoriesSelected'));
+    }
+    public function update(Request $request){
+            $request->session()->put("preferences",$request->categories);
+
+            return to_route('customer.preferences');
+    }
 }
