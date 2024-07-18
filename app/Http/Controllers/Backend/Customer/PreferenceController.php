@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend\Customer;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Clothing;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PreferenceController extends Controller
@@ -30,7 +31,8 @@ class PreferenceController extends Controller
     }
     public function update(Request $request){
             $request->session()->put("preferences",$request->categories);
-
+            $user=User::find(auth()->user()->id);
+            $user->preferences()->sync($request->categories);
             return to_route('customer.preferences');
     }
 }
