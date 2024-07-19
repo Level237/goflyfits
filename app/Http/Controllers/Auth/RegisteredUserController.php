@@ -29,7 +29,7 @@ class RegisteredUserController extends Controller
      *
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function store()
+    public function store(Request $request)
     {
         $name=Session::get('name');
         $email=Session::get('email');
@@ -60,6 +60,7 @@ class RegisteredUserController extends Controller
             return to_route('admin.dashboard');
         }
         if(auth()->user()->role_id===2){
+
             return to_route("customer.dashboard");
         }
     }
