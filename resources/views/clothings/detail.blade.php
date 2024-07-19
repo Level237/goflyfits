@@ -124,183 +124,26 @@
                         </div>
                         <!-- Main cab list END -->
 
-                        <!-- Trip Details START -->
-                        <div class="card border">
-                            <!-- Card header -->
-                            <div class="card-header border-bottom bg-transparent">
-                                <h4 class="mb-0">Trip Details</h4>
-                            </div>
 
-                            <!-- Card body START -->
-                            <div class="card-body">
-                                <!-- Form START -->
-                                <form class="row g-4">
-                                    <!-- Input -->
-                                    <div class="col-md-6">
-                                        <div class="form-control-bg-light">
-                                            <label class="form-label">Pickup Address</label>
-                                            <input type="text" class="form-control form-control-lg" placeholder="Enter exact pick up address" value="36 new resort, New York">
-                                            <div class="form-text">This will help our cab driver reach you on time.</div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Input -->
-                                    <div class="col-md-6">
-                                        <div class="form-control-bg-light">
-                                            <label class="form-label">Drop Address</label>
-                                            <input type="text" class="form-control form-control-lg" placeholder="Enter drop address" value="street profit, New York">
-                                        </div>
-                                    </div>
-
-                                    <h5 class="mb-0 mt-4">Traveler Information</h5>
-
-                                    <!-- Radio button -->
-                                    <div class="col-md-4">
-                                        <label class="form-label">Gender</label>
-                                        <div>
-                                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" checked="">
-                                                <label class="btn btn-lg btn-light btn-dark-bg-check mb-0" for="btnradio1">Male</label>
-
-                                                <input type="radio" class="btn-check" name="btnradio" id="btnradio2">
-                                                <label class="btn btn-lg btn-light btn-dark-bg-check mb-0" for="btnradio2">Female</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Input -->
-                                    <div class="col-md-8">
-                                        <div class="form-control-bg-light">
-                                            <label class="form-label">Name</label>
-                                            <input type="text" class="form-control form-control-lg" placeholder="Enter your name">
-                                        </div>
-                                    </div>
-
-                                    <!-- Input -->
-                                    <div class="col-md-6">
-                                        <div class="form-control-bg-light">
-                                            <label class="form-label">Email id</label>
-                                            <input type="email" class="form-control form-control-lg" placeholder="Enter your email">
-                                        </div>
-                                    </div>
-
-                                    <!-- Input -->
-                                    <div class="col-md-6">
-                                        <div class="form-control-bg-light">
-                                            <label class="form-label">Mobile number</label>
-                                            <input type="text" class="form-control form-control-lg" placeholder="Enter your mobile number">
-                                        </div>
-                                    </div>
-                                </form>
-                                <!-- Form END -->
-                            </div>
-                            <!-- Card body END -->
-                        </div>
-                        <!-- Trip Details END -->
 
                         <!-- Driver and cab detail START -->
                         <div class="card bg-transparent">
 
                             <!-- Card header -->
                             <div class="card-header border-bottom bg-transparent px-0 pt-0">
-                                <h4 class="mb-0">Driver and Cab details</h4>
+                                <h4 class="mb-0">Description</h4>
                             </div>
 
                             <!-- Card body -->
                             <div class="card-body pt-4 p-0">
                                 <!-- List -->
-                                <ul>
-                                    <li class="mb-2">Cab and driver details will be shared on your registered phone. (22 Jan 2021 at 6:55 pm) </li>
-                                    <li class="mb-2">Due to traffic or any other unavoidable reason, the pickup may be delayed for 30 minutes.</li>
-                                    <li>For nighttime driving (between 11:00 pm to 7:00 am) on any of the nights, there will be a night driver charge of $100.</li>
-                                </ul>
-
-                                <!-- Cab images -->
-                                <h5>Cab Images</h5>
-
-                                <!-- Alert box -->
-                                <div class="alert alert-warning" role="alert">
-                                    All pictures shown are for illustration purposes only. The actual product may vary due to product enhancement.
+                                <div>
+                                    {{ $clothing->description }}
                                 </div>
 
-                                <!-- Images -->
-                                <div class="row">
-                                    <!-- Slider START -->
-                                    <div class="tiny-slider arrow-round arrow-xs arrow-dark">
-                                        <div class="tiny-slider-inner rounded-2" data-autoplay="false" data-arrow="true" data-dots="false" data-items="3" data-items-sm="2">
-                                            <!-- Image item -->
-                                            <div>
-                                                <a class="w-100 h-100" data-glightbox="" data-gallery="gallery" href="assets/images/category/cab/4by3/02.jpg">
-                                                    <div class="card card-element-hover card-overlay-hover overflow-hidden">
-                                                        <!-- Image -->
-                                                        <img src="assets/images/category/cab/4by3/02.jpg" class="rounded-3" alt="">
-                                                        <!-- Full screen button -->
-                                                        <div class="hover-element w-100 h-100">
-                                                            <i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-1 p-2 lh-1"></i>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
 
-                                            <!-- Image item -->
-                                            <div>
-                                                <a class="w-100 h-100" data-glightbox="" data-gallery="gallery" href="assets/images/category/cab/4by3/01.jpg">
-                                                    <div class="card card-element-hover card-overlay-hover overflow-hidden">
-                                                        <!-- Image -->
-                                                        <img src="assets/images/category/cab/4by3/01.jpg" class="rounded-3" alt="">
-                                                        <!-- Full screen button -->
-                                                        <div class="hover-element w-100 h-100">
-                                                            <i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-1 p-2 lh-1"></i>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
 
-                                            <!-- Image item -->
-                                            <div>
-                                                <a class="w-100 h-100" data-glightbox="" data-gallery="gallery" href="assets/images/category/cab/4by3/03.jpg">
-                                                    <div class="card card-element-hover card-overlay-hover overflow-hidden">
-                                                        <!-- Image -->
-                                                        <img src="assets/images/category/cab/4by3/03.jpg" class="rounded-3" alt="">
-                                                        <!-- Full screen button -->
-                                                        <div class="hover-element w-100 h-100">
-                                                            <i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-1 p-2 lh-1"></i>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
 
-                                            <!-- Image item -->
-                                            <div>
-                                                <a class="w-100 h-100" data-glightbox="" data-gallery="gallery" href="assets/images/category/cab/4by3/04.jpg">
-                                                    <div class="card card-element-hover card-overlay-hover overflow-hidden">
-                                                        <!-- Image -->
-                                                        <img src="assets/images/category/cab/4by3/04.jpg" class="rounded-3" alt="">
-                                                        <!-- Full screen button -->
-                                                        <div class="hover-element w-100 h-100">
-                                                            <i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-1 p-2 lh-1"></i>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                            <!-- Image item -->
-                                            <div>
-                                                <a class="w-100 h-100" data-glightbox="" data-gallery="gallery" href="assets/images/category/cab/4by3/05.jpg">
-                                                    <div class="card card-element-hover card-overlay-hover overflow-hidden">
-                                                        <!-- Image -->
-                                                        <img src="assets/images/category/cab/4by3/05.jpg" class="rounded-3" alt="">
-                                                        <!-- Full screen button -->
-                                                        <div class="hover-element w-100 h-100">
-                                                            <i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-1 p-2 lh-1"></i>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Slider END -->
-                                </div>
                             </div>
 
                         </div>
@@ -354,37 +197,9 @@
                             <!-- Card body END -->
                         </div>
                         <!-- Inclusion & Exclusion END -->
+                        <div class="border-bottom bg-transparent">
 
-                        <!-- Safety Guidelines START -->
-                        <div class="card bg-transparent">
-                            <!-- Card header -->
-                            <div class="card-header border-bottom bg-transparent px-0 pt-0">
-                                <h4 class="mb-0">Safety Guidelines</h4>
-                            </div>
-
-                            <!-- Card body START -->
-                            <div class="card-body pt-4 p-0">
-                                <ul class="list-group list-group-borderless mb-0">
-                                    <li class="list-group-item h6 fw-light d-flex mb-0">
-                                        <i class="bi bi-arrow-right me-2"></i>All passengers coming to the state by road must show a COVID negative report (RT-PCR) not more than 72 hours old or a valid vaccination certificate. (Travel period should commence after 14 days from the 2nd dose)
-                                    </li>
-                                    <li class="list-group-item h6 fw-light d-flex mb-0">
-                                        <i class="bi bi-arrow-right me-2"></i>Dependent on so extremely delivered by. Yet no jokes worse her why. Bed one supposing breakfast day fulfilled off depending questions.
-                                    </li>
-                                    <li class="list-group-item h6 fw-light d-flex mb-0">
-                                        <i class="bi bi-arrow-right me-2"></i>Whatever boy her exertion his extended. Ecstatic followed handsome drawings entirely Mrs one yet outweigh.
-                                    </li>
-                                    <li class="list-group-item h6 fw-light d-flex mb-0">
-                                        <i class="bi bi-arrow-right me-2"></i>Meant balls it if up doubt small purse. Required his you put the outlived answered position. A pleasure exertion if believed provided to.
-                                    </li>
-                                    <li class="list-group-item h6 fw-light d-flex mb-0">
-                                        <i class="bi bi-arrow-right me-2"></i>All led out world this music while asked. Paid mind even sons does he door no. Attended overcame repeated it is perceived Marianne in.
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Card body END -->
                         </div>
-                        <!-- Safety Guidelines END -->
                     </div>
                 </div>
                 <!-- Main content END -->

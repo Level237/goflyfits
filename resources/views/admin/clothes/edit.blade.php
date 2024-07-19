@@ -25,8 +25,9 @@ Main content START -->
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-10 mx-auto">
-				<form class="vstack gap-4" method="POST" action="{{ route('admin.clothings.store') }}" enctype="multipart/form-data">
+				<form class="vstack gap-4" method="POST" action="{{ route('admin.clothings.update',$clothing->id) }}" enctype="multipart/form-data">
                     @csrf
+                    @method('PUT')
 					<!-- Owner Detail START -->
 					<div class="card shadow">
 						<!-- Card header -->
