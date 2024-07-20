@@ -21,8 +21,8 @@ return new class extends Migration
             ->restrictOnDelete();
             $table->foreignIdFor(Clothing::class)
             ->constrained()
-            ->restrictOnUpdate()
-            ->restrictOnDelete();
+            ->cascadeOnDelete()
+            ->cascadeOnUpdate();
             $table->timestamps();
         });
     }

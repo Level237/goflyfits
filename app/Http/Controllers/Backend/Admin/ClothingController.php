@@ -110,7 +110,13 @@ class ClothingController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $clothing=Clothing::find($id);
+        $clothing->delete();
+        foreach($clothing->categories as $category){
+            $clothing->categories->detach($category->id);
+        }
+
+        return back();
     }
 
     function slugify($string, $delimiter = '-') {
