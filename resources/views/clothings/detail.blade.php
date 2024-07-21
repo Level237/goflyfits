@@ -215,7 +215,7 @@
                             <ul class="list-group list-group-borderless mb-0">
                                 <li class="list-group-item d-flex justify-content-between">
                                     <span class="h6 fw-light mb-0">Base Price</span>
-                                    <span class="h6 fw-light mb-0">$260</span>
+                                    <span class="h6 fw-light mb-0">${{ $clothing->price }}</span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between">
                                     <span class="h6 fw-light mb-0">State Tax</span>

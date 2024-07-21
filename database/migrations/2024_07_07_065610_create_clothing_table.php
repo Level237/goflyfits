@@ -21,6 +21,9 @@ return new class extends Migration
             $table->string("source");
             $table->string('slug');
             $table->string('clothing_profile');
+            $table->boolean('isAvailable')->default(1);
+            $table->string('availableIn')->nullable();
+            $table->string('availableTo')->nullable();
             $table->timestamps();
         });
     }
