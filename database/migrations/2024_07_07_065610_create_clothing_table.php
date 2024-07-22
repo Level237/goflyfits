@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Category;
+use App\Models\Town;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -18,7 +19,10 @@ return new class extends Migration
             $table->text('description');
             $table->string('price');
             $table->string('size');
-            $table->string("source");
+            $table->foreignIdFor(Town::class)
+            ->constrained()
+            ->cascadeOnDelete()
+            ->cascadeOnUpdate();
             $table->string('slug');
             $table->string('clothing_profile');
             $table->boolean('isAvailable')->default(1);

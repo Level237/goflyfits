@@ -20,8 +20,6 @@
                         <!-- Title -->
                         <ul class="nav nav-divider align-items-center mb-0">
                             <li class="nav-item h4">{{ $clothing->source }}</li>
-                            <li class="nav-item h5 fw-light">disponibilité</li>
-                            <li class="nav-item h5 fw-light">22 Jan 2025 - 07.25 PM</li>
                         </ul>
 
                         <!-- Buttons -->
