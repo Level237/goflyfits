@@ -45,6 +45,7 @@
 								<ul class="dropdown-menu" data-bs-popper="none">
 									<li> <a class="dropdown-item" href="clothings?town=douala">douala</a></li>
 									<li> <a class="dropdown-item" href="clothings?town=yaoundé">yaoundé</a></li>
+                                    <li> <a class="dropdown-item" href="clothings?town=bafoussam">bafoussam</a></li>
 								</ul>
 							</li>
 							<li> <a class="dropdown-item" href="{{ route('all.clothing') }}">All Clothings</a></li>

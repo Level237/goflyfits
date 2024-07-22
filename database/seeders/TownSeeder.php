@@ -14,16 +14,16 @@ class TownSeeder extends Seeder
     public function run(): void
     {
         Town::create([
-            'town_name'=>"Douala",
+            'town_name'=>"douala",
         ]);
         Town::create([
-            'town_name'=>"Yaoundé",
+            'town_name'=>"yaoundé",
         ]);
         Town::create([
-            'town_name'=>"Bafoussam",
+            'town_name'=>"bafoussam",
         ]);
         Town::create([
-            'town_name'=>"Kribi",
+            'town_name'=>"kribi",
         ]);
 
         Town::create([

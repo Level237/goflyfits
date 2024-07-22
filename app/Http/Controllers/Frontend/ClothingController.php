@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Clothing;
+use App\Models\Town;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -30,7 +31,8 @@ class ClothingController extends Controller
         }
         if($request->town){
             $category_name=null;
-            $clothings=Clothing::where('source',$request->town)->get();
+            $town=Town::where('town_name',$request->town)->first();
+            $clothings=Clothing::where('town_id',$town->id)->get();
         }
         //$clothing=Clothing::find(15);
 
