@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Clothing;
+use App\Models\Town;
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManagerStatic as Image;
 
@@ -25,7 +26,8 @@ class ClothingController extends Controller
     public function create()
     {
         $categories=Category::all();
-        return view('admin.clothes.create',compact('categories'));
+        $towns=Town::all();
+        return view('admin.clothes.create',compact('categories','towns'));
     }
 
     /**
@@ -39,7 +41,7 @@ class ClothingController extends Controller
         $resizeImageAndGetImageName=$this->resizeImage($request->file("image"));
         $clothing->price=$request->price;
         $clothing->size=$request->size;
-        $clothing->source=$request->source;
+        $clothing->town_id=$request->town_id;
         $clothing->slug=$this->slugify($request->title);
         //$image_path = $request->file('image')->store('clothings', 'public');
         $clothing->clothing_profile="clothings/".$resizeImageAndGetImageName;

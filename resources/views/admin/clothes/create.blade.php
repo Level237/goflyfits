@@ -67,13 +67,11 @@ Main content START -->
 								<!-- State -->
 								<div class="col-md-12">
 									<label class="form-label">Ville </label>
-									<select name="source" class="form-select js-choice" data-search-enabled="true">
-										<option>Selectionnez une source</option>
-										<option value="douala">Douala</option>
-										<option value="yaoundé">Yaoundé</option>
-										<option value="bafoussam">Bafoussam</option>
-										<option value="garoua">Garoua</option>
-                                        <option value="kribi">Kribi</option>
+									<select name="town_id" class="form-select js-choice" data-search-enabled="true">
+										<option>Selectionnez une ville</option>
+                                        @foreach ($towns as $town)
+                                            <option value="{{ $town->id }}">{{ $town->town_name }}</option>
+                                        @endforeach
 									</select>
 								</div>
 
