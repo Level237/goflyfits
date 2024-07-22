@@ -9,6 +9,7 @@ GoFlyFits
 <main>
 
 
+
     <section class="position-relative py-8 py-lg-9" style="background-image:url(assets/images/bg/20.jpg); background-position: center left; background-size: cover;">
         <!-- Background dark overlay -->
         <div class="bg-overlay bg-dark opacity-8"></div>
@@ -28,56 +29,7 @@ GoFlyFits
                     </h1>
                 </div>
 
-                <!-- Search START -->
-                <div class="col-xl-10 mx-auto">
-                    <div class="bg-blur bg-white bg-opacity-10 border border-light border-opacity-25 rounded-3 p-4 mt-5">
-                        <!-- Form START -->
-                        <form class="row g-3 justify-content-center align-items-center">
-                            <div class="col-lg-5">
-                                <!-- Input -->
 
-                                <div class="form-mix-icon-input form-size-lg">
-                                    <select class="form-select js-choice" data-search-enabled="true">
-                                        <option value="">Enter one category</option>
-                                        @foreach ($categories as $category)
-                                        <option value="{{ $category->id }}">{{ $category->category_title }}</option>
-                                        @endforeach
-                                    </select>
-                                    <!-- Icons -->
-                                    <span class="position-absolute top-50 start-0 translate-middle ps-5"><i class="bi bi-geo-alt fs-5"></i></span>
-                                    <a href="#" class="h6 mb-0 position-absolute top-50 end-0 translate-middle pe-1">
-                                        <i class="fa-solid fa-place"></i>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-5">
-                                <!-- Choices -->
-                                <div class="form-mix-icon-input form-size-lg">
-                                    <select class="form-select js-choice" data-search-enabled="true">
-                                        <option value="">Search your position</option>
-                                        <option value="douala">Douala</option>
-                                        <option value="yaoundé">Yaoundé</option>
-                                        <option value="garoua">Garoua</option>
-                                        <option value="bafoussam">Bafoussam</option>
-                                    </select>
-                                    <!-- Icons -->
-                                    <span class="position-absolute top-50 start-0 translate-middle ps-5"><i class="bi bi-geo-alt fs-5"></i></span>
-                                    <a href="#" class="h6 mb-0 position-absolute top-50 end-0 translate-middle pe-1">
-                                        <i class="fa-solid fa-crosshairs"></i>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-2 d-grid">
-                                <!-- Search -->
-                                <a class="btn btn-lg btn-primary mb-0" href="#">Search</a>
-                            </div>
-                        </form>
-                        <!-- Form END -->
-                    </div>
-                </div>
-                <!-- Search END -->
 
             </div> <!-- Row END -->
         </div>
@@ -278,7 +230,7 @@ GoFlyFits
                 <!-- Title -->
                 <div class="col-lg-4">
                     <h2 class="mb-4">Search destination by city</h2>
-                    <button class="btn btn-primary mb-0">View all</button>
+                    <a href="?type=search" class="btn btn-primary mb-0">View all</a>
                 </div>
 
                 <!-- Listing -->

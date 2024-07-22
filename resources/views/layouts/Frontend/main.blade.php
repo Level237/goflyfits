@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    @if($isSearch)
+        <title>Search</title>
+    @endif
 	<title>@yield('title')</title>
 
 	<!-- Meta Tags -->
@@ -90,7 +93,81 @@
 
 </head>
 
-<body>
+@if($isSearch)
+    @php
+        $isHidden="hidden"
+    @endphp
+@else
+    @php
+        $isHidden="none"
+    @endphp
+@endif
+<body style="overflow-y:{{ $isHidden }}">
+    @if($isSearch)
+    <title>Search</title>
+        <section style="position: fixed;background-color:#222529f8;overflow-y:hidden;gap:0px;top:0;left:0px;right:0px;z-index:999999999999999999999999999999999999999;bottom:0px">
+            <div style="display: flex;align-items:center;justify-content:end;margin-right:50px">
+                <a href="/">
+                    <i style="width: 30px;height:50px;cursor: pointer;" class="fa-solid fa-close"></i>
+                </a>
+            </div>
+            <div style="display: flex;justify-content:start;flex-direction:column;align-items:center;height:100vh;margin-top:9rem">
+                <!-- Search START -->
+
+                <h1>Rechercher</h1>
+                <div class="col-xl-8 mx-auto">
+                    <div class="bg-blur bg-white bg-opacity-10 border border-light border-opacity-25 rounded-3 p-4 mt-5">
+                        <!-- Form START -->
+                        <form class="row g-3 justify-content-center align-items-center">
+                            <div class="col-lg-5">
+                                <!-- Input -->
+
+                                <div class="form-mix-icon-input form-size-lg">
+                                    <select class="form-select js-choice" data-search-enabled="true">
+                                        <option value="">Enter one category</option>
+                                        @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}">{{ $category->category_title }}</option>
+                                        @endforeach
+                                    </select>
+                                    <!-- Icons -->
+                                    <span class="position-absolute top-50 start-0 translate-middle ps-5"><i class="bi bi-geo-alt fs-5"></i></span>
+                                    <a href="#" class="h6 mb-0 position-absolute top-50 end-0 translate-middle pe-1">
+                                        <i class="fa-solid fa-place"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-5">
+                                <!-- Choices -->
+                                <div class="form-mix-icon-input form-size-lg">
+                                    <select class="form-select js-choice" data-search-enabled="true">
+                                        <option value="">Search your position</option>
+                                        <option value="douala">Douala</option>
+                                        <option value="yaoundé">Yaoundé</option>
+                                        <option value="garoua">Garoua</option>
+                                        <option value="bafoussam">Bafoussam</option>
+                                    </select>
+                                    <!-- Icons -->
+                                    <span class="position-absolute top-50 start-0 translate-middle ps-5"><i class="bi bi-geo-alt fs-5"></i></span>
+                                    <a href="#" class="h6 mb-0 position-absolute top-50 end-0 translate-middle pe-1">
+                                        <i class="fa-solid fa-crosshairs"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 d-grid">
+                                <!-- Search -->
+                                <a class="btn btn-lg btn-primary mb-0" href="#">Search</a>
+                            </div>
+                        </form>
+                        <!-- Form END -->
+                    </div>
+                </div>
+                <!-- Search END -->
+            </div>
+        </section>
+    @endif
+
     <div class="preloader">
         <div class="preloader-item">
             <div class="spinner-grow text-primary"></div>

@@ -11,6 +11,11 @@ class HomeController extends Controller
 {
     public function index(Request $request){
 
+        $isSearch=false;
+        if($request->type){
+
+            $isSearch=true;
+        }
         $categories=Category::all();
         if($request->session()->has("preferences")){
             $clothings=Clothing::join('category_clothing','category_clothing.clothing_id','clothing.id')
@@ -26,6 +31,6 @@ class HomeController extends Controller
 
 
         //return $clothings;
-        return view('Homepage',compact('categories','clothings','isPreferences'));
+        return view('Homepage',compact('categories','clothings','isPreferences',"isSearch"));
     }
 }
