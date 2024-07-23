@@ -22,7 +22,7 @@ class TownController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.towns.create');
     }
 
     /**
@@ -30,7 +30,11 @@ class TownController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $town=new Town;
+        $town->town_name=$request->town_name;
+        $town->save();
+
+        return to_route('admin.towns.index');
     }
 
     /**
