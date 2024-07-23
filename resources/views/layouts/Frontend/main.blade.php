@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    @if($isSearch)
+    @if(isset($isSearch) && $isSearch)
         <title>Search</title>
     @endif
 	<title>@yield('title')</title>
@@ -93,7 +93,7 @@
 
 </head>
 
-@if($isSearch)
+@if(isset($isSearch) && $isSearch)
     @php
         $isHidden="hidden"
     @endphp
@@ -103,7 +103,7 @@
     @endphp
 @endif
 <body style="overflow-y:{{ $isHidden }}">
-    @if($isSearch)
+    @if(isset($isSearch) && $isSearch)
     <title>Search</title>
         <section style="position: fixed;background-color:#222529f8;overflow-y:hidden;gap:0px;top:0;left:0px;right:0px;z-index:999999999999999999999999999999999999999;bottom:0px">
             <div style="display: flex;align-items:center;justify-content:end;margin-right:50px">
