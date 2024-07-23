@@ -66,6 +66,9 @@ class TownController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $town=Town::find($id);
+        $town->delete();
+
+        return back();
     }
 }
