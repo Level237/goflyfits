@@ -22,7 +22,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.categories.create');
     }
 
     /**
@@ -30,7 +30,11 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $category=new Category;
+        $category->category_title=$request->category_title;
+        $category->save();
+
+        return to_route('admin.categories.index');
     }
 
     /**
@@ -62,6 +66,9 @@ class CategoryController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $category=Category::find($id);
+        $category->delete();
+
+        return back();
     }
 }

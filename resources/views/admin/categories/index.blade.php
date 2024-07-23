@@ -91,7 +91,12 @@ Listes des categories
 
                     <a href="" class="btn btn-sm btn-light mb-0"><i class="fa-solid fa-edit"></i></a>
                     <a href="#" class="btn btn-sm btn-light mb-0"><i class="fa-solid fa-eye"></i></a>
-                    <a href="#" class="btn btn-sm btn-light mb-0"><i class="fa-solid fa-trash"></i></a>
+                    <form method="POST" action="{{ route('admin.categories.destroy',$category->id) }}" onsubmit="return confirm('Are you sure?')">
+                        @csrf
+                        @method('delete')
+
+                        <button type="submit" class="btn btn-sm btn-light mb-0"><i class="fa-solid fa-trash"></i></button>
+                      </form>
                 </div>
 
             </div>
