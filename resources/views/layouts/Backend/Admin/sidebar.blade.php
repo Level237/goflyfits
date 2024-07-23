@@ -42,7 +42,17 @@
                         <li class="nav-item"> <a class="nav-link" href="{{ route('admin.categories.index') }}">Listes des categories</a></li>
                     </ul>
                 </li>
-
+                <!-- Menu item -->
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#collapsetown" role="button" aria-expanded="false" aria-controls="collapsetown">
+                    Villes
+                    </a>
+                    <!-- Submenu -->
+                    <ul class="nav collapse flex-column" id="collapsetown" data-bs-parent="#navbar-sidebar">
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('admin.categories.create') }}">Créer une ville</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('admin.towns.index') }}">Listes des villes</a></li>
+                    </ul>
+                </li>
                 <!-- Menu item -->
                 <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="collapse" href="#collapseagent" role="button" aria-expanded="false" aria-controls="collapseagent">

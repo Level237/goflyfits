@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\AuthStepController;
 use App\Http\Controllers\Backend\Admin\CategoryController;
 use App\Http\Controllers\Backend\Admin\ClothingController;
 use App\Http\Controllers\Backend\Admin\DashboardController;
+use App\Http\Controllers\Backend\Admin\TownController;
 use App\Http\Controllers\Backend\Customer\DashboardController as CustomerDashboardController;
 use App\Http\Controllers\Backend\Customer\PreferenceController;
 use App\Http\Controllers\Frontend\ClothingController as FrontendClothingController;
@@ -42,6 +43,7 @@ Route::middleware(['auth','admin'])->name('admin.')->prefix('admin')->group(func
     Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard');
     Route::resource('clothings',ClothingController::class);
     Route::resource('categories',CategoryController::class);
+    Route::resource('towns',TownController::class);
     });
 
     Route::middleware(['auth','customer'])->name('customer.')->prefix('customer')->group(function(){
