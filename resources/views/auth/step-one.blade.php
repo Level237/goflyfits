@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Booking - Multipurpose Online Booking Theme</title>
+	<title>Step one:Entrez vos informations personnelles</title>
 
 	<!-- Meta Tags -->
 	<meta charset="utf-8">

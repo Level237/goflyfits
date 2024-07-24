@@ -109,7 +109,7 @@ Main banner START -->
 				<h1>Préferences Utilisateurs</h1>
 
 				<!-- Contact form -->
-				<form method="POST" action="{{ route('stepFinal') }}" class="mt-8">
+				<form method="POST" action="{{ route('stepFinal') }}" class="mt-5">
                     @csrf
 					<!-- Message -->
 					<div class="mb-2 form-control-bg-light">
@@ -359,7 +359,7 @@ Main banner START -->
 					</svg>
 				</figure>
 				<!-- Image -->
-				<img src="{{ asset('assets/images/about/05.jpg') }}" class="rounded-3 position-relative" alt="">
+				<img  src="{{ asset('assets/images/bg/cover1.jpg') }}" class="rounded-3  position-relative" alt="">
 			</div>
 		</div>
 		<!-- Content and form END -->

@@ -58,7 +58,7 @@
 
 
 					<!-- Nav item Link -->
-					<li class="nav-item"> <a class="nav-link" href="admin-dashboard.html.htm">Contact</a> </li>
+					<li class="nav-item"> <a class="nav-link" href="{{ route('contact') }}">Contact</a> </li>
                     @auth
                     @if(auth()->user()->role_id===1)
                         <li class="nav-item"> <a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard</a> </li>
