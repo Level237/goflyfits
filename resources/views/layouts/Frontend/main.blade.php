@@ -185,7 +185,7 @@
 		<div class="row mx-auto">
 			<div class="col-md-10 col-xl-6 mx-auto text-center">
 				<!-- Logo -->
-				<img class="mx-auto h-60px" src="assets/images/logo-light.svg" alt="logo">
+				<img class="mx-auto h-60px" src="{{ asset('assets/images/logo2.png') }}" alt="logo">
 				<p class="mt-3 text-white">Speedily say has suitable disposal add boy. On forth doubt miles of child. Exercise joy man children rejoiced.</p>
 				<!-- Links -->
 				<ul class="nav justify-content-between text-primary-hover mt-3 mt-md-0">
