@@ -8,6 +8,7 @@ use App\Http\Controllers\Backend\Admin\TownController;
 use App\Http\Controllers\Backend\Customer\DashboardController as CustomerDashboardController;
 use App\Http\Controllers\Backend\Customer\PreferenceController;
 use App\Http\Controllers\Frontend\ClothingController as FrontendClothingController;
+use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\SearchController;
 use App\Http\Controllers\ProfileController;
@@ -26,6 +27,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[HomeController::class,'index'])->name('homepage');
 
+Route::get('/contact',[ContactController::class,'index'])->name('contact');
 // Step auth user
 Route::post('step-one/personal-information',[AuthStepController::class,'stepOne'])->name('stepOne');
 Route::get('step-one/personal-information',[AuthStepController::class,'stepOneView'])->name('stepOneView');

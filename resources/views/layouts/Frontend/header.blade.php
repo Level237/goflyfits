@@ -59,7 +59,7 @@
 
 
 					<!-- Nav item Link -->
-					<li class="nav-item"> <a class="nav-link" href="admin-dashboard.html.htm">Contact</a> </li>
+					<li class="nav-item"> <a class="nav-link" href="{{ route('contact') }}">Contact</a> </li>
                     @auth
                         @if(auth()->user()->role_id===1)
                             <li class="nav-item"> <a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard</a> </li>
@@ -71,41 +71,7 @@
 					<!-- Nav item Link -->
 
 
-					<!-- Nav item link-->
-					<li class="nav-item dropdown">
-						<a class="nav-link" href="#" id="advanceMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<i class="fas fa-ellipsis-h"></i>
-						</a>
-						<ul class="dropdown-menu min-w-auto" data-bs-popper="none">
-							<li>
-								<a class="dropdown-item" href="https://support.webestica.com/" target="_blank">
-									<i class="text-warning fa-fw bi bi-life-preserver me-2"></i>Support
-								</a>
-							</li>
-							<li>
-								<a class="dropdown-item" href="docs/index.html.htm" target="_blank">
-									<i class="text-danger fa-fw bi bi-card-text me-2"></i>Documentation
-								</a>
-							</li>
-							<li> <hr class="dropdown-divider"></li>
-							<li>
-								<a class="dropdown-item" href="rtl/index.htm" target="_blank">
-									<i class="text-info fa-fw bi bi-toggle-off me-2"></i>RTL demo
-								</a>
-							</li>
-							<li>
-								<a class="dropdown-item" href="https://themes.getbootstrap.com/store/webestica/" target="_blank">
-									<i class="text-success fa-fw bi bi-cloud-download-fill me-2"></i>Buy Booking!
-								</a>
-							</li>
-							<li> <hr class="dropdown-divider"></li>
-							<li>
-								<a class="dropdown-item" href="docs/alerts.html.htm" target="_blank">
-									<i class="text-orange fa-fw bi bi-puzzle-fill me-2"></i>Components
-								</a>
-							</li>
-						</ul>
-					</li>
+
 				</ul>
 			</div>
 			<!-- Main navbar END -->
