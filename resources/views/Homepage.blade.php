@@ -55,8 +55,8 @@ GoFlyFits
                             <div class="col-lg-3">
                                 <!-- Choices -->
                                 <div class="form-mix-icon-input form-size-lg">
-                                    <select class="form-select js-choice" data-search-enabled="true">
-                                        <option value="">Search your position</option>
+                                    <select name="town" class="form-select js-choice" data-search-enabled="true">
+                                        <option >Search your position</option>
                                         <option value="douala">Douala</option>
                                         <option value="yaoundé">Yaoundé</option>
                                         <option value="garoua">Garoua</option>
@@ -90,7 +90,48 @@ GoFlyFits
             </div> <!-- Row END -->
         </div>
     </section>
+@auth
+<section>
+	<div class="container">
+		<div class="row g-4 align-items-center">
 
+			<!-- Title -->
+			<div class="col-lg-2">
+				<h4>Browse by Category</h4>
+				<a href="#" class="h6 fw-normal text-primary mb-0">View all <i class="bi bi-arrow-right"></i></a>
+			</div>
+
+			<!-- Category START -->
+			<div class="col-lg-10">
+				<!-- Slider START -->
+				<div class="tiny-slider arrow-round arrow-xs arrow-dark">
+					<div class="tiny-slider-inner" data-autoplay="true" data-arrow="true" data-edge="2" data-dots="false" data-items-xl="5" data-items-lg="3" data-items-sm="2" data-items-xs="1">
+						<!-- Slider item -->
+                        @foreach($categories as $category)
+                        <div>
+							<div class="card card-body bg-light text-center align-items-center">
+								<!-- Icon -->
+								<div class="icon-xl bg-mode rounded-circle mb-3">
+									<figure>
+										<svg width="47.9px" height="47.3px" viewbox="0 0 47.9 47.3" style="enable-background:new 0 0 47.9 47.3;" xml:space="preserve">
+											<path class="fill-mode-inverse" d="M37.5,20.3c-2.3,1.5-3.6,4.1-3.3,6.9l-10,6.4l-10-6.4c0.3-2.7-1-5.4-3.3-6.9c-1.5-1-3.3-1.5-5.2-1.3 c-3.2,0.3-5.6,3.2-5.3,6.4c0,0.4,0.1,0.7,0.2,1.1c0.5,1.8,1.6,3.3,3.1,4.3c2.2,1.6,5.2,1.8,7.6,0.5l7.8,5.5l-7.4,4.7 c-1.4,0.9-1.9,2.8-1,4.3c0,0,0,0.1,0.1,0.1c1,1.4,2.9,1.8,4.3,0.8c0,0,0,0,0.1,0l8.9-6.3l8.9,6.3c1.4,1,3.3,0.7,4.3-0.7 c1-1.4,0.7-3.3-0.7-4.3c-0.1,0-0.1-0.1-0.2-0.1l-7.4-4.7l7.8-5.5c2.4,1.3,5.4,1.1,7.6-0.5c3.3-2.2,4.3-6.3,2.4-9.2 S40.8,18.1,37.5,20.3L37.5,20.3z M14.4,45.4c-0.7,0.5-1.7,0.3-2.1-0.4c-0.5-0.7-0.3-1.6,0.4-2.1c0,0,0,0,0,0l7.9-5.1l2.2,1.6 L14.4,45.4z M36.4,43.9c0.2,0.8-0.4,1.6-1.2,1.8c-0.4,0.1-0.8,0-1.2-0.2L11.9,29.7c-0.3-0.2-0.6-0.2-0.9,0c-1.9,1.3-4.4,1.2-6.3-0.2 c-1.2-0.8-2.1-2-2.5-3.4c-0.7-2.3,0.6-4.6,2.8-5.3c0.3-0.1,0.6-0.1,0.9-0.2c1.4-0.2,2.9,0.2,4.1,1c2,1.2,3,3.5,2.5,5.7 c-0.1,0.3,0.1,0.7,0.3,0.9l22.9,14.7C36.1,43.1,36.4,43.5,36.4,43.9z M43.7,29.5c-1.8,1.4-4.3,1.4-6.3,0.2c-0.3-0.2-0.6-0.2-0.9,0 l-8.7,6.2l-2.1-1.3l9.9-6.3c0.3-0.2,0.4-0.5,0.3-0.9c-0.4-2.2,0.6-4.5,2.5-5.7c2.5-1.7,5.8-1.3,7.2,0.8 C47.1,24.6,46.2,27.8,43.7,29.5L43.7,29.5z"></path>
+											<path class="fill-primary" d="M32.9,27l2.3-11.3c3.9-0.3,6.8-3.8,6.5-7.7c-0.3-3.7-3.4-6.5-7.1-6.5c-1.6,0-3.2,0.5-4.4,1.5 c-2.2-3.2-6.6-4.1-9.9-1.9c-0.7,0.5-1.4,1.1-1.9,1.9c-1.3-1-2.8-1.5-4.4-1.5c-3.9,0-7.1,3.2-7.1,7.1c0,3.7,2.8,6.8,6.5,7.1L15.5,27 l1.6-0.3l-0.4-2.2h15.2l-0.4,2.2L32.9,27z M29.1,22.9l0.7-4.6l-1.6-0.2l-0.7,4.9H25v-8.7h-1.6v8.7h-2.5l-0.7-4.9l-1.6,0.2l0.7,4.6 h-3l-1.6-8.1c-0.1-0.4-0.4-0.6-0.8-0.6c-3.1,0-5.5-2.5-5.5-5.5s2.5-5.5,5.5-5.5c1.5,0,3,0.6,4,1.7c0.3,0.3,0.8,0.3,1.1,0 c0.1-0.1,0.1-0.1,0.2-0.2c1.3-2.7,4.6-3.9,7.4-2.6c1.1,0.5,2,1.4,2.6,2.6c0.2,0.4,0.7,0.6,1.1,0.4c0.1,0,0.2-0.1,0.2-0.2 c1-1.1,2.5-1.7,4-1.7c3.1,0,5.5,2.5,5.5,5.5s-2.5,5.5-5.5,5.5c-0.4,0-0.7,0.3-0.8,0.6l-1.6,8.1H29.1z"></path>
+										</svg>
+									</figure>
+								</div>
+								<h6 class="mb-0"><a href="#" class="stretched-link">{{ $category->category_title }}</a></h6>
+							</div>
+						</div>
+                        @endforeach
+
+					</div>
+				</div>
+			</div>
+			<!-- Category END -->
+		</div>
+	</div>
+</section>
+@endauth
 
     <!-- =======================
     Main banner END -->
