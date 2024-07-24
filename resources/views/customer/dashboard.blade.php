@@ -47,36 +47,32 @@ Dashboard Client
             <form class="row g-3">
                 <!-- Profile photo -->
                 <div class="col-12">
-                    <label class="form-label">Upload your profile photo<span class="text-danger">*</span></label>
                     <div class="d-flex align-items-center">
-                        <label class="position-relative me-4" for="uploadfile-1" title="Replace this pic">
-                            <!-- Avatar place holder -->
-                            <span class="avatar avatar-xl">
-                                <img id="uploadfile-1-preview" class="avatar-img rounded-circle border border-white border-3 shadow" src="assets/images/avatar/01.jpg" alt="">
-                            </span>
-                        </label>
+                        <div  class="avatar avatar-xl mb-2">
+                            <div style="background: {{ auth()->user()->color }}" class="avatar-img rounded-circle text-white"><span class="position-absolute top-50 start-50 translate-middle fw-bold">{{ auth()->user()->name[0] }}{{ auth()->user()->name[1] }}</span></div>
+                          </div>
                         <!-- Upload button -->
-                        <label class="btn btn-sm btn-primary-soft mb-0" for="uploadfile-1">Change</label>
+
                         <input id="uploadfile-1" class="form-control d-none" type="file">
                     </div>
                 </div>
 
                 <!-- Name -->
                 <div class="col-md-6">
-                    <label class="form-label">Full Name<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" value="Jacqueline Miller" placeholder="Enter your full name">
+                    <label class="form-label">Name<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" value="{{ auth()->user()->name  }}" placeholder="Enter your full name">
                 </div>
 
                 <!-- Email -->
                 <div class="col-md-6">
                     <label class="form-label">Email address<span class="text-danger">*</span></label>
-                    <input type="email" class="form-control" value="hello@gmail.com" placeholder="Enter your email id">
+                    <input type="email" class="form-control" value="{{ auth()->user()->email  }}" placeholder="Enter your email id">
                 </div>
 
                 <!-- Mobile -->
                 <div class="col-md-6">
                     <label class="form-label">Mobile number<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" value="222 555 666" placeholder="Enter your mobile number">
+                    <input type="text" class="form-control" value="{{ auth()->user()->phone_number }}" placeholder="Enter your mobile number">
                 </div>
 
                 <!-- Nationality -->
@@ -85,47 +81,21 @@ Dashboard Client
                     <select class="form-select js-choice">
                         <option value="">Select your country</option>
                         <option>USA</option>
-                        <option selected="">Paris</option>
+                        <option selected="">Cameroon</option>
                         <option>India</option>
                         <option>UK</option>
                     </select>
                 </div>
 
-                <!-- Date of birth -->
-                <div class="col-md-6">
-                    <label class="form-label">Date of Birth<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control flatpickr" value="29 Aug 1996" placeholder="Enter date of birth" data-date-format="d M Y">
-                </div>
-
-                <!-- Gender -->
-                <div class="col-md-6">
-                    <label class="form-label">Select Gender<span class="text-danger">*</span></label>
-                    <div class="d-flex gap-4">
-                        <div class="form-check radio-bg-light">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked="">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Male
-                            </label>
-                        </div>
-                        <div class="form-check radio-bg-light">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                Female
-                            </label>
-                        </div>
-                        <div class="form-check radio-bg-light">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-                            <label class="form-check-label" for="flexRadioDefault3">
-                                Others
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Address -->
-                <div class="col-12">
-                    <label class="form-label">Address</label>
-                    <textarea class="form-control" rows="3" spellcheck="false">2119 N Division Ave, New Hampshire, York, United States</textarea>
+                <div class="col-md-12">
+                    <label class="form-label">Town<span class="text-danger">*</span></label>
+                    <select class="form-select js-choice">
+                        <option value="">Select your town</option>
+                        <option>USA</option>
+                        <option selected="">Douala</option>
+                        <option>India</option>
+                        <option>UK</option>
+                    </select>
                 </div>
 
                 <!-- Button -->

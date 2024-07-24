@@ -37,15 +37,6 @@
                         <a class="nav-link" href="{{ route('customer.preferences') }}"><i class="bi bi-ticket-perforated fa-fw me-2"></i>Mes préferences</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="account-travelers.html.htm"><i class="bi bi-people fa-fw me-2"></i>Travelers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="account-payment-details.html.htm"><i class="bi bi-wallet fa-fw me-2"></i>Payment Details</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="account-wishlist.html.htm"><i class="bi bi-heart fa-fw me-2"></i>Wishlist</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="account-settings.html.htm"><i class="bi bi-gear fa-fw me-2"></i>Settings</a>
                     </li>
                     <li class="nav-item">
