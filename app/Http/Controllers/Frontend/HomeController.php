@@ -25,7 +25,7 @@ class HomeController extends Controller
             ->get();
             $isPreferences=true;
         }else{
-            $clothings=Clothing::inRandomOrder()->take(8)->get();
+            $clothings=Clothing::inRandomOrder()->take(4)->get();
             $isPreferences=false;
         }
 

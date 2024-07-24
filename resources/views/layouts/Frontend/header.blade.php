@@ -16,8 +16,8 @@
 					<span></span>
 				</span>
 			</button>
-
-			<!-- Main navbar START -->
+            @auth
+            <!-- Main navbar START -->
 			<div class="navbar-collapse collapse" id="navbarCollapse">
 				<ul class="navbar-nav navbar-nav-scroll mx-auto">
 
@@ -109,6 +109,8 @@
 				</ul>
 			</div>
 			<!-- Main navbar END -->
+            @endauth
+
 
 			<!-- Profile and Notification START -->
 			<ul class="nav flex-row align-items-center list-unstyled ms-xl-auto">

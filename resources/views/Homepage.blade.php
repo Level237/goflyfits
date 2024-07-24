@@ -10,7 +10,7 @@ GoFlyFits
 
 
 
-    <section class="position-relative py-8 py-lg-9" style="background-image:url(assets/images/bg/20.jpg); background-position: center left; background-size: cover;">
+    <section class="position-relative py-8 py-lg-9" style="background-image:url(assets/images/bg/bg.jpg); background-position: center left; background-size: cover;">
         <!-- Background dark overlay -->
         <div class="bg-overlay bg-dark opacity-8"></div>
         <div class="container z-index-9 position-relative">
@@ -27,7 +27,63 @@ GoFlyFits
                                 </span>
                             </span>
                     </h1>
+
                 </div>
+                @auth
+                <div class="col-xl-12 mx-auto">
+                    <div class="bg-blur bg-white bg-opacity-10 border border-light border-opacity-25 rounded-3 p-4 mt-5">
+                        <!-- Form START -->
+                        <form class="row g-3 justify-content-center align-items-center">
+                            <div class="col-lg-3">
+                                <!-- Input -->
+
+                                <div class="form-mix-icon-input form-size-lg">
+                                    <select name="category_id" class="form-select js-choice" data-search-enabled="true">
+                                        <option value="">Enter one category</option>
+                                        @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}">{{ $category->category_title }}</option>
+                                        @endforeach
+                                    </select>
+                                    <!-- Icons -->
+                                    <span class="position-absolute top-50 start-0 translate-middle ps-5"><i class="bi bi-geo-alt fs-5"></i></span>
+                                    <a href="#" class="h6 mb-0 position-absolute top-50 end-0 translate-middle pe-1">
+                                        <i class="fa-solid fa-place"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <!-- Choices -->
+                                <div class="form-mix-icon-input form-size-lg">
+                                    <select class="form-select js-choice" data-search-enabled="true">
+                                        <option value="">Search your position</option>
+                                        <option value="douala">Douala</option>
+                                        <option value="yaoundé">Yaoundé</option>
+                                        <option value="garoua">Garoua</option>
+                                        <option value="bafoussam">Bafoussam</option>
+                                    </select>
+                                    <!-- Icons -->
+                                    <span class="position-absolute top-50 start-0 translate-middle ps-5"><i class="bi bi-geo-alt fs-5"></i></span>
+                                    <a href="#" class="h6 mb-0 position-absolute top-50 end-0 translate-middle pe-1">
+                                        <i class="fa-solid fa-crosshairs"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-icon-input ">
+                                    <input type="text" class="form-control form-control-lg flatpickr" data-date-format="d/m/y" placeholder="Selectionnez une date pour votre besoin">
+                                    <span class="form-icon"><i class="bi bi-calendar fs-5"></i></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 d-grid">
+
+                                <a class="btn btn-md btn-primary mb-0" href="#">Search</a>
+                            </div>
+                        </form>
+                        <!-- Form END -->
+                    </div>
+                </div>
+                @endauth
 
 
 
@@ -38,6 +94,7 @@ GoFlyFits
 
     <!-- =======================
     Main banner END -->
+    @guest
     <section class="">
         <div class="container">
             <div class="row g-4">
@@ -174,7 +231,7 @@ GoFlyFits
         <div class="container">
             <div class="row g-4 g-lg-5 justify-content-center">
                 <!-- Step item -->
-                <div class="col-sm-6 col-md-4 text-center position-relative">
+                <div class="col-sm-6 col-md-4 position-relative text-center pt-0 pt-lg-5">
                     <!-- SVG decoration -->
                     <figure class="position-absolute top-0 start-100 translate-middle mt-8 d-none d-lg-block">
                         <svg width="154px" height="83px">
@@ -184,15 +241,17 @@ GoFlyFits
 
                     <div class="px-4">
                         <!-- Image -->
-                        <img src="assets/images/element/step-3.svg" class="w-150px mb-3" alt="">
+
+                        <img src="assets/images/element/step-2.svg" class="w-150px mb-3" alt="">
                         <!-- Title -->
-                        <h5>Search Choice</h5>
-                        <p class="mb-0">Total 630+ destinations that we work with</p>
+                        <h5>Select Destination</h5>
+                        <p class="mb-0">Insipidity the sufficient discretion imprudence</p>
+
                     </div>
                 </div>
 
                 <!-- Step item -->
-                <div class="col-sm-6 col-md-4 position-relative text-center pt-0 pt-lg-5">
+                <div class="col-sm-6 col-md-4 text-center position-relative">
                     <!-- SVG decoration -->
                     <figure class="position-absolute top-100 start-100 translate-middle d-none d-lg-block mt-n9">
                         <svg class="fill-secondary opacity-4" width="161px" height="79px">
@@ -200,13 +259,13 @@ GoFlyFits
                             </svg>
                     </figure>
 
-                    <div class="px-4">
+                    <div class="px-4 mt-6" style="">
                         <!-- Image -->
-                        <img src="assets/images/element/step-2.svg" class="w-150px mb-3" alt="">
+                        <img src="assets/images/element/step-3.svg" class="w-150px mb-3" alt="">
 
                         <!-- Title -->
-                        <h5>Select Destination</h5>
-                        <p class="mb-0">Insipidity the sufficient discretion imprudence</p>
+                        <h5>Search Choice</h5>
+                        <p class="mb-0">Total 630+ destinations that we work with</p>
                     </div>
                 </div>
 
@@ -228,13 +287,12 @@ GoFlyFits
         <div class="container">
             <div class="row g-4 align-items-center">
                 <!-- Title -->
-                <div class="col-lg-4">
-                    <h2 class="mb-4">Search destination by city</h2>
-                    <a href="?type=search" class="btn btn-primary mb-0">View all</a>
-                </div>
 
+                <div class="col-lg-12">
+                    <h2 class="mb-0 text-center">Search clothing by category</h2>
+                </div>
                 <!-- Listing -->
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <div class="row g-4">
                         <!-- Card item -->
                         <div class="col-md-6">
@@ -245,8 +303,8 @@ GoFlyFits
                                         <img src="assets/images/category/hotel/nearby/01.jpg" class="h-70px rounded-2" alt="">
 
                                         <div class="ms-3">
-                                            <h5 class="mb-0"><a href="#">San Francisco</a></h5>
-                                            <span>25 Listing</span>
+                                            <h5 class="mb-0"><a href="#">Bussness</a></h5>
+                                            <span>25 trouvés</span>
                                         </div>
                                     </div>
                                     <!-- Button -->
@@ -264,8 +322,8 @@ GoFlyFits
                                         <img src="assets/images/category/hotel/nearby/02.jpg" class="h-70px rounded-2" alt="">
 
                                         <div class="ms-3">
-                                            <h5 class="mb-0"><a href="#">Los Angeles</a></h5>
-                                            <span>18 Listing</span>
+                                            <h5 class="mb-0"><a href="#">After Work</a></h5>
+                                            <span>35 trouvés</span>
                                         </div>
                                     </div>
                                     <!-- Button -->
@@ -283,8 +341,8 @@ GoFlyFits
                                         <img src="assets/images/category/hotel/nearby/04.jpg" class="h-70px rounded-2" alt="">
 
                                         <div class="ms-3">
-                                            <h5 class="mb-0"><a href="#">Sanjosh</a></h5>
-                                            <span>15 Listing</span>
+                                            <h5 class="mb-0"><a href="#">Pubs</a></h5>
+                                            <span>15 trouvés</span>
                                         </div>
                                     </div>
                                     <!-- Button -->
@@ -302,8 +360,8 @@ GoFlyFits
                                         <img src="assets/images/category/hotel/nearby/05.jpg" class="h-70px rounded-2" alt="">
 
                                         <div class="ms-3">
-                                            <h5 class="mb-0"><a href="#">New York</a></h5>
-                                            <span>12 Listing</span>
+                                            <h5 class="mb-0"><a href="#">Weddings</a></h5>
+                                            <span>30 trouvés</span>
                                         </div>
                                     </div>
                                     <!-- Button -->
@@ -321,8 +379,8 @@ GoFlyFits
                                         <img src="assets/images/category/hotel/nearby/07.jpg" class="h-70px rounded-2" alt="">
 
                                         <div class="ms-3">
-                                            <h5 class="mb-0"><a href="#">Brazil, Rio</a></h5>
-                                            <span>16 Listing</span>
+                                            <h5 class="mb-0"><a href="#">WorkShop</a></h5>
+                                            <span>12 trouvés</span>
                                         </div>
                                     </div>
                                     <!-- Button -->
@@ -340,8 +398,8 @@ GoFlyFits
                                         <img src="assets/images/category/hotel/nearby/09.jpg" class="h-70px rounded-2" alt="">
 
                                         <div class="ms-3">
-                                            <h5 class="mb-0"><a href="#">Las Vegas</a></h5>
-                                            <span>13 Listing</span>
+                                            <h5 class="mb-0"><a href="#">Entertainment</a></h5>
+                                            <span>25 trouvés</span>
                                         </div>
                                     </div>
                                     <!-- Button -->
@@ -355,147 +413,187 @@ GoFlyFits
         </div>
     </section>
 
-
-    <!-- =======================
-    Category END -->
-
-    <!-- =======================
-    Listing START -->
-    <section class="pt-0 pt-sm-5">
+    <section class="pb-0">
         <div class="container">
             <!-- Title -->
-            <div class="row mb-4 mb-sm-5">
+            <div class="row mb-4">
                 <div class="col-12 text-center">
                     <h2 class="mb-0">Great Clothings to Explore</h2>
                     <p class="mb-0">Book your hotel with us and don't forget to grab an awesome hotel deal to save massive on your stay.</p>
                 </div>
             </div>
 
-            <div class="row g-4">
-                <!-- Card item -->
+            <!-- Slider START -->
+            <div class="tiny-slider arrow-round arrow-blur arrow-hover">
+                <div class="tiny-slider-inner mb-8" data-autoplay="true" data-arrow="true" data-edge="2" data-dots="false" data-items-xl="3" data-items-lg="3" data-items-md="2" data-items-sm="1">
 
-                @foreach ($clothings as $clothing)
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="card shadow h-100">
-                        <div class="position-relative">
-                            <!-- Image -->
-                            <img src="{{ Storage::url($clothing->clothing_profile) }}" class="card-img-top" alt="Card image">
-                            <!-- Overlay -->
-                            <div class="card-img-overlay p-3 z-index-1">
-                                <div class="badge text-bg-dark"><i class="fa-solid fa-map fa-fw text-warning mx-2"></i>{{ $clothing->source }}</div>
-                            </div>
-                        </div>
-
-                        <!-- Card body START -->
-                        <div class="card-body">
-                            <!-- Title -->
-                            <h5 class="card-title me-2"><a href="directory-detail.html.htm">{{ $clothing->title }}</a></h5>
-
-                            <!-- Address and Contact -->
-                            <ul class="list-group list-group-borderless mb-0">
-
-                                <div style="justify-content:space-between" class="d-flex mt-2">
-
-                                    <div class="class="list-group-item small pb-0"">
-                                        <i class="bi bi-pin-map-fill fa-fw h6 small mb-0"></i>Taille: {{ $clothing->size }}
-                                    </div>
-                                    @if($isPreferences)
-                                    <div style="font-size: 11px" class="badge bg-primary bg-opacity-10 p-2 text-success">{{ $clothing->category_title }}</div>
-                                    @else
-                                    <div style="font-size: 11px" class="badge bg-primary bg-opacity-10 p-2 text-success">{{ $clothing->categories[0]->category_title }}</div>
-                                    @endif
+                    @foreach($clothings as $clothing)
+                    <!-- Offer card START -->
+                    <div>
+                        <div class="card">
+                            <img src="{{ Storage::url($clothing->clothing_profile) }}" class="card-img" alt="">
+                            <!-- Card body -->
+                            <div class="position-absolute top-100 start-50 translate-middle w-100">
+                                <div class="card-body text-center bg-mode shadow rounded mx-4 p-3">
+                                    <h6 class="card-title mb-1"><a href="#">{{ $clothing->title }}</a></h6>
+                                    <small>{{ $clothing->categories[0]->category_title }}</small>
 
                                 </div>
-
-                                <li class="list-group-item small pb-0">
-
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- Card body END -->
-
-                        <!-- Card footer START-->
-                        <div class="card-footer border-top">
-                            <!-- Buttons -->
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="directory-detail.html.htm" class="btn btn-link p-0 mb-0">View detail<i class="bi bi-arrow-right ms-1"></i></a>
-                                <a href="#" class="h6 mb-0 z-index-2"><i class="fa-regular fa-heart"></i></a>
                             </div>
                         </div>
                     </div>
-                </div>
-                @endforeach
+                    <!-- Offer card END -->-->
+                    @endforeach
 
+
+                </div>
             </div>
+            <!-- Slider END -->
         </div>
     </section>
+
+<section class="py-0 py-md-5">
+	<div class="container">
+		<div class="row g-4 g-lg-7 justify-content-center align-items-center">
+			<!-- Image -->
+			<div class="col-5 col-sm-3 col-xl-2">
+				<img src="assets/images/client/01.svg" class="grayscale" alt="">
+			</div>
+			<!-- Image -->
+			<div class="col-5 col-sm-3 col-xl-2">
+				<img src="assets/images/client/02.svg" class="grayscale" alt="">
+			</div>
+			<!-- Image -->
+			<div class="col-5 col-sm-3 col-xl-2">
+				<img src="assets/images/client/03.svg" class="grayscale" alt="">
+			</div>
+			<!-- Image -->
+			<div class="col-5 col-sm-3 col-xl-2">
+				<img src="assets/images/client/04.svg" class="grayscale" alt="">
+			</div>
+			<!-- Image -->
+			<div class="col-5 col-sm-3 col-xl-2">
+				<img src="assets/images/client/05.svg" class="grayscale" alt="">
+			</div>
+			<!-- Image -->
+			<div class="col-5 col-sm-3 col-xl-2">
+				<img src="assets/images/client/06.svg" class="grayscale" alt="">
+			</div>
+		</div>
+	</div>
+</section>
+    @endguest
+<!-- =======================
+Client END -->
+   @auth
+   <section class="pt-0 pt-sm-5">
+    <div class="container">
+        <!-- Title -->
+        <div class="row mb-4 mb-sm-5">
+            <div class="col-12 text-center">
+                <h2 class="mb-0">Great Clothings to Explore</h2>
+                <p class="mb-0">Book your hotel with us and don't forget to grab an awesome hotel deal to save massive on your stay.</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Card item -->
+
+            @foreach ($clothings as $clothing)
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+                <div class="card shadow h-100">
+                    <div class="position-relative">
+                        <!-- Image -->
+                        <img src="{{ Storage::url($clothing->clothing_profile) }}" class="card-img-top" alt="Card image">
+                        <!-- Overlay -->
+                        <div class="card-img-overlay p-3 z-index-1">
+                            <div class="badge text-bg-dark"><i class="fa-solid fa-map fa-fw text-warning mx-2"></i>{{ $clothing->source }}</div>
+                        </div>
+                    </div>
+
+                    <!-- Card body START -->
+                    <div class="card-body">
+                        <!-- Title -->
+                        <h5 class="card-title me-2"><a href="directory-detail.html.htm">{{ $clothing->title }}</a></h5>
+
+                        <!-- Address and Contact -->
+                        <ul class="list-group list-group-borderless mb-0">
+
+                            <div style="justify-content:space-between" class="d-flex mt-2">
+
+                                <div class="class="list-group-item small pb-0"">
+                                    <i class="bi bi-pin-map-fill fa-fw h6 small mb-0"></i>Taille: {{ $clothing->size }}
+                                </div>
+                                @if($isPreferences)
+                                <div style="font-size: 11px" class="badge bg-primary bg-opacity-10 p-2 text-success">{{ $clothing->category_title }}</div>
+                                @else
+                                <div style="font-size: 11px" class="badge bg-primary bg-opacity-10 p-2 text-success">{{ $clothing->categories[0]->category_title }}</div>
+                                @endif
+
+                            </div>
+
+                            <li class="list-group-item small pb-0">
+
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Card body END -->
+
+                    <!-- Card footer START-->
+                    <div class="card-footer border-top">
+                        <!-- Buttons -->
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="directory-detail.html.htm" class="btn btn-link p-0 mb-0">View detail<i class="bi bi-arrow-right ms-1"></i></a>
+                            <a href="#" class="h6 mb-0 z-index-2"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+
+        </div>
+    </div>
+</section>
+   @endauth
     <!-- =======================
     Listing END -->
 
-    <!-- =======================
-    Offer action box START -->
-    <section class="pt-0 pt-sm-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- Card -->
-                    <div class="card bg-dark p-3">
-                        <div class="card-body border border-2 border-dashed border-white rounded position-relative">
-                            <!-- Scissor Svg -->
-                            <figure class="position-absolute top-0 start-0 mt-n3 ms-3">
-                                <svg class="pt-1" width="30.1px" height="23.4px" viewbox="0 0 30.1 23.4" style="enable-background:new 0 0 30.1 23.4;" xml:space="preserve">
-                                    <path class="fill-white" d="M30.1,4.4c0,0-1.9-1.6-3.4-0.7c-1.2,0.7-8.9,4.5-12.3,6.2L9.6,7.2c0.5-0.9,0.6-2,0.3-3C9.6,2.8,8.6,1.6,7.2,0.8 C4.7-0.6,1.7-0.1,0.5,2C0,3-0.1,4,0.2,5.1c0.4,1.3,1.3,2.6,2.7,3.4C3.5,8.8,4.1,9,4.8,9.1v0c0,0,0,0,0,0c0.1,0,0.1,0,0.2,0 c4,0.6,6,1.7,7,2.5c-1,0.8-3,1.9-7,2.5c-0.1,0-0.1,0-0.2,0c0,0,0,0,0,0l0,0c-0.6,0.1-1.3,0.3-1.9,0.7c-1.4,0.8-2.3,2-2.7,3.4 c-0.3,1-0.2,2.1,0.3,3.1c1.2,2.1,4.2,2.7,6.7,1.2c1.4-0.8,2.3-2,2.7-3.4c0.3-1,0.2-2.1-0.3-3l4.8-2.8c3.4,1.7,11.1,5.6,12.3,6.2 c1.6,0.9,3.4-0.7,3.4-0.7l-12.7-7.3L30.1,4.4z M7.5,6C7,7,5.4,7.2,4,6.4C3.2,5.9,2.6,5.2,2.4,4.5C2.3,4.1,2.3,3.6,2.6,3.2 c0.5-1,2.2-1.1,3.5-0.3C6.9,3.3,7.4,4,7.6,4.8C7.7,5.1,7.8,5.6,7.5,6z M7.6,18.6c-0.2,0.8-0.8,1.5-1.6,1.9c-1.4,0.8-3,0.6-3.5-0.3 c-0.3-0.4-0.2-0.9-0.1-1.3C2.6,18.1,3.2,17.4,4,17c1.4-0.8,3-0.6,3.5,0.3C7.8,17.8,7.7,18.2,7.6,18.6z"></path>
-                                </svg>
-                            </figure>
-                            <!-- Scissor Svg -->
-                            <figure class="position-absolute bottom-0 end-0 mb-n3 me-3">
-                                <svg class="pb-1" width="30.1px" height="23.4px" viewbox="0 0 30.1 23.4" style="enable-background:new 0 0 30.1 23.4;" xml:space="preserve">
-                                    <path class="fill-white" d="M0,19c0,0,1.9,1.6,3.4,0.7c1.2-0.7,8.8-4.6,12.2-6.3l4.8,2.7c-0.5,0.9-0.6,2-0.3,3c0.4,1.3,1.3,2.5,2.7,3.3 c2.5,1.4,5.5,0.9,6.7-1.3c0.5-0.9,0.6-2,0.3-3.1c-0.4-1.3-1.3-2.5-2.7-3.3c-0.6-0.3-1.3-0.6-1.9-0.7l0,0c0,0,0,0,0,0 c-0.1,0-0.1,0-0.2,0c-4-0.6-6-1.7-7-2.5c1-0.8,3-1.9,7-2.5c0.1,0,0.1,0,0.2,0c0,0,0,0,0,0l0,0C26,9,26.6,8.7,27.2,8.4 c1.4-0.8,2.3-2.1,2.7-3.4c0.3-1,0.2-2.1-0.4-3.1c-1.2-2.1-4.2-2.6-6.7-1.2c-1.4,0.8-2.3,2.1-2.7,3.4c-0.3,1-0.2,2.1,0.3,3L15.7,10 C12.3,8.3,4.6,4.5,3.4,3.8C1.8,2.9,0,4.5,0,4.5l12.7,7.2L0,19z M22.6,17.3c0.5-1,2.1-1.1,3.5-0.4c0.8,0.4,1.4,1.2,1.6,1.9 c0.1,0.3,0.2,0.8-0.1,1.3c-0.5,1-2.1,1.1-3.5,0.4c-0.8-0.5-1.4-1.2-1.6-1.9C22.4,18.2,22.4,17.7,22.6,17.3z M22.4,4.7 C22.6,4,23.2,3.3,24,2.8c1.3-0.8,3-0.6,3.5,0.3c0.3,0.4,0.2,0.9,0.1,1.3c-0.2,0.8-0.8,1.5-1.6,1.9c-1.3,0.8-3,0.6-3.5-0.3 C22.3,5.6,22.3,5.1,22.4,4.7z"></path>
-                                </svg>
-                            </figure>
 
-                            <!-- Title -->
-                            <h2 class="text-white">Get an Extra 45% Discount Code</h2>
-                            <!-- Content -->
-                            <div class="d-flex justify-content-between flex-wrap">
-                                <h4 class="fw-light text-white mb-0">On all restaurant deals</h4>
-                                <a href="#" class="text-warning fs-4 stretched-link">Use Code: BOOK56</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- =======================
     Offer action box END -->
 
-    <!-- =======================
-    Action box START -->
-    <section class="my-md-5" style="background-image:url(assets/images/about/11.jpg); background-position: center left; background-size: cover;">
+    @guest
+    <section>
         <div class="container">
-            <div class="row py-lg-7">
-                <div class="col-lg-6 ms-auto">
-                    <h5 class="badge text-bg-white mb-3"><i class="bi bi-star-fill text-warning me-2"></i>Featured</h5>
-                    <h2 class="mb-4 text-white">Start Your Day With
-                        <span class="position-relative z-index-9">Black Coffee
-                            <!-- SVG START -->
-                            <span class="position-absolute top-50 start-50 translate-middle z-index-n1 d-none d-md-block mt-3">
-                                <svg width="300px" height="21.5px" viewbox="0 0 445.5 21.5">
-                                    <path class="fill-success" d="M409.9,2.6c-9.7-0.6-19.5-1-29.2-1.5c-3.2-0.2-6.4-0.2-9.7-0.3c-7-0.2-14-0.4-20.9-0.5 c-3.9-0.1-7.8-0.2-11.7-0.3c-1.1,0-2.3,0-3.4,0c-2.5,0-5.1,0-7.6,0c-11.5,0-23,0-34.5,0c-2.7,0-5.5,0.1-8.2,0.1 c-6.8,0.1-13.6,0.2-20.3,0.3c-7.7,0.1-15.3,0.1-23,0.3c-12.4,0.3-24.8,0.6-37.1,0.9c-7.2,0.2-14.3,0.3-21.5,0.6 c-12.3,0.5-24.7,1-37,1.5c-6.7,0.3-13.5,0.5-20.2,0.9C112.7,5.3,99.9,6,87.1,6.7C80.3,7.1,73.5,7.4,66.7,8 C54,9.1,41.3,10.1,28.5,11.2c-2.7,0.2-5.5,0.5-8.2,0.7c-5.5,0.5-11,1.2-16.4,1.8c-0.3,0-0.7,0.1-1,0.1c-0.7,0.2-1.2,0.5-1.7,1 C0.4,15.6,0,16.6,0,17.6c0,1,0.4,2,1.1,2.7c0.7,0.7,1.8,1.2,2.7,1.1c6.6-0.7,13.2-1.5,19.8-2.1c6.1-0.5,12.3-1,18.4-1.6 c6.7-0.6,13.4-1.1,20.1-1.7c2.7-0.2,5.4-0.5,8.1-0.7c10.4-0.6,20.9-1.1,31.3-1.7c6.5-0.4,13-0.7,19.5-1.1c2.7-0.1,5.4-0.3,8.1-0.4 c10.3-0.4,20.7-0.8,31-1.2c6.3-0.2,12.5-0.5,18.8-0.7c2.1-0.1,4.2-0.2,6.3-0.2c11.2-0.3,22.3-0.5,33.5-0.8 c6.2-0.1,12.5-0.3,18.7-0.4c2.2-0.1,4.4-0.1,6.7-0.1c11.5-0.1,23-0.2,34.6-0.4c7.2-0.1,14.4-0.1,21.6-0.1c12.2,0,24.5,0.1,36.7,0.1 c2.4,0,4.8,0.1,7.2,0.2c6.8,0.2,13.5,0.4,20.3,0.6c5.1,0.2,10.1,0.3,15.2,0.4c3.6,0.1,7.2,0.4,10.8,0.6c10.6,0.6,21.1,1.2,31.7,1.8 c2.7,0.2,5.4,0.4,8,0.6c2.9,0.2,5.8,0.4,8.6,0.7c0.4,0.1,0.9,0.2,1.3,0.3c1.1,0.2,2.2,0.2,3.2-0.4c0.9-0.5,1.6-1.5,1.9-2.5 c0.6-2.2-0.7-4.5-2.9-5.2c-1.9-0.5-3.9-0.7-5.9-0.9c-1.4-0.1-2.7-0.3-4.1-0.4c-2.6-0.3-5.2-0.4-7.9-0.6 C419.7,3.1,414.8,2.9,409.9,2.6z"></path>
-                                </svg>
-                            </span>
-                            <!-- SVG END -->
-                        </span>
-                    </h2>
-                    <p class="text-white mb-4">Delivered dejection necessary objection do Mr prevailed. Mr feeling does chiefly cordial in do. Water timed folly right aware if oh truth. Large above be to means. Dashwood does provide stronger is.</p>
-                    <a href="#" class="btn btn-primary mb-0">Check Listing</a>
+            <div class="row g-4">
+                <div class="col-12">
+                    <!-- Action box START -->
+                    <div class="card card-body shadow p-4">
+                        <div class="row g-4 justify-content-between align-items-center">
+                            <!-- Image -->
+                            <div class="col-sm-3 col-lg-2">
+                                <img src="assets/images/element/22.svg" alt="">
+                            </div>
+
+                            <!-- Title and content -->
+                            <div class="col-sm-9 col-lg-6 col-xl-7">
+                                <h4>Why did you choose us</h4>
+                                <p class="mb-0">Water timed folly right aware if oh truth. Large above be to means. Dashwood does provide stronger is.</p>
+                            </div>
+
+                            <!-- Button -->
+                            <div class="col-lg-3 col-xxl-2 d-grid">
+                                <a href="{{ route('register') }}" class="btn btn-primary mb-0">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Action box END -->
                 </div>
             </div>
         </div>
     </section>
-    <!-- =======================
-    Action box END -->
+    @endguest
+
 
     <!-- =======================
     About START -->
@@ -503,93 +601,7 @@ GoFlyFits
     <!-- =======================
     About END -->
 
-    <!-- =======================
-    Testimonials START -->
-    <section class="pt-0 pt-md-5">
-        <div class="container">
-            <div class="text-center position-relative py-5" style="background-image:url(assets/images/element/map.svg); background-position: center left; background-size: cover;">
-                <!-- Avatar decoration -->
-                <div class="avatar position-absolute top-50 end-0 mt-5 me-7">
-                    <img class="avatar-img rounded-circle border border-2 border-light d-none d-md-block" src="assets/images/avatar/09.jpg" alt="avatar">
-                </div>
-                <!-- Avatar decoration -->
-                <div class="avatar avatar-lg position-absolute top-0 end-0 mt-5">
-                    <img class="avatar-img rounded-circle border border-2 border-light d-none d-lg-block" src="assets/images/avatar/05.jpg" alt="avatar">
-                </div>
-                <!-- Avatar decoration -->
-                <div class="avatar position-absolute top-50 start-0 ms-5">
-                    <img class="avatar-img rounded-circle border border-2 border-light d-none d-md-block" src="assets/images/avatar/04.jpg" alt="avatar">
-                </div>
-                <!-- Avatar decoration -->
-                <div class="avatar avatar-sm position-absolute bottom-0 start-0 mb-5 ms-8">
-                    <img class="avatar-img rounded-circle border border-2 border-light d-none d-md-block" src="assets/images/avatar/07.jpg" alt="avatar">
-                </div>
-                <!-- Avatar decoration -->
-                <div class="avatar avatar-lg position-absolute top-0 start-0 mt-5">
-                    <img class="avatar-img rounded-circle border border-2 border-light d-none d-lg-block" src="assets/images/avatar/06.jpg" alt="avatar">
-                </div>
 
-                <!-- Title -->
-                <div class="row mb-5">
-                    <div class="col-12">
-                        <h2>Hear From Our Happy Clients</h2>
-                    </div>
-                </div>
-
-                <!-- Testimonials -->
-                <div class="row">
-                    <div class="col-md-9 col-xl-7 mx-auto">
-                        <!-- Slider START -->
-                        <div class="tiny-slider dots-primary">
-                            <div class="tiny-slider-inner" data-autoplay="true" data-arrow="false" data-dots="true" data-edge="2" data-items="1">
-                                <!-- Slider item -->
-                                <div>
-                                    <!-- Avatar -->
-                                    <div class="avatar avatar-xl mb-4">
-                                        <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="avatar">
-                                    </div>
-                                    <!-- Content -->
-                                    <p class="h5 fw-light mb-3">"Size-like body someone had. Are conduct viewing boy minutes warrant the expense? Tolerably behavior may admit daughters offending her ask own. Praise effects wish change way and any wanted."</p>
-                                    <ul class="list-inline small mb-3">
-                                        <li class="list-inline-item me-0"><i class="fa-solid fa-star text-warning"></i></li>
-                                        <li class="list-inline-item me-0"><i class="fa-solid fa-star text-warning"></i></li>
-                                        <li class="list-inline-item me-0"><i class="fa-solid fa-star text-warning"></i></li>
-                                        <li class="list-inline-item me-0"><i class="fa-solid fa-star text-warning"></i></li>
-                                        <li class="list-inline-item"><i class="fa-solid fa-star-half-alt text-warning"></i></li>
-                                    </ul>
-                                    <h5 class="mb-0">Carolyn Ortiz</h5>
-                                    <span>Ceo of Google</span>
-                                </div>
-
-                                <!-- Slider item -->
-                                <div>
-                                    <!-- Avatar -->
-                                    <div class="avatar avatar-xl mb-4">
-                                        <img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt="avatar">
-                                    </div>
-                                    <!-- Content -->
-                                    <p class="h5 fw-light mb-3">"Are conduct viewing boy minutes warrant the expense? Tolerably behavior may admit daughters offending her ask own. Praise effects wish change way and any wanted."</p>
-                                    <ul class="list-inline small mb-3">
-                                        <li class="list-inline-item me-0"><i class="fa-solid fa-star text-warning"></i></li>
-                                        <li class="list-inline-item me-0"><i class="fa-solid fa-star text-warning"></i></li>
-                                        <li class="list-inline-item me-0"><i class="fa-solid fa-star text-warning"></i></li>
-                                        <li class="list-inline-item me-0"><i class="fa-solid fa-star text-warning"></i></li>
-                                        <li class="list-inline-item"><i class="fa-solid fa-star-half-alt text-warning"></i></li>
-                                    </ul>
-                                    <h5 class="mb-0">Louis Ferguson</h5>
-                                    <span>Editor in Chief</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slider END -->
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- =======================
-    Testimonials END -->
 
     <!-- =======================
     Top City START -->
@@ -597,119 +609,6 @@ GoFlyFits
     <!-- =======================
     Top City END -->
 
-    <!-- =======================
-    Best deal START -->
-    <section>
-        <div class="container">
-            <!-- Title -->
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <h2 class="mb-0">Special Offers</h2>
-                </div>
-            </div>
-
-            <!-- Slider START -->
-            <div class="tiny-slider arrow-round arrow-blur arrow-hover">
-                <div class="tiny-slider-inner" data-autoplay="false" data-arrow="true" data-edge="2" data-dots="false" data-items-xl="3" data-items-lg="2" data-items-sm="1">
-
-                    <!-- Slider item -->
-                    <div class="h-100">
-                        <div class="card bg-primary bg-opacity-10 border border-2 border-primary border-dashed border-opacity-75 rounded-3 h-100">
-                            <div class="card-body">
-                                <!-- Title -->
-                                <h5 class="text-primary">Get extra 20% discount on all SPA deals</h5>
-                                <div class="d-flex justify-content-between flex-wrap align-items-center">
-                                    <div class="bg-mode rounded-2 px-3 py-2 d-inline-block">
-                                        <h6 class="fw-normal user-select-all mb-0">LOG125F</h6>
-                                    </div>
-                                    <span class="h6 fw-light small mb-0">Valid till: 31 Dec</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slider item -->
-                    <div class="h-100">
-                        <div class="card border rounded-3 overflow-hidden h-100">
-                            <div class="row g-0 align-items-center">
-                                <!-- Image -->
-                                <div class="col-sm-6">
-                                    <img src="assets/images/offer/02.jpg" class="card-img rounded-0" alt="">
-                                </div>
-
-                                <!-- Title and content -->
-                                <div class="col-sm-6">
-                                    <div class="card-body px-3">
-                                        <h6 class="card-title"><a href="offer-detail.html.htm" class="stretched-link">Hot Summer Nights</a></h6>
-                                        <p class="mb-0">Up to 3 nights free!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slider item -->
-                    <div class="h-100">
-                        <div class="card bg-info bg-opacity-10 border border-2 border-info border-dashed border-opacity-75 rounded-3 h-100">
-                            <div class="card-body">
-                                <!-- Title -->
-                                <h5 class="text-info">Get extra 20% discount on all Activity deals</h5>
-                                <div class="d-flex justify-content-between flex-wrap align-items-center">
-                                    <div class="bg-mode rounded-2 px-3 py-2 d-inline-block">
-                                        <h6 class="fw-normal user-select-all mb-0">LOG125F</h6>
-                                    </div>
-                                    <span class="h6 fw-light small mb-0">Valid till: 31 Dec</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slider item -->
-                    <div class="h-100">
-                        <div class="card border rounded-3 overflow-hidden h-100">
-                            <div class="row g-0 align-items-center">
-                                <!-- Image -->
-                                <div class="col-sm-6">
-                                    <img src="assets/images/offer/01.jpg" class="card-img rounded-0" alt="">
-                                </div>
-
-                                <!-- Title and content -->
-                                <div class="col-sm-6">
-                                    <div class="card-body px-3">
-                                        <h6 class="card-title"><a href="offer-detail.html.htm" class="stretched-link">Daily 50 Lucky Winners get a Free Stay</a></h6>
-                                        <p class="mb-0">Valid till: 15 Nov</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slider item -->
-                    <div class="h-100">
-                        <div class="card border rounded-3 overflow-hidden h-100">
-                            <div class="row g-0 align-items-center">
-                                <!-- Image -->
-                                <div class="col-sm-6">
-                                    <img src="assets/images/offer/03.jpg" class="card-img rounded-0" alt="">
-                                </div>
-
-                                <!-- Title and content -->
-                                <div class="col-sm-6">
-                                    <div class="card-body px-3">
-                                        <h6 class="card-title"><a href="offer-detail.html.htm" class="stretched-link">Book & Enjoy</a></h6>
-                                        <p class="mb-0">20% Off on the best available room rate</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Slider END -->
-        </div>
-    </section>
-    <!-- =======================
-    Best deal END -->
 
     </main>
     @endsection

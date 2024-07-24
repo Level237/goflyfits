@@ -174,6 +174,7 @@
         </div>
     </div>
 <!-- Header START -->
+
 @include('layouts.Frontend.header')
 
 @yield('content')
