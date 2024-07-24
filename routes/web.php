@@ -9,6 +9,7 @@ use App\Http\Controllers\Backend\Customer\DashboardController as CustomerDashboa
 use App\Http\Controllers\Backend\Customer\PreferenceController;
 use App\Http\Controllers\Frontend\ClothingController as FrontendClothingController;
 use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Frontend\SearchController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +36,7 @@ Route::post('step-final',[AuthStepController::class,"stepFinal"])->name("stepFin
 //List and search clothing
 Route::get('all/clothings',[FrontendClothingController::class,'allClothing'])->name('all.clothing');
 Route::get('clothings',[FrontendClothingController::class,'getClothing'])->name('getClothing');
+Route::get('search',[SearchController::class,'search'])->name('search');
 //Detail clothing
 Route::get('clothing/{slug}',[ClothingController::class,'show'])->name('clothing.show');
 

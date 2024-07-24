@@ -33,7 +33,8 @@ GoFlyFits
                 <div class="col-xl-12 mx-auto">
                     <div class="bg-blur bg-white bg-opacity-10 border border-light border-opacity-25 rounded-3 p-4 mt-5">
                         <!-- Form START -->
-                        <form class="row g-3 justify-content-center align-items-center">
+                        <form action="{{ route('search') }}" class="row g-3 justify-content-center align-items-center">
+                            @csrf
                             <div class="col-lg-3">
                                 <!-- Input -->
 
@@ -71,13 +72,13 @@ GoFlyFits
                             </div>
                             <div class="col-lg-3">
                                 <div class="form-icon-input ">
-                                    <input type="text" class="form-control form-control-lg flatpickr" data-date-format="d/m/y" placeholder="Selectionnez une date pour votre besoin">
+                                    <input type="date" max="2024-07-25" min="2024-07-24" name="date" class="form-control form-control-lg flatpickr" data-date-format="d/m/y" placeholder="Selectionnez une date pour votre besoin">
                                     <span class="form-icon"><i class="bi bi-calendar fs-5"></i></span>
                                 </div>
                             </div>
                             <div class="col-lg-2 d-grid">
 
-                                <a class="btn btn-md btn-primary mb-0" href="#">Search</a>
+                                <button class="btn btn-md btn-primary mb-0" type="submit">Search</button>
                             </div>
                         </form>
                         <!-- Form END -->
@@ -143,7 +144,7 @@ GoFlyFits
                 <div class="col-lg-4 position-relative">
                     <h2>We find  clothings for your Bussness</h2>
                     <p>Book your hotel with us and don't forget to grab an awesome hotel deal to save massive on your stay.</p>
-                    <img src="assets/images/about/09.jpg" class="rounded-3" alt="">
+                    <img src="{{ asset('assets/images/bg/cover2.jpg') }}" class="rounded-3" alt="">
                     <!-- Svg decoration -->
                     <figure class="position-absolute bottom-0 end-0 me-lg-n5 mb-n3">
                         <svg class="fill-info" width="150px" height="133.5px" viewbox="0 0 150 133.5" style="enable-background:new 0 0 150 133.5;" xml:space="preserve">
@@ -177,7 +178,7 @@ GoFlyFits
                     <!-- Image -->
                     <div class="position-relative mb-5">
                         <!-- Image -->
-                        <img src="assets/images/about/10.jpg" class="rounded-3" alt="">
+                        <img src="{{ asset('assets/images/bg/cover1.jpg') }}" class="rounded-3" alt="">
                         <!-- Manager -->
                         <div class="position-absolute bottom-0 start-0 ms-n3 ms-lg-n6 mb-2 z-index-1">
                             <div class="bg-mode shadow d-inline-block text-center rounded-3 position-relative p-4">
