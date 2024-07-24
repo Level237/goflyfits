@@ -303,7 +303,7 @@ GoFlyFits
 
                     <div class="px-4 mt-6" style="">
                         <!-- Image -->
-                        <img src="assets/images/element/step-3.svg" class="w-150px mb-3" alt="">
+                        <img src="assets/images/element/search.svg" class="w-150px mb-3" alt="">
 
                         <!-- Title -->
                         <h5>Search Choice</h5>
