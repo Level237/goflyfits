@@ -98,8 +98,8 @@
 		<div class="container">
 			<!-- Logo START -->
 			<a class="navbar-brand" href="index.html-1.htm">
-				<img class="light-mode-item navbar-brand-item" src="assets/images/logo.svg" alt="logo">
-				<img class="dark-mode-item navbar-brand-item" src="assets/images/logo-light.svg" alt="logo">
+				<img class="light-mode-item navbar-brand-item" src="{{ asset('assets/images/logo2.png') }}" alt="logo">
+				<img class="dark-mode-item navbar-brand-item" src="{{ asset('assets/images/logo2.png') }}" alt="logo">
 			</a>
 			<!-- Logo END -->
 
@@ -465,7 +465,7 @@ Footer START -->
 			<!-- Widget -->
 			<div class="col-md-4">
 				<div class="text-center text-md-start mb-3 mb-md-0">
-					<a href="index.html-1.htm"> <img class="h-30px" src="assets/images/logo-light.svg" alt="logo"> </a>
+					<a href="index.html-1.htm"> <img class="h-30px" src="{{ asset('assets/images/logo1.png') }}" alt="logo"> </a>
 				</div>
 			</div>
 

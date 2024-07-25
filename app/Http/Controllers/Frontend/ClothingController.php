@@ -16,11 +16,12 @@ class ClothingController extends Controller
         $clothings=Clothing::query()
         ->orderBy('id','desc')
         ->get();
-        return view('clothings.list',compact('clothings'));
+        $categories=Category::all();
+        return view('clothings.list',compact('clothings','categories'));
     }
 
     public function getClothing(Request $request){
-
+        $categories=Category::all();
         if($request->category){
             $category=Category::where("category_title",$request->category)->first();
             $category_name=$category->category_title;
@@ -38,7 +39,7 @@ class ClothingController extends Controller
 
         //return $clothing->categories;
         //return $clothings;
-        return view('clothings.list',compact('clothings','category_name'));
+        return view('clothings.list',compact('clothings','category_name','categories'));
     }
     public function show(){
 

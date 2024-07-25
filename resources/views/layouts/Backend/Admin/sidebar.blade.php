@@ -2,8 +2,8 @@
     <!-- Navbar brand for xl START -->
     <div class="d-flex align-items-center">
         <a class="navbar-brand" href="index.html-1.htm">
-            <img class="light-mode-item navbar-brand-item" src="assets/images/logo.svg" alt="logo">
-            <img class="dark-mode-item navbar-brand-item" src="assets/images/logo-light.svg" alt="logo">
+            <img class="light-mode-item navbar-brand-item" src="{{ asset('assets/images/logo2.png') }}" alt="logo">
+            <img class="dark-mode-item navbar-brand-item" src="{{ asset('assets/images/logo2.png') }}" alt="logo">
         </a>
     </div>
     <!-- Navbar brand for xl END -->
