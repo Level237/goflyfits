@@ -361,10 +361,10 @@
 						<li class="px-3 mb-3">
 							<div class="d-flex align-items-center">
 								<!-- Avatar -->
-								<div class="avatar me-3">
-									<img class="avatar-img rounded-circle shadow" src="assets/images/avatar/01.jpg" alt="avatar">
-								</div>
-								<div>
+								<div  class="avatar" href="#" id="profileDropdown" role="button" data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false"">
+                                    <div style="background: {{ auth()->user()->color }}" class="avatar-img rounded-circle text-white"><span class="position-absolute top-50 start-50 translate-middle fw-bold">{{ auth()->user()->name[0] }}{{ auth()->user()->name[1] }}</span></div>
+                                  </div>
+								<div class="mx-2">
 									<a class="h6 mt-2 mt-sm-0" href="#">{{ auth()->user()->name }}</a>
 									<p class="small m-0">{{ auth()->user()->email }}</p>
 								</div>
