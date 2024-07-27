@@ -33,4 +33,9 @@ class Clothing extends Model
 
         return $this->belongsTo(Town::class);
     }
+
+    public function brand(){
+
+        return $this->belongsTo(Brand::class);
+    }
 }

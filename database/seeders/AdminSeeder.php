@@ -22,6 +22,8 @@ class AdminSeeder extends Seeder
             'country'=>"cameroon",
             'phone_number'=>"691594365",
             'isChoice'=>1,
+            'size'=>"xl",
+            'weight'=>"78",
             'color'=>"green"
         ],
         );

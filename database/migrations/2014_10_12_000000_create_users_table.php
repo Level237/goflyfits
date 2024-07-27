@@ -28,6 +28,8 @@ return new class extends Migration
             $table->string('phone_number')->unique();
             $table->rememberToken();
             $table->boolean("isChoice")->default(0);
+            $table->string('size');
+            $table->string('weight')->nullable();
             $table->string('color');
             $table->timestamps();
         });

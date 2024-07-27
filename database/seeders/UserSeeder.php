@@ -22,6 +22,8 @@ class UserSeeder extends Seeder
             'country'=>"cameroon",
             'phone_number'=>"690394365",
             'isChoice'=>0,
+            'size'=>"xl",
+            'weight'=>"67",
             'color'=>"red"
         ],
         );

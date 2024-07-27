@@ -27,6 +27,8 @@ class User extends Authenticatable
         'phone_number',
         'town',
         'country',
+        'size',
+        'weight',
         'phone_number',
         'isChoice',
         'role_id',
