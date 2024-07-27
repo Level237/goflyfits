@@ -44,13 +44,19 @@ Main content START -->
 										<input type="text" class="form-control" name="title" placeholder="Entrez le nom du vetement">
 
 									</div>
+                                    @error('title')
+                                        <div style="color:#c70609">{{ $message }}</div>
+                                        @enderror
 								</div>
 
 								<!-- Contact number -->
 								<div class="col-md-6">
 									<label class="form-label">Prix</label>
 									<input class="form-control" type="text" name="price" placeholder="Entrez le prix du vetement">
-								</div>
+                                    @error('price')
+                                    <div style="color:#c70609">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
 								<!-- Email -->
                                 <div class="col-md-6 form-control-bg-light">
@@ -62,13 +68,19 @@ Main content START -->
                                         <option value="XXL">XXL</option>
                                         <option value="XXXL">XXXL</option>
                                     </select>
+                                    @error('size')
+                                        <div style="color:#c70609">{{ $message }}</div>
+                                        @enderror
                                 </div>
 
 								<!-- Address -->
 								<div class="col-12">
 									<label class="form-label">Description</label>
 									<textarea class="form-control" name="description" rows="4" placeholder="Entrez une description du vetement"></textarea>
-								</div>
+                                    @error('description')
+                                    <div style="color:#c70609">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
 								<!-- State -->
 								<div class="col-md-12">
@@ -79,6 +91,9 @@ Main content START -->
                                             <option value="{{ $town->id }}">{{ $town->town_name }}</option>
                                         @endforeach
 									</select>
+                                    @error('town_id')
+                                        <div style="color:#c70609">{{ $message }}</div>
+                                        @enderror
 								</div>
                                 <div class="col-md-12">
 									<label class="form-label">Marque </label>
@@ -88,6 +103,9 @@ Main content START -->
                                             <option value="{{ $brand->id }}">{{ $brand->brand_title }}</option>
                                         @endforeach
 									</select>
+                                    @error('brand_id')
+                                        <div style="color:#c70609">{{ $message }}</div>
+                                        @enderror
 								</div>
 								<!-- City -->
 
@@ -115,6 +133,9 @@ Main content START -->
                                             <option value="{{ $categorie->id }}">{{ $categorie->category_title }}</option>
                                         @endforeach
 									</select>
+                                    @error('categories')
+                                        <div style="color:#c70609">{{ $message }}</div>
+                                        @enderror
 								</div>
 
 								<!-- State -->
@@ -123,7 +144,9 @@ Main content START -->
 								<div class="col-12">
 									<label class="form-label">Upload image *</label>
 									<input class="form-control" name="image" type="file" name="size" >
-
+                                    @error('image')
+                                    <div style="color:#c70609">{{ $message }}</div>
+                                    @enderror
 								</div>
 							</div>
 						</div>

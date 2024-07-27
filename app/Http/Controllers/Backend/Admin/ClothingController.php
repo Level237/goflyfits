@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ClothingRequest;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Clothing;
@@ -35,7 +36,7 @@ class ClothingController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ClothingRequest $request)
     {
         $clothing=new Clothing;
         $clothing->title=$request->title;
@@ -95,6 +96,7 @@ class ClothingController extends Controller
         $clothing->title=$request->title;
         $clothing->description=$request->description;
         $clothing->price=$request->price;
+        $clothing->brand_id=$request->brand_id;
         $clothing->size=$request->size;
         $clothing->source=$request->source;
         $clothing->slug=$this->slugify($request->title);
