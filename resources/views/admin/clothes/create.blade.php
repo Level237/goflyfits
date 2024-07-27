@@ -53,10 +53,16 @@ Main content START -->
 								</div>
 
 								<!-- Email -->
-								<div class="col-md-6">
-									<label class="form-label">Taille</label>
-									<input class="form-control" type="text" name="size" placeholder="Entrez la taille du vetement">
-								</div>
+                                <div class="col-md-6 form-control-bg-light">
+                                    <label class="form-label">Taille</label>
+                                    <select  class="form-control" name="size" id="">
+                                        <option value="L">L</option>
+                                        <option value="XL">XL</option>
+                                        <option value="M">M</option>
+                                        <option value="XXL">XXL</option>
+                                        <option value="XXXL">XXXL</option>
+                                    </select>
+                                </div>
 
 								<!-- Address -->
 								<div class="col-12">
@@ -74,7 +80,15 @@ Main content START -->
                                         @endforeach
 									</select>
 								</div>
-
+                                <div class="col-md-12">
+									<label class="form-label">Marque </label>
+									<select name="brand_id" class="form-select js-choice" data-search-enabled="true">
+										<option>Selectionnez une marque</option>
+                                        @foreach ($brands as $brand)
+                                            <option value="{{ $brand->id }}">{{ $brand->brand_title }}</option>
+                                        @endforeach
+									</select>
+								</div>
 								<!-- City -->
 
 							</div>

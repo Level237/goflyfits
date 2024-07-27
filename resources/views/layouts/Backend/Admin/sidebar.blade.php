@@ -42,6 +42,18 @@
                         <li class="nav-item"> <a class="nav-link" href="{{ route('admin.categories.index') }}">Listes des categories</a></li>
                     </ul>
                 </li>
+
+                <!-- Menu item -->
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#collapsebrand" role="button" aria-expanded="false" aria-controls="collapseguest">
+                   Marques
+                    </a>
+                    <!-- Submenu -->
+                    <ul class="nav collapse flex-column" id="collapsebrand" data-bs-parent="#navbar-sidebar">
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('admin.categories.create') }}">Créer une marque</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('admin.categories.index') }}">Listes des marques</a></li>
+                    </ul>
+                </li>
                 <!-- Menu item -->
                 <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="collapse" href="#collapsetown" role="button" aria-expanded="false" aria-controls="collapsetown">

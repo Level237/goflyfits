@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Clothing;
 use App\Models\Town;
@@ -26,8 +27,9 @@ class ClothingController extends Controller
     public function create()
     {
         $categories=Category::all();
+        $brands=Brand::all();
         $towns=Town::all();
-        return view('admin.clothes.create',compact('categories','towns'));
+        return view('admin.clothes.create',compact('categories','towns','brands'));
     }
 
     /**
@@ -40,6 +42,7 @@ class ClothingController extends Controller
         $clothing->description=$request->description;
         $resizeImageAndGetImageName=$this->resizeImage($request->file("image"));
         $clothing->price=$request->price;
+        $clothing->brand_id=$request->brand_id;
         $clothing->size=$request->size;
         $clothing->town_id=$request->town_id;
         $clothing->slug=$this->slugify($request->title);
