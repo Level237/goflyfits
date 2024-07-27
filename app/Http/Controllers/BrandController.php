@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
 use Illuminate\Http\Request;
 
 class BrandController extends Controller
@@ -11,7 +12,9 @@ class BrandController extends Controller
      */
     public function index()
     {
-        //
+        $brands=Brand::all();
+
+        return view('admin.brands.index',compact('brands'));
     }
 
     /**
@@ -19,7 +22,7 @@ class BrandController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.brands.create');
     }
 
     /**
@@ -27,7 +30,11 @@ class BrandController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $category=new Brand;
+        $category->brand_title=$request->brand_title;
+        $category->save();
+
+        return to_route('admin.brands.index');
     }
 
     /**

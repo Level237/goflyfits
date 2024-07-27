@@ -50,8 +50,8 @@
                     </a>
                     <!-- Submenu -->
                     <ul class="nav collapse flex-column" id="collapsebrand" data-bs-parent="#navbar-sidebar">
-                        <li class="nav-item"> <a class="nav-link" href="{{ route('admin.categories.create') }}">Créer une marque</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="{{ route('admin.categories.index') }}">Listes des marques</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('admin.brands.create') }}">Créer une marque</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('admin.brands.index') }}">Listes des marques</a></li>
                     </ul>
                 </li>
                 <!-- Menu item -->

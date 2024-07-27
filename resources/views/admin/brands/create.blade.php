@@ -1,7 +1,7 @@
 @extends('layouts.Frontend.main')
 
 @section('title')
-Nouvel categorie
+Nouvelle marque
 @endsection
 
 @section('content')
@@ -10,7 +10,7 @@ Nouvel categorie
 	<div class="container" style="margin-top: 60px">
 		<div class="row">
 			<div class="col-12 mx-auto text-center">
-				<h1 class="fs-2 mb-2">Nouvel categorie</h1>
+				<h1 class="fs-2 mb-2">Nouvelle marque</h1>
 				<p class="mb-0">Praise effects wish change way and any wanted. Lively use looked latter regard had.</p>
 			</div>
 		</div>
@@ -25,13 +25,13 @@ Main content START -->
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-10 mx-auto">
-				<form class="vstack gap-4" method="POST" action="{{ route('admin.categories.store') }}">
+				<form class="vstack gap-4" method="POST" action="{{ route('admin.brands.store') }}">
                     @csrf
 					<!-- Owner Detail START -->
 					<div class="card shadow">
 						<!-- Card header -->
 						<div class="card-header border-bottom">
-							<h5 class="mb-0">Category</h5>
+							<h5 class="mb-0">Marque</h5>
 						</div>
 
 						<!-- Card body -->
@@ -39,9 +39,9 @@ Main content START -->
 							<div class="row g-3">
 								<!-- Owner name -->
 								<div class="col-12">
-									<label class="form-label">Nom de la category</label>
+									<label class="form-label">Nom de la marque</label>
 									<div class="input-group">
-										<input type="text" class="form-control" name="category_title" placeholder="Entrez le nom de la categorie">
+										<input type="text" class="form-control" name="brand_title" placeholder="Entrez le nom de votre marque">
 
 									</div>
 								</div>
