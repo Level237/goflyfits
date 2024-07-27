@@ -120,6 +120,9 @@ Main banner START -->
                                 <option value="{{ $categorie->id }}">{{ $categorie->category_title }}</option>
                             @endforeach
                         </select>
+                        @error('preferences')
+                        <div style="color:#c70609">{{ $message }}</div>
+                        @enderror
 					</div>
                     <div class="mb-4 form-control-bg-light">
 						<label class="form-label">Quel est votre taille? *</label>
@@ -130,7 +133,6 @@ Main banner START -->
                             <option value="XXL">XXL</option>
                             <option value="XXXL">XXXL</option>
                         </select>
-
 					</div>
                     @error('size')
                     <div style="color:#c70609">{{ $message }}</div>

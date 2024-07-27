@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RegisterRequest;
 use App\Http\Requests\StepOneRequest;
+use App\Http\Requests\StepThreeRequest;
 use App\Models\Category;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
@@ -72,7 +73,7 @@ class AuthStepController extends Controller
     }
 }
 
-    public function stepFinal(Request $request){
+    public function stepFinal(StepThreeRequest $request){
         if(Session::has('email') && Session::has('password')){
             $name=Session::get('name');
         $email=Session::get('email');
@@ -85,6 +86,8 @@ class AuthStepController extends Controller
             'email' => $email,
             'password' => Hash::make($password),
             'town'=>$town,
+            'size'=>$request->size,
+            'weight'=>$request->weight,
             'phone_number'=>$phone_number,
             'color'=>$this->randomColor(),
             'isChoice'=>1,
