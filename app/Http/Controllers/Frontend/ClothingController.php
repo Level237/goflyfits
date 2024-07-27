@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\DB;
 class ClothingController extends Controller
 {
     public function allClothing(){
-
+        $categories=Category::all();
         $clothings=Clothing::query()
         ->orderBy('id','desc')
         ->get();

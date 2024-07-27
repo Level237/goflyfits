@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 class SearchController extends Controller
 {
     public function search(Request $request){
+        $categories=Category::all();
         $town=Town::where('town_name',$request->town)->first();
         $category=Category::find($request->category_id);
             $clothings=Clothing::join('category_clothing','category_clothing.clothing_id','clothing.id')
@@ -22,6 +23,6 @@ class SearchController extends Controller
             $category_name=$category->category_title;
 
             //return $clothings;
-            return view('clothings.list',compact('clothings','category_name'));
+            return view('clothings.list',compact('clothings','category_name','categories'));
     }
 }
