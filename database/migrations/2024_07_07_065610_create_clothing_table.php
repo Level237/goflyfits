@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Town;
 use Illuminate\Database\Migrations\Migration;
@@ -23,6 +24,11 @@ return new class extends Migration
             ->constrained()
             ->cascadeOnDelete()
             ->cascadeOnUpdate();
+            $table->foreignIdFor(Brand::class)
+            ->constrained()
+            ->cascadeOnDelete()
+            ->cascadeOnUpdate();
+            $table->string('size');
             $table->string('slug');
             $table->string('clothing_profile');
             $table->boolean('isAvailable')->default(1);
