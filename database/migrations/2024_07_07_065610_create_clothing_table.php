@@ -28,7 +28,6 @@ return new class extends Migration
             ->constrained()
             ->cascadeOnDelete()
             ->cascadeOnUpdate();
-            $table->string('size');
             $table->string('slug');
             $table->string('clothing_profile');
             $table->boolean('isAvailable')->default(1);

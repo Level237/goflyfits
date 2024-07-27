@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Booking - Multipurpose Online Booking Theme</title>
+	<title>Preferences utilisateur</title>
 
 	<!-- Meta Tags -->
 	<meta charset="utf-8">
@@ -112,7 +112,7 @@ Main banner START -->
 				<form method="POST" action="{{ route('stepFinal') }}" class="mt-5">
                     @csrf
 					<!-- Message -->
-					<div class="mb-2 form-control-bg-light">
+					<div class="mb-4 form-control-bg-light">
 						<label class="form-label">Quels sont vos préferences de style? *</label>
 						<select name="preferences[]" multiple class="form-select js-choice" data-search-enabled="true">
 
@@ -120,6 +120,28 @@ Main banner START -->
                                 <option value="{{ $categorie->id }}">{{ $categorie->category_title }}</option>
                             @endforeach
                         </select>
+					</div>
+                    <div class="mb-4 form-control-bg-light">
+						<label class="form-label">Quel est votre taille? *</label>
+						<select  class="form-control" name="size" id="">
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <option value="M">M</option>
+                            <option value="XXL">XXL</option>
+                            <option value="XXXL">XXXL</option>
+                        </select>
+
+					</div>
+                    @error('size')
+                    <div style="color:#c70609">{{ $message }}</div>
+                    @enderror
+
+                    <div class="mb-2 form-control-bg-light">
+						<label class="form-label">Quel est votre poids? *</label>
+						<input type="text" name="weight" class="form-control">
+                        @error('weight')
+                        <div style="color:#c70609">{{ $message }}</div>
+                        @enderror
 					</div>
 					<!-- Button -->
 					<div><button  class="btn mt-4 btn-lg btn-primary mb-0" type="submit">Suivant</button></div>

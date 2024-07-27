@@ -2,17 +2,16 @@
 
 namespace App\Http\Requests;
 
-use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
 
-class StepOneRequest extends FormRequest
+class StepTwoRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
      */
     public function authorize(): bool
     {
-        return true;
+        return false;
     }
 
     /**
@@ -23,9 +22,7 @@ class StepOneRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['required', 'string','max:12', 'unique:'.User::class],
-            'phone_number'=>['required', 'numeric', 'unique:'.User::class],
-            'town'=>'required'
+            //
         ];
     }
 }
