@@ -127,7 +127,11 @@ Main Content START -->
 									<div class="mb-3">
 										<label class="form-label">Enter email id</label>
 										<input  name="email" type="email" class="form-control">
+                                        @error('email')
+                                        <div style="color:#c70609">{{ $message }}</div>
+                                        @enderror
 									</div>
+
 									<!-- Password -->
 									<div class="mb-3 position-relative">
 										<label class="form-label">Enter password</label>
@@ -135,11 +139,17 @@ Main Content START -->
 										<span class="position-absolute top-50 end-0 translate-middle-y p-0 mt-3">
 											<i class="fakepasswordicon fas fa-eye-slash cursor-pointer p-2"></i>
 										</span>
+                                        @error('password')
+                                        <div style="color:#c70609">{{ $message }}</div>
+                                        @enderror
 									</div>
 									<!-- Confirm Password -->
 									<div class="mb-3">
 										<label class="form-label">Confirm Password</label>
 										<input name="password_confirmation" type="password" class="form-control">
+                                        @error('password_confirmation')
+                                        <div style="color:#c70609">{{ $message }}</div>
+                                        @enderror
 									</div>
 									<!-- Remember me -->
 									<div class="mb-3">
