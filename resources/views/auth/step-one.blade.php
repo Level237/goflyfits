@@ -115,12 +115,20 @@ Main banner START -->
 					<div class="mb-2 form-control-bg-light">
 						<label class="form-label">Quel est votre nom? *</label>
 						<input type="text" name="name" class="form-control">
+                        @error('name')
+                        <div style="color:#c70609">{{ $message }}</div>
+                        @enderror
 					</div>
+
 					<!-- Email -->
 					<div class="mb-2 form-control-bg-light">
 						<label class="form-label">Quel est votre numéro de téléphone? *</label>
 						<input type="text" name="phone_number" class="form-control">
+                        @error('phone_number')
+                        <div style="color:#c70609">{{ $message }}</div>
+                        @enderror
 					</div>
+
 					<!-- Message -->
 					<div class="mb-2 form-control-bg-light">
 						<label class="form-label">Quel est votre ville de résidence? *</label>
@@ -131,7 +139,11 @@ Main banner START -->
                             <option value="garoua">Garoua</option>
                             <option value="ebolowa">Ebolowa</option>
                         </select>
+
 					</div>
+                    @error('town')
+                    <div style="color:#c70609">{{ $message }}</div>
+                    @enderror
 					<!-- Button -->
 					<div><button type="submit" class="btn mt-4 btn-lg btn-primary mb-0" type="button">Suivant</button></div>
 				</form>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RegisterRequest;
+use App\Http\Requests\StepOneRequest;
 use App\Models\Category;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
@@ -43,7 +44,7 @@ class AuthStepController extends Controller
        }
     }
 
-    public function stepTwo(Request $request){
+    public function stepTwo(StepOneRequest $request){
         if(Session::has('email') && Session::has('password')){
             $name=$request->name;
             $phone_number=$request->phone_number;
