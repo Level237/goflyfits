@@ -66,6 +66,9 @@ class BrandController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $brand=Brand::find($id);
+        $brand->delete();
+
+        return back();
     }
 }
