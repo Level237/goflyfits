@@ -32,8 +32,8 @@ Admin Dashboard
                     <div class="d-flex justify-content-between align-items-center">
                         <!-- Digit -->
                         <div>
-                            <h4 class="mb-0">56</h4>
-                            <span class="h6 fw-light mb-0">Total Drivers</span>
+                            <h4 class="mb-0">{{ $clothingCount }}</h4>
+                            <span class="h6 fw-light mb-0">Total Clothings</span>
                         </div>
                         <!-- Icon -->
                         <div class="icon-lg rounded-circle bg-warning text-white mb-0"><i class="fa-solid fa-hotel fa-fw"></i></div>
@@ -62,7 +62,7 @@ Admin Dashboard
                     <div class="d-flex justify-content-between align-items-center">
                         <!-- Digit -->
                         <div>
-                            <h4 class="mb-0">24</h4>
+                            <h4 class="mb-0">{{ $userCount }}</h4>
                             <span class="h6 fw-light mb-0">Total Users</span>
                         </div>
                         <!-- Icon -->
