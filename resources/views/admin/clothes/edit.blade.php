@@ -69,15 +69,24 @@ Main content START -->
 								<div class="col-md-12">
 									<label class="form-label">Ville </label>
 									<select name="source" class="form-select js-choice" data-search-enabled="true">
-										<option>Selectionnez une source</option>
-										<option @selected($clothing->source==="douala")  value="douala">Douala</option>
-										<option @selected($clothing->source==="yaoundé") value="yaoundé">Yaoundé</option>
-										<option @selected($clothing->source==="bafoussam") value="bafoussam">Bafoussam</option>
-										<option @selected($clothing->source==="garoua") value="garoua">Garoua</option>
-                                        <option @selected($clothing->source==="kribi") value="kribi">Kribi</option>
+
+                                        @foreach ($towns as $town)
+                                        <option @selected($town->id===$clothing->town_id) value="{{ $town->id }}">{{ $town->town_name }}</option>
+                                    @endforeach
 									</select>
 								</div>
-
+                                <div class="col-md-12">
+									<label class="form-label">Marque </label>
+									<select name="brand_id" class="form-select js-choice" data-search-enabled="true">
+										<option>Selectionnez une marque</option>
+                                        @foreach ($brands as $brand)
+                                            <option @selected($brand->id===$clothing->brand_id) value="{{ $brand->id }}">{{ $brand->brand_title }}</option>
+                                        @endforeach
+									</select>
+                                    @error('brand_id')
+                                        <div style="color:#c70609">{{ $message }}</div>
+                                        @enderror
+								</div>
 								<!-- City -->
 
 							</div>

@@ -84,7 +84,9 @@ class ClothingController extends Controller
     {
         $categories=Category::all();
         $clothing=Clothing::find($id);
-        return view('admin.clothes.edit',compact('clothing','categories'));
+        $brands=Brand::all();
+        $towns=Town::all();
+        return view('admin.clothes.edit',compact('clothing','categories','brands','towns'));
     }
 
     /**
