@@ -99,7 +99,7 @@
                                                 <h5>Prix</h5>
                                             </div>
                                             <div>
-                                                <h5>${{ $clothing->price }}/jour</h5>
+                                                <h5>${{ $clothing->price }}</h5>
                                             </div>
                                         </div>
                                         <!-- List -->
@@ -219,6 +219,10 @@
                                     <span class="h6 fw-light mb-0">State Tax</span>
                                     <span class="h6 fw-light mb-0">$1</span>
                                 </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span class="h6 fw-light mb-0">day</span>
+                                    <span class="h6 fw-light mb-0">24 hours</span>
+                                </li>
                                 <li class="list-group-item py-0"><hr class="my-0"></li>
                                 <!-- Divider -->
                                 <li class="list-group-item d-flex justify-content-between pb-0">
@@ -235,7 +239,7 @@
                             <div class="d-grid mt-4 gap-2">
 
                                 <!-- Button -->
-                                <a href="/customer/payment?clothing_name={{ $clothing->name }}?clothing_id={{ $clothing->id }}?price={{ $price }}" class="btn btn-dark mb-0 mt-2">Pay Now</a>
+                                <a href="/customer/payment?clothing_name={{ $clothing->title }}&clothing_id={{ $clothing->id }}&price={{ $price }}" class="btn btn-dark mb-0 mt-2">Pay Now</a>
                             </div>
                         </div>
                     </div>

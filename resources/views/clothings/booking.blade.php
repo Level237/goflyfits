@@ -24,8 +24,8 @@ Booking clothing
                                     <!-- Breadcrumb -->
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb breadcrumb-dots mb-0">
-                                            <li class="breadcrumb-item"><a href="index.html-1.htm"><i class="bi bi-house me-1"></i> Home</a></li>
-                                            <li class="breadcrumb-item">Hotel detail</li>
+                                            <li class="breadcrumb-item"><a href="{{ route('homepage') }}"><i class="bi bi-house me-1"></i> Home</a></li>
+                                            <li class="breadcrumb-item"><a href="{{ route('clothing.show',$clothing->slug) }}">{{ $clothing->title }}</a></li>
                                             <li class="breadcrumb-item active">Booking</li>
                                         </ol>
                                     </nav>
@@ -61,7 +61,7 @@ Booking clothing
                             <button type="button" class="btn btn-link step-trigger mb-0" role="tab" id="steppertrigger1" aria-controls="step-1">
                                 <span class="bs-stepper-circle">1</span>
                             </button>
-                            <h6 class="bs-stepper-label d-none d-md-block">Tour Review</h6>
+                            <h6 class="bs-stepper-label d-none d-md-block">clothing Review</h6>
                         </div>
                     </div>
                     <div class="line"></div>
@@ -72,7 +72,7 @@ Booking clothing
                             <button type="button" class="btn btn-link step-trigger mb-0" role="tab" id="steppertrigger2" aria-controls="step-2">
                                 <span class="bs-stepper-circle">2</span>
                             </button>
-                            <h6 class="bs-stepper-label d-none d-md-block">Traveler Info</h6>
+                            <h6 class="bs-stepper-label d-none d-md-block">User Info</h6>
                         </div>
                     </div>
                     <div class="line"></div>
@@ -101,42 +101,73 @@ Booking clothing
                                 <div id="step-1" role="tabpanel" class="content fade" aria-labelledby="steppertrigger1">
                                     <div class="vstack gap-4">
                                         <!-- Title -->
-                                        <h4 class="mb-0">Tour Review</h4>
+                                        <h4 class="mb-0">Clothing Review</h4>
 
                                         <hr class="my-0"> <!-- Divider -->
 
                                         <!-- Tour list START -->
-                                        <div class="card shadow rounded-2 overflow-hidden">
-                                            <div class="row g-0">
-                                                <!-- Image -->
-                                                <div class="col-sm-6 col-md-4">
-                                                    <img src="assets/images/category/tour/4by3/03.jpg" class="" alt="">
-                                                </div>
+                                        <div class="card border p-4">
+                                            <!-- Card body START -->
+                                            <div class="card-body p-0">
+                                                <div class="row g-4 align-items-center">
+                                                    <!-- Image -->
+                                                    <div class="col-md-4">
+                                                        <div class="tiny-slider-inner" data-autoplay="false" data-arrow="true" data-dots="false" data-items="1">
+                                                            <!-- Image item -->
+                                                            <div><img class="rounded" src="{{ Storage::url($clothing->clothing_profile) }}" alt="Card image"></div>
+                                                        </div>
+                                                    </div>
 
-                                                <!-- Card Body START -->
-                                                <div class="col-sm-6 col-md-8">
-                                                    <div class="card-body p-3">
-                                                        <!-- Title -->
-                                                        <h5 class="card-title mb-1"><a href="#">Beautiful Bali with Malaysia</a></h5>
-                                                        <!-- Rating star -->
-                                                        <ul class="list-inline mb-0">
-                                                            <li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
-                                                            <li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
-                                                            <li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
-                                                            <li class="list-inline-item me-0 small"><i class="fa-solid fa-star text-warning"></i></li>
-                                                            <li class="list-inline-item me-0 small"><i class="fa-solid fa-star-half-alt text-warning"></i></li>
-                                                        </ul>
+                                                    <!-- card body -->
+                                                    <div class="col-md-8">
+                                                        <!-- Title and rating -->
+                                                        <div class="d-sm-flex justify-content-sm-between">
+                                                            <!-- Card title -->
+                                                            <div>
+                                                                <h4 class="card-title mb-2">{{ $clothing->title }}</h4>
 
+                                                            </div>
+                                                            <!-- Rating Star -->
+                                                            <ul class="list-inline mb-0">
+                                                                <li class="list-inline-item me-0"><i class="fa-solid fa-star text-warning"></i></li>
+                                                                <li class="list-inline-item me-0"><i class="fa-solid fa-star text-warning"></i></li>
+                                                                <li class="list-inline-item me-0"><i class="fa-solid fa-star text-warning"></i></li>
+                                                                <li class="list-inline-item me-0"><i class="fa-solid fa-star text-warning"></i></li>
+                                                                <li class="list-inline-item"><i class="fa-solid fa-star-half-alt text-warning"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div style="justify-content: space-between;align-items:center" class="d-flex">
+                                                            <div>
+                                                                <h5>Taille</h5>
+                                                            </div>
+                                                            <div>
+                                                                <h5>{{ $clothing->size }}</h5>
+                                                            </div>
+                                                        </div>
+                                                        <div style="justify-content: space-between;align-items:center" class="d-flex">
+                                                            <div>
+                                                                <h5>Prix</h5>
+                                                            </div>
+                                                            <div>
+                                                                <h5>${{ $clothing->price }}</h5>
+                                                            </div>
+                                                        </div>
                                                         <!-- List -->
-                                                        <ul class="nav nav-divider small mb-0 mt-2">
-                                                            <li class="nav-item mb-1"><i class="far fa-calendar-alt me-2"></i>April 12-17</li>
-                                                            <li class="nav-item mb-1"><i class="fa-solid fa-bed me-2"></i>1 Room</li>
-                                                            <li class="nav-item mb-1"><i class="bi bi-people-fill me-2"></i>2 Guests</li>
-                                                            <li class="nav-item mb-1"><i class="bi bi-geo-alt-fill me-2"></i>From New York</li>
-                                                        </ul>
+                                                        <div class="grid-cols-3 mt-3">
+                                                        @foreach ($clothing->categories as $category)
+
+                                                        <div style="margin-bottom: 6px;font-size:15px;" class="badge bg-primary text-dark">{{ $category->category_title }}</div>
+
+                                                        @endforeach
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <!-- Card body END -->
+                                            </div>
+                                            <!-- Card body END -->
+
+                                            <!-- Card footer -->
+                                            <div class="card-footer p-0 pt-4">
+
                                             </div>
                                         </div>
                                         <!-- Tour list END -->
