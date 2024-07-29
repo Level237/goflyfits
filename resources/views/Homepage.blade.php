@@ -566,7 +566,7 @@ Client END -->
                     <div class="card-footer border-top">
                         <!-- Buttons -->
                         <div class="d-flex justify-content-between align-items-center">
-                            <a href="directory-detail.html.htm" class="btn btn-link p-0 mb-0">View detail<i class="bi bi-arrow-right ms-1"></i></a>
+                            <a href="{{ route('clothing.show',$clothing->slug) }}" class="btn btn-link p-0 mb-0">View detail<i class="bi bi-arrow-right ms-1"></i></a>
                             <a href="#" class="h6 mb-0 z-index-2"><i class="fa-regular fa-heart"></i></a>
                         </div>
                     </div>
