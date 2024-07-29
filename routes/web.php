@@ -6,6 +6,7 @@ use App\Http\Controllers\Backend\Admin\ClothingController;
 use App\Http\Controllers\Backend\Admin\DashboardController;
 use App\Http\Controllers\Backend\Admin\TownController;
 use App\Http\Controllers\Backend\Customer\DashboardController as CustomerDashboardController;
+use App\Http\Controllers\Backend\Customer\PaymentController;
 use App\Http\Controllers\Backend\Customer\PreferenceController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\Frontend\ClothingController as FrontendClothingController;
@@ -54,6 +55,7 @@ Route::middleware(['auth','admin'])->name('admin.')->prefix('admin')->group(func
 
     Route::middleware(['auth','customer'])->name('customer.')->prefix('customer')->group(function(){
         Route::get('dashboard',[CustomerDashboardController::class,'index'])->name('dashboard');
+        Route::get('payment',[PaymentController::class,'payment'])->name('payment');
         Route::get('preferences',[PreferenceController::class,'index'])->name('preferences');
         Route::put('preferences',[PreferenceController::class,'update'])->name('preferences.update');
         Route::get('preferences/edit',[PreferenceController::class,'edit'])->name('preferences.edit');

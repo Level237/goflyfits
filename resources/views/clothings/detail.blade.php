@@ -217,37 +217,25 @@
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between">
                                     <span class="h6 fw-light mb-0">State Tax</span>
-                                    <span class="h6 fw-light mb-0">$50</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between">
-                                    <span class="h6 fw-light mb-0">Night Charge</span>
-                                    <span class="h6 fw-light mb-0">$100</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between">
-                                    <span class="h6 fw-light mb-0">Convenience Fee</span>
-                                    <span class="h6 fw-light mb-0">$25</span>
+                                    <span class="h6 fw-light mb-0">$1</span>
                                 </li>
                                 <li class="list-group-item py-0"><hr class="my-0"></li>
                                 <!-- Divider -->
                                 <li class="list-group-item d-flex justify-content-between pb-0">
                                     <span class="h5 fw-normal mb-0">Total</span>
-                                    <span class="h5 fw-normal mb-0">$435</span>
+                                    <span class="h5 fw-normal mb-0">
+                                        @php
+                                            $price=$clothing->price + 1
+                                        @endphp
+                                        ${{ $price }}
+                                    </span>
                                 </li>
                             </ul>
 
                             <div class="d-grid mt-4 gap-2">
-                                <div class="form-check form-check-inline mb-0">
-                                    <input class="form-check-input" type="radio" name="discountOptions" id="discount1" value="option1" checked="">
-                                    <label class="form-check-label h6 fw-normal mb-0" for="discount1">Pay $220 now (Half Payment)</label>
-                                </div>
-
-                                <div class="form-check form-check-inline mb-0">
-                                    <input class="form-check-input" type="radio" name="discountOptions" id="discount2" value="option2">
-                                    <label class="form-check-label h6 fw-normal mb-0" for="discount2">Pay $435 now (Full payment)</label>
-                                </div>
 
                                 <!-- Button -->
-                                <a href="cab-booking.html.htm" class="btn btn-dark mb-0 mt-2">Pay Now</a>
+                                <a href="/customer/payment?clothing_name={{ $clothing->name }}?clothing_id={{ $clothing->id }}?price={{ $price }}" class="btn btn-dark mb-0 mt-2">Pay Now</a>
                             </div>
                         </div>
                     </div>
