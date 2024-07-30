@@ -83,7 +83,7 @@ Booking clothing
                             <button type="button" class="btn btn-link step-trigger mb-0" role="tab" id="steppertrigger3" aria-controls="step-3">
                                 <span class="bs-stepper-circle">3</span>
                             </button>
-                            <h6 class="bs-stepper-label d-none d-md-block">Make Payment</h6>
+                            <h6 class="bs-stepper-label d-none d-md-block">Payment</h6>
                         </div>
                     </div>
                 </div>
