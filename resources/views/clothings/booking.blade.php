@@ -446,7 +446,7 @@ Booking clothing
                                 <div id="step-2" role="tabpanel" class="content fade" aria-labelledby="steppertrigger2">
                                     <div class="vstack gap-4">
                                         <!-- Title -->
-                                        <h4 class="mb-0">Traveler Detail</h4>
+                                        <h4 class="mb-0">Client</h4>
 
                                         <hr class="my-0"> <!-- Divider -->
 
@@ -513,77 +513,15 @@ Booking clothing
                                             </div>
                                             <!-- Card body END -->
                                         </div>
-                                        <!-- Traveler 1 form END -->
-
-                                        <!-- Traveler 2 form START -->
-                                        <div class="card border">
-                                            <!-- Card header -->
-                                            <div class="card-header border-bottom">
-                                                <h5 class="mb-0">Traveler 2</h5>
-                                            </div>
-
-                                            <!-- Card body START -->
-                                            <div class="card-body">
-                                                <div class="row g-4">
-                                                    <!-- Title -->
-                                                    <div class="col-md-2">
-                                                        <label class="form-label">Title</label>
-                                                        <div class="form-control-bg-light">
-                                                            <select class="form-select form-select-sm js-choice border-0">
-                                                                <option value="Mr">Mr</option>
-                                                                <option value="Mrs">Mrs</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- First Name -->
-                                                    <div class="col-md-5">
-                                                        <div class="form-control-bg-light">
-                                                            <label class="form-label">First name</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- Last name -->
-                                                    <div class="col-md-5">
-                                                        <div class="form-control-bg-light">
-                                                            <label class="form-label">Last name</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- DOB -->
-                                                    <div class="col-md-6">
-                                                        <div class="form-control-bg-light">
-                                                            <label class="form-label">Date of birth</label>
-                                                            <input type="text" class="form-control flatpickr" data-date-format="d M Y">
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- Passport number -->
-                                                    <div class="col-md-6">
-                                                        <div class="form-control-bg-light">
-                                                            <label class="form-label">Passport number</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- Card body END -->
-                                        </div>
-                                        <!-- Traveler 2 form END -->
-
                                         <!-- Booking detail START -->
                                         <div class="card border">
                                             <!-- Card header -->
                                             <div class="card-header border-bottom">
                                                 <h5 class="mb-0">Your booking detail will be sent here</h5>
                                             </div>
-
                                             <!-- Card body START -->
                                             <div class="card-body">
                                                 <div class="row g-4">
-                                                    <!-- Mobile number -->
                                                     <div class="col-md-6">
                                                         <div class="form-control-bg-light">
                                                             <label class="form-label">Mobile Number</label>
