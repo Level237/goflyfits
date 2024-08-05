@@ -19,6 +19,7 @@ class Clothing extends Model
         'price',
         'size',
         'source',
+        'gender',
         'town_id',
         'brand_id',
         'slug',

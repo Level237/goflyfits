@@ -180,7 +180,7 @@
 @yield('content')
 
 
-<footer class="bg-dark py-7">
+<footer class="bg-dark py-7 ">
 	<div class="container">
 		<div class="row mx-auto">
 			<div class="col-md-10 col-xl-6 mx-auto text-center">

@@ -172,127 +172,15 @@ Booking clothing
                                         </div>
                                         <!-- Tour list END -->
 
-                                        <!-- Flight detail START -->
-                                        <div class="card border">
-                                            <!-- Card header -->
-                                            <div class="card-header border-bottom d-flex justify-content-between">
-                                                <!-- Title -->
-                                                <h5 class="mb-0">Flight Details</h5>
-                                                <a href="#" class="btn btn-link p-0 mb-0 text-primary-hover text-reset text-decoration-underline">View details</a>
-                                            </div>
 
-                                            <!-- Card body START -->
-                                            <div class="card-body">
-
-                                                <!-- Title -->
-                                                <div class="p-3 bg-light rounded-2 d-sm-flex justify-content-sm-between align-items-center mb-4">
-                                                    <!-- Airline Name -->
-                                                    <h6 class="mb-0">New York - Malaysia</h6>
-                                                    <h6 class="fw-normal mb-0"><span class="text-body">Date:</span> 12 April 2022</h6>
-                                                </div>
-
-                                                <!-- Ticket item START -->
-                                                <div class="row g-4">
-                                                    <!-- Air line name -->
-                                                    <div class="col-md-3">
-                                                        <!-- Image -->
-                                                        <img src="assets/images/element/09.svg" class="w-80px mb-3" alt="">
-                                                        <!-- Title -->
-                                                        <h6 class="fw-normal small mb-0">Phillippines Airline</h6>
-                                                    </div>
-
-                                                    <!-- Airport detail -->
-                                                    <div class="col-4 col-md-3">
-                                                        <!-- Title -->
-                                                        <h5>CDG</h5>
-                                                        <h6 class="mb-0">2:50 pm</h6>
-                                                    </div>
-
-                                                    <!-- Time -->
-                                                    <div class="col-4 col-md-3 text-center">
-                                                        <!-- Time -->
-                                                        <h6>5hr 50min</h6>
-
-                                                        <div class="position-relative my-4">
-                                                            <!-- Line -->
-                                                            <hr class="bg-primary opacity-5 position-relative">
-                                                            <!-- Icon -->
-                                                            <div class="icon-md bg-primary text-white rounded-circle position-absolute top-50 start-50 translate-middle">
-                                                                <i class="fa-solid fa-fw fa-plane"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- Airport detail -->
-                                                    <div class="col-4 col-md-3 text-end">
-                                                        <!-- Title -->
-                                                        <h5>JFK</h5>
-                                                        <h6 class="mb-0">7:35 pm</h6>
-                                                    </div>
-
-                                                </div>
-                                                <!-- Ticket item END -->
-
-                                                <!-- Title -->
-                                                <div class="p-3 bg-light rounded-2 d-sm-flex justify-content-sm-between align-items-center text-center my-4">
-                                                    <!-- Airline Name -->
-                                                    <h6 class="mb-1 mb-sm-0">Malaysia - New York</h6>
-                                                    <h6 class="fw-normal mb-0"><span class="text-body">Date:</span> 18 April 2022</h6>
-                                                </div>
-
-                                                <!-- Ticket item START -->
-                                                <div class="row g-4">
-                                                    <!-- Air line name -->
-                                                    <div class="col-md-3">
-                                                        <!-- Image -->
-                                                        <img src="assets/images/element/09.svg" class="w-80px mb-3" alt="">
-                                                        <!-- Title -->
-                                                        <h6 class="fw-normal small mb-0">Phillippines Airline</h6>
-                                                    </div>
-
-                                                    <!-- Airport detail -->
-                                                    <div class="col-4 col-md-3">
-                                                        <!-- Title -->
-                                                        <h5>JFK</h5>
-                                                        <h6 class="mb-0">5:50 am</h6>
-                                                    </div>
-
-                                                    <!-- Time -->
-                                                    <div class="col-4 col-md-3 text-center">
-                                                        <!-- Time -->
-                                                        <h6>5hr 50min</h6>
-
-                                                        <div class="position-relative my-4">
-                                                            <!-- Line -->
-                                                            <hr class="bg-primary opacity-5 position-relative">
-                                                            <!-- Icon -->
-                                                            <div class="icon-md bg-primary text-white rounded-circle position-absolute top-50 start-50 translate-middle">
-                                                                <i class="fa-solid fa-fw fa-plane"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- Airport detail -->
-                                                    <div class="col-4 col-md-3 text-end">
-                                                        <!-- Title -->
-                                                        <h5>CDG</h5>
-                                                        <h6 class="mb-0">11:35 am</h6>
-                                                    </div>
-
-                                                </div>
-                                                <!-- Ticket item END -->
-                                            </div>
-                                            <!-- Card body END -->
-                                        </div>
-                                        <!-- Flight detail END -->
 
                                         <!-- Hotel detail START -->
                                         <div class="card border">
                                             <!-- Card header -->
                                             <div class="card-header border-bottom d-flex justify-content-between">
                                                 <!-- Title -->
-                                                <h5 class="mb-0">Hotel Details</h5>
-                                                <a href="#" class="btn btn-link p-0 mb-0 text-primary-hover text-reset text-decoration-underline">View details</a>
+                                                <h5 class="mb-0">clothing details</h5>
+
                                             </div>
 
                                             <!-- Card body START -->
@@ -301,26 +189,30 @@ Booking clothing
                                                 <div class="row">
                                                     <!-- Info -->
                                                     <div class="col-sm-8">
-                                                        <h6>Courtyard by Marriott New York</h6>
-                                                        <h6 class="mb-1 fw-light"><span class="text-secondary">Room:</span> Deluxe Pool View with Breakfast</h6>
-                                                        <ul class="list-inline mb-0">
-                                                            <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
-                                                            <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
-                                                            <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
-                                                            <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
-                                                            <li class="list-inline-item me-0 small"><i class="fas fa-star-half-alt text-warning"></i></li>
-                                                        </ul>
+                                                        <h6>Marque :</h6>
                                                     </div>
                                                     <!-- Review -->
                                                     <div class="col-sm-4">
-                                                        <h6 class="mb-0">12 April 2022</h6>
-                                                        <p class="text-success mb-0">Breakfast Included</p>
+                                                        <h6 class="mb-0">{{ $clothing->brand->brand_title }}</h6>
+
                                                     </div>
                                                 </div>
                                                 <!-- Hotel item END -->
 
                                                 <hr> <!-- Divider -->
+                                                <div class="row">
+                                                    <!-- Info -->
+                                                    <div class="col-sm-8">
+                                                        <h6>Genre :</h6>
+                                                    </div>
+                                                    <!-- Review -->
+                                                    <div class="col-sm-4">
+                                                        <h6 class="mb-0">{{ $clothing->brand->brand_title }}</h6>
 
+                                                    </div>
+                                                </div>
+
+                                                <hr> <!-- Divider -->
                                                 <!-- Hotel item START -->
                                                 <div class="row">
                                                     <!-- Info -->
