@@ -30,7 +30,7 @@ return new class extends Migration
             ->cascadeOnUpdate();
             $table->string('slug');
             $table->string('clothing_profile');
-            $table->string('gender');
+            $table->boolean('gender')->default(1);
             $table->boolean('isPopular')->default(0);
             $table->boolean('isAvailable')->default(1);
             $table->string('availableIn')->nullable();

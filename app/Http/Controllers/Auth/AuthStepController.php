@@ -25,6 +25,7 @@ class AuthStepController extends Controller
             Session::forget("name");
             Session::forget('preferences');
             Session::forget('town');
+            Session::forget("gender_user");
        }else{
         $email=$request->email;
         $password=$request->password;
@@ -50,11 +51,14 @@ class AuthStepController extends Controller
             $name=$request->name;
             $phone_number=$request->phone_number;
             $town=$request->town;
+            $genderUser=$request->gender_user;
             Session::put('name',$name);
             Session::save();
             Session::put('phone_number',$phone_number);
             Session::save();
             Session::put('town',$town);
+            Session::save();
+            Session::put('gender_user',$genderUser);
             Session::save();
             return to_route('stepTwoView');
        }else{
@@ -80,6 +84,7 @@ class AuthStepController extends Controller
         $password=Session::get('password');
         $phone_number=Session::get('phone_number');
         $town=Session::get('town');
+        $genderUser=Session::get('gender_user');
         $preferences=$request->preferences;
         $user = User::create([
             'name' => $name,
@@ -90,6 +95,7 @@ class AuthStepController extends Controller
             'weight'=>$request->weight,
             'phone_number'=>$phone_number,
             'color'=>$this->randomColor(),
+            'gender_user'=>$genderUser,
             'isChoice'=>1,
             'role_id'=>2
         ]);

@@ -144,6 +144,14 @@ Main banner START -->
                     @error('town')
                     <div style="color:#c70609">{{ $message }}</div>
                     @enderror
+                    <div class="mb-2 form-control-bg-light">
+						<label class="form-label">Vous etes? *</label>
+						<select  class="form-control" name="gender_user" id="">
+                            <option value="1">Homme</option>
+                            <option value="0">Femme</option>
+                        </select>
+
+					</div>
 					<!-- Button -->
 					<div><button type="submit" class="btn mt-4 btn-lg btn-primary mb-0" type="button">Suivant</button></div>
 				</form>
