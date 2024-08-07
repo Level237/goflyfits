@@ -21,6 +21,7 @@ class HomeController extends Controller
             $clothings=Clothing::join('category_clothing','category_clothing.clothing_id','clothing.id')
             ->join('categories','categories.id','category_clothing.category_id')
             ->whereIn('category_clothing.category_id',$request->session()->get('preferences'))
+            ->where('town_id',auth()->user()->town_id)
             ->inRandomOrder()->take(8)
             ->get();
             $isPreferences=true;

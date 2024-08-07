@@ -15,6 +15,7 @@ class PreferenceController extends Controller
         $clothings=Clothing::join('category_clothing','category_clothing.clothing_id','clothing.id')
             ->join('categories','categories.id','category_clothing.category_id')
             ->whereIn('category_clothing.category_id',$categoriesPreferences)
+            ->where('town_id',auth()->user()->town_id)
             ->take(4)
             ->get();
             $categories=Category::whereIn("id",$categoriesPreferences)->get();
