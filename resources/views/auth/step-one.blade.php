@@ -133,11 +133,10 @@ Main banner START -->
 					<div class="mb-2 form-control-bg-light">
 						<label class="form-label">Quel est votre ville de résidence? *</label>
 						<select  class="form-control" name="town" id="">
-                            <option value="douala">Douala</option>
-                            <option value="yaoundé">Yaoundé</option>
-                            <option value="bafoussam">Bafoussam</option>
-                            <option value="garoua">Garoua</option>
-                            <option value="ebolowa">Ebolowa</option>
+                            @foreach ($towns as $town)
+                                <option value="{{ $town->id }}">{{ $town->town_name }}</option>
+                            @endforeach
+
                         </select>
 
 					</div>

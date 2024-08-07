@@ -7,6 +7,7 @@ use App\Http\Requests\RegisterRequest;
 use App\Http\Requests\StepOneRequest;
 use App\Http\Requests\StepThreeRequest;
 use App\Models\Category;
+use App\Models\Town;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
@@ -26,6 +27,7 @@ class AuthStepController extends Controller
             Session::forget('preferences');
             Session::forget('town');
             Session::forget("gender_user");
+            return back();
        }else{
         $email=$request->email;
         $password=$request->password;
@@ -40,7 +42,8 @@ class AuthStepController extends Controller
 
     public function stepOneView(){
         if(Session::has('email') && Session::has('password')){
-           return view('auth.step-one');
+            $towns=Town::all();
+           return view('auth.step-one',compact('towns'));
       }else{
             return to_route("register");
        }
@@ -90,7 +93,7 @@ class AuthStepController extends Controller
             'name' => $name,
             'email' => $email,
             'password' => Hash::make($password),
-            'town'=>$town,
+            'town_id'=>$town,
             'size'=>$request->size,
             'weight'=>$request->weight,
             'phone_number'=>$phone_number,

@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Models\Role;
+use App\Models\Town;
 use App\Models\Category;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
@@ -25,11 +26,12 @@ class User extends Authenticatable
         'email',
         'password',
         'phone_number',
-        'town',
+        'town_id',
         'country',
         'size',
         'weight',
         'phone_number',
+        'gender_user',
         'isChoice',
         'role_id',
         'color'
@@ -57,6 +59,9 @@ class User extends Authenticatable
 
     public function role():HasOne{
         return $this->hasOne(Role::class);
+    }
+    public function town():HasOne{
+        return $this->hasOne(Town::class);
     }
 
     public function preferences(){

@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Role;
+use App\Models\Town;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -23,7 +24,10 @@ return new class extends Migration
             ->constrained()
             ->cascadeOnDelete()
             ->cascadeOnUpdate();
-            $table->string("town");
+            $table->foreignIdFor(Town::class)
+            ->constrained()
+            ->cascadeOnDelete()
+            ->cascadeOnUpdate();
             $table->string('country')->default("cameroon");
             $table->string('phone_number')->unique();
             $table->rememberToken();

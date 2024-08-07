@@ -90,11 +90,9 @@ Dashboard Client
                 <div class="col-md-12">
                     <label class="form-label">Town<span class="text-danger">*</span></label>
                     <select class="form-select js-choice">
-                        <option value="">Select your town</option>
-                        <option>USA</option>
-                        <option selected="">Douala</option>
-                        <option>India</option>
-                        <option>UK</option>
+                        @foreach ($towns as $town)
+                        <option value="{{  }}">{{ $town->town_name }}</option>
+                        @endforeach
                     </select>
                 </div>
 

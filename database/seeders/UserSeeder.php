@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
             'email'=>"user@goflyfits.com",
             'role_id'=>2,
             'password'=>bcrypt('password'),
-            'town'=>"douala",
+            'town_id'=>1,
             'country'=>"cameroon",
             'phone_number'=>"690394365",
             'isChoice'=>0,
