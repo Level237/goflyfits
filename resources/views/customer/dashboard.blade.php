@@ -91,7 +91,7 @@ Dashboard Client
                     <label class="form-label">Town<span class="text-danger">*</span></label>
                     <select class="form-select js-choice">
                         @foreach ($towns as $town)
-                        <option value="{{  }}">{{ $town->town_name }}</option>
+                        <option @selected($town->id===auth()->user()->town_id) value="{{ $town->id }}">{{ $town->town_name }}</option>
                         @endforeach
                     </select>
                 </div>
