@@ -25,7 +25,8 @@ class StepOneRequest extends FormRequest
         return [
             'name' => ['required', 'string','max:12', 'unique:'.User::class],
             'phone_number'=>['required', 'numeric', 'unique:'.User::class],
-            'town'=>'required'
+            'town'=>'required',
+            'gender_user'=>'required'
         ];
     }
 }

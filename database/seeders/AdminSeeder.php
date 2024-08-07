@@ -23,6 +23,7 @@ class AdminSeeder extends Seeder
             'phone_number'=>"691594365",
             'isChoice'=>1,
             'size'=>"xl",
+            'gender_user'=>1,
             'weight'=>"78",
             'color'=>"green"
         ],
