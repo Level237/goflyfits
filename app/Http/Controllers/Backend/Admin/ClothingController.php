@@ -40,6 +40,7 @@ class ClothingController extends Controller
     {
         $clothing=new Clothing;
         $clothing->title=$request->title;
+        $clothing->gender=$request->gender;
         $clothing->description=$request->description;
         $resizeImageAndGetImageName=$this->resizeImage($request->file("image"));
         $clothing->price=$request->price;
@@ -98,6 +99,7 @@ class ClothingController extends Controller
         $clothing->title=$request->title;
         $clothing->description=$request->description;
         $clothing->price=$request->price;
+        $clothing->gender=$request->gender;
         $clothing->brand_id=$request->brand_id;
         $clothing->size=$request->size;
         $clothing->source=$request->source;

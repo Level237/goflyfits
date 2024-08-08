@@ -95,6 +95,19 @@ Main content START -->
                                         <div style="color:#c70609">{{ $message }}</div>
                                         @enderror
 								</div>
+
+                                <div class="col-md-12">
+									<label class="form-label">Genre</label>
+									<select name="gender" class="form-select js-choice" data-search-enabled="true">
+										<option>Selectionnez un genre</option>
+
+                                            <option value="1">Homme</option>
+                                            <option value="0">Femme</option>
+									</select>
+                                    @error('gender')
+                                        <div style="color:#c70609">{{ $message }}</div>
+                                        @enderror
+								</div>
                                 <div class="col-md-12">
 									<label class="form-label">Marque </label>
 									<select name="brand_id" class="form-select js-choice" data-search-enabled="true">

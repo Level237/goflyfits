@@ -30,7 +30,8 @@ class ClothingRequest extends FormRequest
             "town_id"=>['required'],
             "brand_id"=>['required'],
             'categories'=>"required",
-            "image"=>['required']
+            "image"=>['required'],
+            'gender'=>['required']
         ];
     }
 }
