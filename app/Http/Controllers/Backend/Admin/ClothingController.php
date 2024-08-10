@@ -9,7 +9,7 @@ use App\Models\Category;
 use App\Models\Clothing;
 use App\Models\Town;
 use Illuminate\Http\Request;
-use Intervention\Image\ImageManagerStatic as Image;
+use Intervention\Image\Laravel\Facades\Image;
 
 class ClothingController extends Controller
 {
@@ -63,7 +63,7 @@ class ClothingController extends Controller
     public function resizeImage($image){
         $image_name = uniqid() .'.'. $image->getClientOriginalExtension();
         $path = public_path('storage/clothings/');
-        $imgx = Image::make($image);
+        $imgx = Image::read($image);
         $imgx->resize(600, 500, function ($constraint) {
 
         })->save($path.'/'.$image_name);

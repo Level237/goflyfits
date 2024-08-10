@@ -156,7 +156,7 @@ Main content START -->
 								<!-- Image Gallery -->
 								<div class="col-12">
 									<label class="form-label">Upload image *</label>
-									<input class="form-control" name="image" type="file" name="size" >
+									<input class="form-control" name="image" type="file"  >
                                     @error('image')
                                     <div style="color:#c70609">{{ $message }}</div>
                                     @enderror
