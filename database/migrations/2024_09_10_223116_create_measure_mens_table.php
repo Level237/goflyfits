@@ -13,6 +13,20 @@ return new class extends Migration
     {
         Schema::create('measure_mens', function (Blueprint $table) {
             $table->id();
+            $table->string('full_shoulder_width');
+            $table->string('sleeves');
+            $table->string('full_chest');
+            $table->string('waist');
+            $table->string('hips');
+            $table->string('front_shoulder_width');
+            $table->string('back_shoulder_width');
+            $table->string('front_jacket_length');
+            $table->string('neck');
+            $table->string('trouser waist');
+            $table->string('crotch');
+            $table->string('thigh');
+            $table->string('throuser_length');
+            $table->string('cuff');
             $table->timestamps();
         });
     }
