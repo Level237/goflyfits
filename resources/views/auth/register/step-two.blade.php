@@ -138,7 +138,7 @@ Main banner START -->
 
                         <!-- Email -->
                         <div class="mb-2 form-control-bg-light">
-                            <label class="form-label">birthday? *</label>
+                            <label class="form-label">birthday *</label>
                             <div class="form-icon-input ">
                                 <input type="date"  name="birthday" class="form-control form-control-lg flatpickr" data-date-format="d/m/y" placeholder="Selectionnez votre date d'anniversaire">
                                 <span class="form-icon"><i class="bi bi-calendar fs-5"></i></span>

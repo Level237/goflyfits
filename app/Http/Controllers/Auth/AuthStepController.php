@@ -69,8 +69,8 @@ class AuthStepController extends Controller
         }
     }
     public function stepThreeView(){
-
-        return view('auth.register.step-three');
+        $towns=Town::all();
+        return view('auth.register.step-three',compact('towns'));
     }
     public function stepTwoView(){
         if(Session::has('full_name') && Session::has('name') && Session::has('gender_user')){

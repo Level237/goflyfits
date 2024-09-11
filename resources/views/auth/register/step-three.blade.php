@@ -117,36 +117,30 @@ Main banner START -->
                     @csrf
 					<!-- Name -->
 					<!-- Email -->
-                        <div class="mb-2 form-control-bg-light">
-                            <label class="form-label">Pays d'origine *</label>
-                            <input type="text" name="country" class="form-control">
+                        <div class="mb-4 form-control-bg-light">
+                            <label class="form-label">Country *</label>
+                            <select class="form-select" aria-label="Disabled select example" disabled>
+
+                                <option value="cameroon">Cameroon</option>
+                              </select>
                             @error('country')
                             <div style="color:#c70609">{{ $message }}</div>
                             @enderror
                         </div>
+                        <!-- Message -->
+                        <div class="mb-4 form-control-bg-light">
+                            <label class="form-label">Quel est votre ville de résidence? *</label>
+                            <select  class="form-control" name="town" id="">
+                                @foreach ($towns as $town)
+                                    <option value="{{ $town->id }}">{{ $town->town_name }}</option>
+                                @endforeach
 
-                        <!-- Email -->
-                        <div class="mb-2 form-control-bg-light">
-                            <label class="form-label">Email *</label>
-                            <input type="text" name="town" class="form-control">
-                            @error('town')
-                            <div style="color:#c70609">{{ $message }}</div>
-                            @enderror
+                            </select>
+
                         </div>
-
-
-
-                        <!-- Email -->
-                        <div class="mb-2 form-control-bg-light">
-                            <label class="form-label">birthday? *</label>
-                            <div class="form-icon-input ">
-                                <input type="date"  name="birthday" class="form-control form-control-lg flatpickr" data-date-format="d/m/y" placeholder="Selectionnez votre date d'anniversaire">
-                                <span class="form-icon"><i class="bi bi-calendar fs-5"></i></span>
-                            </div>
-                            @error('birthday')
-                            <div style="color:#c70609">{{ $message }}</div>
-                            @enderror
-                        </div>
+                        @error('town')
+                                            <div style="color:#c70609">{{ $message }}</div>
+                                            @enderror
 					<!-- Button -->
 					<div><button type="submit" class="btn mt-4 btn-lg btn-primary mb-0" type="button">Suivant</button></div>
 				</form>

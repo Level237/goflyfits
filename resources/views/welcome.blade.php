@@ -7,20 +7,7 @@
     @enderror
 </div>
 
-<!-- Message -->
-<div class="mb-4 form-control-bg-light">
-    <label class="form-label">Quel est votre ville de résidence? *</label>
-    <select  class="form-control" name="town" id="">
-        @foreach ($towns as $town)
-            <option value="{{ $town->id }}">{{ $town->town_name }}</option>
-        @endforeach
 
-    </select>
-
-</div>
-@error('town')
-                    <div style="color:#c70609">{{ $message }}</div>
-                    @enderror
 
 
                     return [
