@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Preferences utilisateur</title>
+	<title>Step one:Entrez vos informations personnelles</title>
 
 	<!-- Meta Tags -->
 	<meta charset="utf-8">
@@ -80,7 +80,12 @@
 	<!-- Plugins CSS -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/font-awesome/css/all.min-1.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons-1.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/choices/css/choices.min.css') }}">
+    !-- Plugins CSS -->
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/font-awesome/css/all.min-1.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons-1.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/flatpickr/css/flatpickr.min-1.css') }}">
+
+
 	<!-- Theme CSS -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 
@@ -104,49 +109,47 @@ Main banner START -->
 	<div class="container">
 		<!-- Content and form START -->
 		<div class="row g-4">
-			<div class="col-lg-6 ">
+			<div class="col-lg-6">
 				<!-- Title -->
-				<h1>Préferences Utilisateurs</h1>
+				<h1>Parlez nous de vous</h1>
 
 				<!-- Contact form -->
-				<form method="POST" action="{{ route('stepFinal') }}" class="mt-5">
+				<form method="POST" action="{{ route('stepTwo') }}" class="mt-4">
                     @csrf
-					<!-- Message -->
-					<div class="mb-4 form-control-bg-light">
-						<label class="form-label">Quels sont vos préferences de style? *</label>
-						<select name="preferences[]" multiple class="form-select js-choice" data-search-enabled="true">
+					<!-- Name -->
+					<!-- Email -->
+                        <div class="mb-2 form-control-bg-light">
+                            <label class="form-label">Numéro de téléphone *</label>
+                            <input type="text" name="phone_number" class="form-control">
+                            @error('phone_number')
+                            <div style="color:#c70609">{{ $message }}</div>
+                            @enderror
+                        </div>
 
-                            @foreach ($categories as $categorie)
-                                <option value="{{ $categorie->id }}">{{ $categorie->category_title }}</option>
-                            @endforeach
-                        </select>
-                        @error('preferences')
-                        <div style="color:#c70609">{{ $message }}</div>
-                        @enderror
-					</div>
-                    <div class="mb-4 form-control-bg-light">
-						<label class="form-label">Quel est votre taille? *</label>
-						<select  class="form-control" name="size" id="">
-                            <option value="L">L</option>
-                            <option value="XL">XL</option>
-                            <option value="M">M</option>
-                            <option value="XXL">XXL</option>
-                            <option value="XXXL">XXXL</option>
-                        </select>
-					</div>
-                    @error('size')
-                    <div style="color:#c70609">{{ $message }}</div>
-                    @enderror
+                        <!-- Email -->
+                        <div class="mb-2 form-control-bg-light">
+                            <label class="form-label">Email *</label>
+                            <input type="text" name="email" class="form-control">
+                            @error('email')
+                            <div style="color:#c70609">{{ $message }}</div>
+                            @enderror
+                        </div>
 
-                    <div class="mb-2 form-control-bg-light">
-						<label class="form-label">Quel est votre poids? *</label>
-						<input type="text" name="weight" class="form-control">
-                        @error('weight')
-                        <div style="color:#c70609">{{ $message }}</div>
-                        @enderror
-					</div>
+
+
+                        <!-- Email -->
+                        <div class="mb-2 form-control-bg-light">
+                            <label class="form-label">birthday? *</label>
+                            <div class="form-icon-input ">
+                                <input type="date"  name="birthday" class="form-control form-control-lg flatpickr" data-date-format="d/m/y" placeholder="Selectionnez votre date d'anniversaire">
+                                <span class="form-icon"><i class="bi bi-calendar fs-5"></i></span>
+                            </div>
+                            @error('phone_number')
+                            <div style="color:#c70609">{{ $message }}</div>
+                            @enderror
+                        </div>
 					<!-- Button -->
-					<div><button  class="btn mt-4 btn-lg btn-primary mb-0" type="submit">Suivant</button></div>
+					<div><button type="submit" class="btn mt-4 btn-lg btn-primary mb-0" type="button">Suivant</button></div>
 				</form>
 			</div>
 
@@ -383,7 +386,7 @@ Main banner START -->
 					</svg>
 				</figure>
 				<!-- Image -->
-				<img  src="{{ asset('assets/images/bg/cover1.jpg') }}" class="rounded-3  position-relative" alt="">
+				<img src="{{ asset('assets/images/about/05.jpg') }}" class="rounded-3 position-relative" alt="">
 			</div>
 		</div>
 		<!-- Content and form END -->
@@ -414,7 +417,7 @@ Footer END -->
 
 <!-- Bootstrap JS -->
 <script src="{{ asset('assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ asset('assets/vendor/choices/js/choices.min.js') }}"></script>
+<script src="{{ asset('assets/vendor/flatpickr/js/flatpickr.min.js') }}"></script>
 <!-- ThemeFunctions -->
 <script src="{{ asset('assets/js/functions.js') }}"></script>
 

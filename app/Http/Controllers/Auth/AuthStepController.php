@@ -20,9 +20,9 @@ class AuthStepController extends Controller
     public function stepOne(RegisterRequest $request){
 
         if(Session::has('full_name') && Session::has('name') && Session::has('gender_user')){
-            Session::forget("email");
-            Session::forget("password");
-            Session::forget("phone_number");
+            Session::forget("full_name");
+            Session::forget("name");
+            Session::forget("gender_user");
             Session::forget("name");
             Session::forget('preferences');
             Session::forget('town');
@@ -38,7 +38,7 @@ class AuthStepController extends Controller
         Session::save();
         Session::put('gender_user',$gender_user);
         Session::save();
-        return to_route("stepOneView");
+        return to_route("stepTwoView");
        }
 
     }
@@ -51,33 +51,30 @@ class AuthStepController extends Controller
     }
 
     public function stepTwo(StepOneRequest $request){
-        if(Session::has('email') && Session::has('password')){
-            $name=$request->name;
+        if(Session::has('full_name') && Session::has('name') && Session::has('gender_user')){
             $phone_number=$request->phone_number;
-            $town=$request->town;
-            $genderUser=$request->gender_user;
-            Session::put('name',$name);
+            $email=$request->email;
+            $birthday=$request->birthday;
+            Session::put('name',$phone_number);
             Session::save();
-            Session::put('phone_number',$phone_number);
+            Session::put('phone_number',$email);
             Session::save();
-            Session::put('town',$town);
-            Session::save();
-            Session::put('gender_user',$genderUser);
+            Session::put('town',$birthday);
             Session::save();
             return to_route('stepTwoView');
        }else{
-             return to_route("register");
+            return to_route('stepOneView');
         }
     }
 
     public function stepTwoView(){
-        if(Session::has("email")&& Session::has("password") && Session::has("name")){
+        if(Session::has('full_name') && Session::has('name') && Session::has('gender_user')){
             $categories=Category::all();
             return view('auth.step-two',compact('categories'));
         }
 
     else{
-        return to_route('register');
+        return to_route('stepOneView');
     }
 }
 
