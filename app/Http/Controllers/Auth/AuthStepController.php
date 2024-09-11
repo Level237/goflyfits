@@ -41,12 +41,10 @@ class AuthStepController extends Controller
     }
 
     public function stepOneView(){
-        if(Session::has('email') && Session::has('password')){
+
             $towns=Town::all();
-           return view('auth.step-one',compact('towns'));
-      }else{
-            return to_route("register");
-       }
+           return view('auth.register.step-one',compact('towns'));
+
     }
 
     public function stepTwo(StepOneRequest $request){

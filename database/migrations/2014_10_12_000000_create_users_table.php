@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Measure;
 use App\Models\Role;
 use App\Models\Town;
 use Illuminate\Database\Migrations\Migration;
@@ -17,12 +18,16 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            $table->string('last_name');
+            $table->string('full_name');
             $table->string('birthday');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->foreignIdFor(Role::class)
+            ->constrained()
+            ->cascadeOnDelete()
+            ->cascadeOnUpdate();
+            $table->foreignIdFor(Measure::class)
             ->constrained()
             ->cascadeOnDelete()
             ->cascadeOnUpdate();

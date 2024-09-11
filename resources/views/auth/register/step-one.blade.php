@@ -112,38 +112,25 @@ Main banner START -->
 				<form method="POST" action="{{ route('stepTwo') }}" class="mt-4">
                     @csrf
 					<!-- Name -->
-					<div class="mb-2 form-control-bg-light">
-						<label class="form-label">Quel est votre nom? *</label>
+					<div class="mb-4 form-control-bg-light">
+						<label class="form-label">full name? *</label>
+						<input type="text" name="full_name" class="form-control">
+                        @error('name')
+                        <div style="color:#c70609">{{ $message }}</div>
+                        @enderror
+					</div>
+
+                    <div class="mb-4 form-control-bg-light">
+						<label class="form-label">Nom d'utilisateur *</label>
 						<input type="text" name="name" class="form-control">
                         @error('name')
                         <div style="color:#c70609">{{ $message }}</div>
                         @enderror
 					</div>
 
-					<!-- Email -->
-					<div class="mb-2 form-control-bg-light">
-						<label class="form-label">Quel est votre numéro de téléphone? *</label>
-						<input type="text" name="phone_number" class="form-control">
-                        @error('phone_number')
-                        <div style="color:#c70609">{{ $message }}</div>
-                        @enderror
-					</div>
 
-					<!-- Message -->
-					<div class="mb-2 form-control-bg-light">
-						<label class="form-label">Quel est votre ville de résidence? *</label>
-						<select  class="form-control" name="town" id="">
-                            @foreach ($towns as $town)
-                                <option value="{{ $town->id }}">{{ $town->town_name }}</option>
-                            @endforeach
 
-                        </select>
-
-					</div>
-                    @error('town')
-                    <div style="color:#c70609">{{ $message }}</div>
-                    @enderror
-                    <div class="mb-2 form-control-bg-light">
+                    <div class="mb-4 form-control-bg-light">
 						<label class="form-label">Vous etes? *</label>
 						<select  class="form-control" name="gender_user" id="">
                             <option value="1">Homme</option>
