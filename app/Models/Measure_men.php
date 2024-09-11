@@ -10,7 +10,7 @@ class Measure_men extends Model
 {
     use HasFactory;
 
-    public function mesures():MorphMany
+    public function measures():MorphMany
     {
         return $this->morphMany(Measure::class,"measurable");
     }
