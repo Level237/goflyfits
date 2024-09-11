@@ -19,7 +19,7 @@ class AuthStepController extends Controller
 {
     public function stepOne(RegisterRequest $request){
 
-        if(Session::has('email') && Session::has('password')){
+        if(Session::has('full_name') && Session::has('name') && Session::has('gender_user')){
             Session::forget("email");
             Session::forget("password");
             Session::forget("phone_number");
@@ -29,11 +29,14 @@ class AuthStepController extends Controller
             Session::forget("gender_user");
             return back();
        }else{
-        $email=$request->email;
-        $password=$request->password;
-        Session::put('email',$email);
+        $full_name=$request->full_name;
+        $name=$request->name;
+        $gender_user=$request->gender_user;
+        Session::put('full_name',$full_name);
         Session::save();
-        Session::put('password',$password);
+        Session::put('name',$name);
+        Session::save();
+        Session::put('gender_user',$gender_user);
         Session::save();
         return to_route("stepOneView");
        }

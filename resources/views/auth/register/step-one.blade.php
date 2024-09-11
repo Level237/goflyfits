@@ -109,13 +109,13 @@ Main banner START -->
 				<h1>Parlez nous de vous</h1>
 
 				<!-- Contact form -->
-				<form method="POST" action="{{ route('stepTwo') }}" class="mt-4">
+				<form method="POST" action="{{ route('stepOne') }}" class="mt-4">
                     @csrf
 					<!-- Name -->
 					<div class="mb-4 form-control-bg-light">
-						<label class="form-label">full name? *</label>
+						<label class="form-label">full name *</label>
 						<input type="text" name="full_name" class="form-control">
-                        @error('name')
+                        @error('full_name')
                         <div style="color:#c70609">{{ $message }}</div>
                         @enderror
 					</div>
@@ -131,7 +131,7 @@ Main banner START -->
 
 
                     <div class="mb-4 form-control-bg-light">
-						<label class="form-label">Vous etes? *</label>
+						<label class="form-label">genre *</label>
 						<select  class="form-control" name="gender_user" id="">
                             <option value="1">Homme</option>
                             <option value="0">Femme</option>
