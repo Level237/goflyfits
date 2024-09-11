@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Step one:Entrez vos informations personnelles</title>
+	<title>Step two:Entrez vos informations personnelles</title>
 
 	<!-- Meta Tags -->
 	<meta charset="utf-8">
@@ -80,7 +80,6 @@
 	<!-- Plugins CSS -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/font-awesome/css/all.min-1.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons-1.css') }}">
-    !-- Plugins CSS -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/font-awesome/css/all.min-1.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons-1.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/flatpickr/css/flatpickr.min-1.css') }}">
@@ -144,7 +143,7 @@ Main banner START -->
                                 <input type="date"  name="birthday" class="form-control form-control-lg flatpickr" data-date-format="d/m/y" placeholder="Selectionnez votre date d'anniversaire">
                                 <span class="form-icon"><i class="bi bi-calendar fs-5"></i></span>
                             </div>
-                            @error('phone_number')
+                            @error('birthday')
                             <div style="color:#c70609">{{ $message }}</div>
                             @enderror
                         </div>

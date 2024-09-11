@@ -70,7 +70,7 @@ class AuthStepController extends Controller
     public function stepTwoView(){
         if(Session::has('full_name') && Session::has('name') && Session::has('gender_user')){
             $categories=Category::all();
-            return view('auth.step-two',compact('categories'));
+            return view('auth.register.step-two',compact('categories'));
         }
 
     else{
