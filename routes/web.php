@@ -33,8 +33,9 @@ Route::get('/contact',[ContactController::class,'index'])->name('contact');
 // Step auth user
 Route::post('step-one/personal-information',[AuthStepController::class,'stepOne'])->name('stepOne');
 Route::get('step-one/personal-information',[AuthStepController::class,'stepOneView'])->name('stepOneView');
-Route::post('step-two/user-preference',[AuthStepController::class,'stepTwo'])->name('stepTwo');
-Route::get('step-two/user-preference',[AuthStepController::class,'stepTwoView'])->name('stepTwoView');
+Route::post('step-two/personal-information',[AuthStepController::class,'stepTwo'])->name('stepTwo');
+Route::get('step-two/personal-information',[AuthStepController::class,'stepTwoView'])->name('stepTwoView');
+Route::get('step-three/country-information',[AuthStepController::class,'stepThreeView'])->name('stepThreeView');
 Route::post('step-final',[AuthStepController::class,"stepFinal"])->name("stepFinal");
 
 //List and search clothing
