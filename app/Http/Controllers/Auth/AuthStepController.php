@@ -83,6 +83,17 @@ class AuthStepController extends Controller
     }
 }
 
+public function stepThree(StepTwoRequest $request){
+
+    $country=$request->country;
+    $town=$request->town;
+    Session::put('name',$country);
+    Session::save();
+    Session::put('town',$town);
+    Session::save();
+    return $country;
+}
+
     public function stepFinal(StepThreeRequest $request){
         if(Session::has('email') && Session::has('password')){
             $name=Session::get('name');

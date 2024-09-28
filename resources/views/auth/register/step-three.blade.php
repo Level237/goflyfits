@@ -113,13 +113,13 @@ Main banner START -->
 				<h1>Parlez nous de vous</h1>
 
 				<!-- Contact form -->
-				<form method="POST" action="{{ route('stepTwo') }}" class="mt-4">
+				<form method="POST" action="{{ route('stepThree') }}" class="mt-4">
                     @csrf
 					<!-- Name -->
 					<!-- Email -->
                         <div class="mb-4 form-control-bg-light">
                             <label class="form-label">Country *</label>
-                            <select class="form-select" aria-label="Disabled select example" disabled>
+                            <select  class="form-select" aria-label="Disabled select example" disabled>
 
                                 <option value="cameroon">Cameroon</option>
                               </select>
@@ -127,6 +127,7 @@ Main banner START -->
                             <div style="color:#c70609">{{ $message }}</div>
                             @enderror
                         </div>
+                        <input type="hidden" name="country" value="cameroon">
                         <!-- Message -->
                         <div class="mb-4 form-control-bg-light">
                             <label class="form-label">Quel est votre ville de résidence? *</label>
