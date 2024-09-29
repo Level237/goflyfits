@@ -117,6 +117,7 @@ Main banner START -->
                     @csrf
 					<!-- Name -->
 					<!-- Email -->
+                    @if($gender_user==1)
                         <div class="row">
                             <div class="col-lg-6 mb-4 form-control-bg-light">
                                 <label class="form-label">Sleeves *</label>
@@ -151,21 +152,23 @@ Main banner START -->
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-6 mb-4 form-control-bg-light">
-                                <label class="form-label">Front Shoulder width *</label>
-                                <input type="text" name="front_shoulder_width" class="form-control">
-                                @error('front_shoulder_width')
-                            <div style="color:#c70609">{{ $message }}</div>
-                            @enderror
-                            </div>
-                            <div class="col-lg-6 mb-4 form-control-bg-light">
-                                <label class="form-label">Back Shoulder Width *</label>
-                                <input type="text" name="back_shoulder_width" class="form-control">
-                                @error('full_chest')
-                            <div style="color:#c70609">{{ $message }}</div>
-                            @enderror
-                            </div>
+                        <div class="col-lg-6 mb-4 form-control-bg-light">
+                            <label class="form-label">Front Shoulder width *</label>
+                            <input type="text" name="front_shoulder_width" class="form-control">
+                            @error('front_shoulder_width')
+                        <div style="color:#c70609">{{ $message }}</div>
+                        @enderror
                         </div>
+                        <div class="col-lg-6 mb-4 form-control-bg-light">
+                            <label class="form-label">Back Shoulder Width *</label>
+                            <input type="text" name="back_shoulder_width" class="form-control">
+                            @error('full_chest')
+                        <div style="color:#c70609">{{ $message }}</div>
+                        @enderror
+                        </div>
+                        </div>
+                    @endif
+
 					<!-- Button -->
 					<div><button type="submit" class="btn mt-2 btn-lg btn-primary mb-0" type="button">Suivant</button></div>
 				</form>
