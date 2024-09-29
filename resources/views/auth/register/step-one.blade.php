@@ -376,7 +376,7 @@ Main banner START -->
 					</svg>
 				</figure>
 				<!-- Image -->
-				<img src="{{ asset('assets/images/about/05.jpg') }}" class="rounded-3 position-relative" alt="">
+				<img src="https://blush.design/api/download?shareUri=1Jn-WnCvIToU8avc&c=Skin_0%7Eca8f67-0.2%7Eff8282-0.3%7Eca8f67&w=800&h=800&fm=png" class="rounded-3 position-relative" alt="">
 			</div>
 		</div>
 		<!-- Content and form END -->

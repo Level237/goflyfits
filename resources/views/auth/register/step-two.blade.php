@@ -105,12 +105,12 @@
 <!-- =======================
 Main banner START -->
 <section class="pt-4 pt-md-5">
-	<div class="container">
+	<div class="container ">
 		<!-- Content and form START -->
-		<div class="row g-4">
-			<div class="col-lg-6">
+		<div style="display: flex;justify-items:center;justify-content:center;align-items:center" class="row g-4 mt-4">
+			<div class="col-lg-6 ">
 				<!-- Title -->
-				<h1>Parlez nous de vous</h1>
+				<h1 class="">Vos informations</h1>
 
 				<!-- Contact form -->
 				<form method="POST" action="{{ route('stepTwo') }}" class="mt-4">
@@ -153,7 +153,7 @@ Main banner START -->
 			</div>
 
 			<!-- Image -->
-			<div class="col-lg-6 col-xl-5 text-center text-lg-end position-relative ms-auto">
+			<div style="margin" class="col-lg-6 col-xl-5 text-center text-lg-end position-relative ms-auto">
 				<!-- Svg decoration -->
 				<figure class="position-absolute start-0 top-0 d-none d-md-block mt-n5 ms-n3">
 					<svg height="400" class="fill-primary opacity-2" viewbox="0 0 340 340">
@@ -385,7 +385,7 @@ Main banner START -->
 					</svg>
 				</figure>
 				<!-- Image -->
-				<img src="{{ asset('assets/images/about/05.jpg') }}" class="rounded-3 position-relative" alt="">
+				<img src="https://blush.design/api/download?shareUri=7PmQxry62z0vdAvz&c=Skin_0%7E09b9c6-0.4%7Eb75858&w=800&h=800&fm=png" class="rounded-3 position-relative" alt="">
 			</div>
 		</div>
 		<!-- Content and form END -->
