@@ -107,10 +107,10 @@ Main banner START -->
 <section class="pt-4 pt-md-5">
 	<div class="container">
 		<!-- Content and form START -->
-		<div class="row g-4">
+		<div style="display: flex;justify-items:center;justify-content:center;align-items:center" class="row g-4 mt-4">
 			<div class="col-lg-6">
 				<!-- Title -->
-				<h1>Parlez nous de vous</h1>
+				<h1>Localité</h1>
 
 				<!-- Contact form -->
 				<form method="POST" action="{{ route('stepThree') }}" class="mt-4">
@@ -380,7 +380,7 @@ Main banner START -->
 					</svg>
 				</figure>
 				<!-- Image -->
-				<img src="{{ asset('assets/images/about/05.jpg') }}" class="rounded-3 position-relative" alt="">
+				<img src="https://blush.design/api/download?shareUri=j5ef35yYLeL39XIx&c=Skin_0%7E09b9c6-0.2%7Eff8282&w=800&h=800&fm=png" class="rounded-3 position-relative" alt="">
 			</div>
 		</div>
 		<!-- Content and form END -->
