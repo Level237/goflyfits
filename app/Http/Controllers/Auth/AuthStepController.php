@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RegisterRequest;
+use App\Http\Requests\StepFourRequest;
 use App\Http\Requests\StepInitRequest;
 use App\Http\Requests\StepOneRequest;
 use App\Http\Requests\StepThreeRequest;
@@ -101,9 +102,28 @@ public function stepThree(StepTwoRequest $request){
     Session::save();
     Session::put('town',$town);
     Session::save();
-    return $country;
+    return to_route('stepFourView');
 }
 
+public function stepFourView(){
+
+    $gender=Session::get('gender_user');
+
+    return view('auth.register.step-four');
+}
+
+public function stepFour(StepFourRequest $request){
+    $height=$request->height;
+    $weight=$request->weight;
+    $size=$request->size;
+    Session::put('height',$height);
+    Session::save();
+    Session::put('town',$weight);
+    Session::save();
+    Session::put('size',$height);
+    Session::save();
+
+}
     public function stepFinal(StepThreeRequest $request){
         if(Session::has('email') && Session::has('password')){
             $name=Session::get('name');
