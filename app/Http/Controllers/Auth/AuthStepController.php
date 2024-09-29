@@ -107,7 +107,7 @@ public function stepThree(StepTwoRequest $request){
 
 public function stepFourView(){
 
-    $gender=Session::get('gender_user');
+    //$gender=Session::get('gender_user');
 
     return view('auth.register.step-four');
 }
@@ -115,14 +115,23 @@ public function stepFourView(){
 public function stepFour(StepFourRequest $request){
     $height=$request->height;
     $weight=$request->weight;
-    $size=$request->size;
+    $size=$request->full_shoulder_width;
     Session::put('height',$height);
     Session::save();
-    Session::put('town',$weight);
+    Session::put('weight',$weight);
     Session::save();
-    Session::put('size',$height);
+    Session::put('full_shoulder_width',$size);
     Session::save();
 
+    return to_route("stepFiveView");
+}
+
+public function stepFiveView(){
+
+    $gender_user=Session::get('gender_user');
+
+    //return $gender_user;
+    return view('auth.register.step-five',compact('gender_user'));
 }
     public function stepFinal(StepThreeRequest $request){
         if(Session::has('email') && Session::has('password')){

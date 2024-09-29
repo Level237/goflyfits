@@ -107,54 +107,67 @@ Main banner START -->
 <section class="pt-4 pt-md-5">
 	<div class="container">
 		<!-- Content and form START -->
-		<div style="display: flex;justify-items:center;justify-content:center;align-items:center" class="row g-4 mt-4">
+		<div style="display: flex;justify-items:center;justify-content:center;align-items:center" class="row g-4 mt-2">
 			<div class="col-lg-6">
 				<!-- Title -->
 				<h1>Mesures Corporelles</h1>
 
 				<!-- Contact form -->
-				<form method="POST" action="{{ route('stepFour') }}" class="mt-4">
+				<form method="POST" action="{{ route('stepThree') }}" class="mt-4">
                     @csrf
 					<!-- Name -->
 					<!-- Email -->
                         <div class="row">
                             <div class="col-lg-6 mb-4 form-control-bg-light">
-                                <label class="form-label">Quel est votre Taille? *</label>
-                                <select  class="form-control" name="height" id="">
-
-                                        <option value="1,50">1.50</option>
-
-
-                                </select>
-                                @error('height')
+                                <label class="form-label">Sleeves *</label>
+                                <input type="text" name="sleeves" class="form-control">
+                                @error('sleeves')
                             <div style="color:#c70609">{{ $message }}</div>
                             @enderror
                             </div>
                             <div class="col-lg-6 mb-4 form-control-bg-light">
-                                <label class="form-label">Quel est votre poids? *</label>
-                                <select  class="form-control" name="weight" id="">
-
-                                        <option value="1,50">55</option>
-                                        <option value="1,50">65</option>
-                                        <option value="1,50">75</option>
-                                        <option value="1,50">85</option>
-                                </select>
-                                @error('weight')
+                                <label class="form-label">full chest *</label>
+                                <input type="text" name="full_chest" class="form-control">
+                                @error('full_chest')
                             <div style="color:#c70609">{{ $message }}</div>
                             @enderror
                             </div>
                         </div>
                         <!-- Message -->
-                        <div class="mb-4 form-control-bg-light">
-                            <label class="form-label">Size *</label>
-                            <input type="text" name="full_shoulder_width" class="form-control">
-
+                        <div class="row">
+                            <div class="col-lg-6 mb-4 form-control-bg-light">
+                                <label class="form-label">Waist *</label>
+                                <input type="text" name="waist" class="form-control">
+                                @error('waist')
+                            <div style="color:#c70609">{{ $message }}</div>
+                            @enderror
+                            </div>
+                            <div class="col-lg-6 mb-4 form-control-bg-light">
+                                <label class="form-label">Hips *</label>
+                                <input type="text" name="hips" class="form-control">
+                                @error('hips')
+                            <div style="color:#c70609">{{ $message }}</div>
+                            @enderror
+                            </div>
                         </div>
-                        @error('full_shoulder_width')
-                                            <div style="color:#c70609">{{ $message }}</div>
-                                            @enderror
+                        <div class="row">
+                            <div class="col-lg-6 mb-4 form-control-bg-light">
+                                <label class="form-label">Front Shoulder width *</label>
+                                <input type="text" name="front_shoulder_width" class="form-control">
+                                @error('front_shoulder_width')
+                            <div style="color:#c70609">{{ $message }}</div>
+                            @enderror
+                            </div>
+                            <div class="col-lg-6 mb-4 form-control-bg-light">
+                                <label class="form-label">Back Shoulder Width *</label>
+                                <input type="text" name="back_shoulder_width" class="form-control">
+                                @error('full_chest')
+                            <div style="color:#c70609">{{ $message }}</div>
+                            @enderror
+                            </div>
+                        </div>
 					<!-- Button -->
-					<div><button type="submit" class="btn mt-4 btn-lg btn-primary mb-0" type="button">Suivant</button></div>
+					<div><button type="submit" class="btn mt-2 btn-lg btn-primary mb-0" type="button">Suivant</button></div>
 				</form>
 			</div>
 

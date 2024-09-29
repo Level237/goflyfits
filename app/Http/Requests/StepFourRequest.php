@@ -24,7 +24,7 @@ class StepFourRequest extends FormRequest
         return [
             'height'=>'required',
             'weight'=>'required',
-            'size'=>'required'
+            'full_shoulder_width'=>'required'
         ];
     }
 }
