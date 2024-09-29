@@ -125,14 +125,7 @@ Main banner START -->
                             @enderror
                         </div>
 
-                        <!-- Email -->
-                        <div class="mb-2 form-control-bg-light">
-                            <label class="form-label">Email *</label>
-                            <input type="text" name="email" class="form-control">
-                            @error('email')
-                            <div style="color:#c70609">{{ $message }}</div>
-                            @enderror
-                        </div>
+
 
 
 

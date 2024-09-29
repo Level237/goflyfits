@@ -23,7 +23,6 @@ class StepOneRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'email' => ['required', 'email','unique:'.User::class],
             'phone_number'=>['required', 'numeric', 'unique:'.User::class],
             'birthday'=>'required',
         ];

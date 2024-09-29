@@ -67,13 +67,11 @@ class AuthStepController extends Controller
     public function stepTwo(StepOneRequest $request){
         if(Session::has('full_name') && Session::has('name') && Session::has('gender_user')){
             $phone_number=$request->phone_number;
-            $email=$request->email;
             $birthday=$request->birthday;
-            Session::put('name',$phone_number);
+            Session::put('phone_number',$phone_number);
             Session::save();
-            Session::put('phone_number',$email);
             Session::save();
-            Session::put('town',$birthday);
+            Session::put('birthday',$birthday);
             Session::save();
             return to_route('stepThreeView');
        }else{
