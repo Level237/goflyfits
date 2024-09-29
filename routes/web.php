@@ -31,6 +31,7 @@ Route::get('/',[HomeController::class,'index'])->name('homepage');
 
 Route::get('/contact',[ContactController::class,'index'])->name('contact');
 // Step auth user
+Route::post('step-init',[AuthStepController::class,'stepInit'])->name('stepInit');
 Route::post('step-one/personal-information',[AuthStepController::class,'stepOne'])->name('stepOne');
 Route::get('step-one/personal-information',[AuthStepController::class,'stepOneView'])->name('stepOneView');
 Route::post('step-two/personal-information',[AuthStepController::class,'stepTwo'])->name('stepTwo');

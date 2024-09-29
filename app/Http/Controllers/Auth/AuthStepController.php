@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RegisterRequest;
+use App\Http\Requests\StepInitRequest;
 use App\Http\Requests\StepOneRequest;
 use App\Http\Requests\StepThreeRequest;
 use App\Http\Requests\StepTwoRequest;
@@ -18,6 +19,17 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthStepController extends Controller
 {
+
+    public function stepInit(StepInitRequest $request){
+        $email=$request->email;
+        $password=$request->password;
+        Session::put('email',$email);
+        Session::save();
+        Session::put('password',$password);
+        Session::save();
+
+        return to_route('stepOneView');
+    }
     public function stepOne(RegisterRequest $request){
 
 

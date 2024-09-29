@@ -120,7 +120,7 @@ Main Content START -->
 								<p class="mb-0">Already a member?<a href="{{ route('login') }}"> Log in</a></p>
 
 								<!-- Form START -->
-								<form action="{{ route('stepOne') }}" method="POST" class="mt-2 text-start">
+								<form action="{{ route('stepInit') }}" method="POST" class="mt-2 text-start">
                                     @csrf
 
 									<!-- Email -->
