@@ -15,18 +15,18 @@ return new class extends Migration
             $table->id();
 
 
-            $table->string('full_shoulder_width');
-            $table->string('sleeves');
-            $table->string('full_chest');
-            //$table->string('waist');
+            $table->string('full_shoulder_width')->nullable();
+            $table->string('sleeves')->nullable();
+            $table->string('full_chest')->nullable();
+            $table->string('waist')->nullable();
             //$table->string('hips');
             //$table->string('front_shoulder_width');
             //$table->string('back_shoulder_width');
             //$table->string('front_jacket_length');
             //$table->string('neck');
-            $table->string('trouser waist');
-            $table->string('crotch');
-            $table->string('thigh');
+            $table->string('trouser waist')->nullable();
+            $table->string('crotch')->nullable();
+            $table->string('thigh')->nullable();
             //$table->string('throuser_length');
             //$table->string('cuff');
 
