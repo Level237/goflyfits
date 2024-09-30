@@ -13,7 +13,36 @@ return new class extends Migration
     {
         Schema::create('measures', function (Blueprint $table) {
             $table->id();
-            $table->morphs('measurable');
+
+
+            $table->string('full_shoulder_width');
+            $table->string('sleeves');
+            $table->string('full_chest');
+            //$table->string('waist');
+            //$table->string('hips');
+            //$table->string('front_shoulder_width');
+            //$table->string('back_shoulder_width');
+            //$table->string('front_jacket_length');
+            //$table->string('neck');
+            $table->string('trouser waist');
+            $table->string('crotch');
+            $table->string('thigh');
+            //$table->string('throuser_length');
+            //$table->string('cuff');
+
+            $table->string('back_length')->nullable();
+            $table->string('bust')->nullable();
+            $table->string('point_bust')->nullable();
+            $table->string('sleeve_length')->nullable();
+            $table->string('arm')->nullable();
+            $table->string('armHole')->nullable();
+            $table->string('coat_length')->nullable();
+            $table->string('skirt_length')->nullable();
+            $table->string('hight_hip')->nullable();
+            $table->string('inseam')->nullable();
+            $table->string('seat')->nullable();
+            $table->string('inseam')->nullable();
+            $table->string('trouser_thigh')->nullable();
             $table->timestamps();
         });
     }
