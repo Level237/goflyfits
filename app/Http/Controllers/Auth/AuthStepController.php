@@ -107,22 +107,47 @@ public function stepThree(StepTwoRequest $request){
 
 public function stepFourView(){
 
-    //$gender=Session::get('gender_user');
+    $gender_user=Session::get('gender_user');
 
-    return view('auth.register.step-four');
+    return view('auth.register.step-four',compact("gender_user"));
 }
 
-public function stepFour(StepFourRequest $request){
+public function stepFour(Request $request){
+
+    $gender_user=Session::get('gender_user');
+    if($gender_user==1){
+        $size=$request->full_shoulder_width;
+        $sleeves=$request->sleeves;
+        $full_chest=$request->full_chest;
+        $waist=$request->waist;
+        Session::put('full_shoulder_width',$size);
+        Session::save();
+        Session::put('sleeves',$sleeves);
+        Session::save();
+        Session::put('full_chest',$full_chest);
+        Session::save();
+        Session::put('waist',$waist);
+        Session::save();
+    }
     $height=$request->height;
     $weight=$request->weight;
-    $size=$request->full_shoulder_width;
+
+    $hips=$request->hips;
+    $front_shoulder_width=$request->front_shoulder_width;
+    $back_shoulder_width=$request->back_shoulder_width;
+    $front_jacket_length=$request->front_jacket_length;
     Session::put('height',$height);
     Session::save();
     Session::put('weight',$weight);
     Session::save();
-    Session::put('full_shoulder_width',$size);
+    Session::put('hips',$hips);
     Session::save();
-
+    Session::put('front_shoulder_width',$front_shoulder_width);
+    Session::save();
+    Session::put('back_shoulder_width',$back_shoulder_width);
+    Session::save();
+    Session::put('front_jacket_length',$front_jacket_length);
+    Session::save();
     return to_route("stepFiveView");
 }
 

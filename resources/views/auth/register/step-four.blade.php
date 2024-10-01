@@ -117,6 +117,7 @@ Main banner START -->
                     @csrf
 					<!-- Name -->
 					<!-- Email -->
+                        @if($gender_user==1)
                         <div class="row">
                             <div class="col-lg-4 mb-4 form-control-bg-light">
                                 <label class="form-label">Quel est votre Taille? *</label>
@@ -200,14 +201,19 @@ Main banner START -->
                             <div class="col-lg-3 mb-4 form-control-bg-light">
                                 <label class="form-label">Front Jacket Length *</label>
                                 <input type="text" name="front_jacket_length" class="form-control">
-
+                                @error('front_jacket_length')
+                                <div style="color:#c70609">{{ $message }}</div>
+                                @enderror
                             </div>
                         </div>
                         <!-- Message -->
 
-                        @error('full_shoulder_width')
-                                            <div style="color:#c70609">{{ $message }}</div>
-                                            @enderror
+
+                        @endif
+
+                        @if($gender_user==0)
+
+                        @endif
 					<!-- Button -->
 					<div style="display: flex;justify-content:end" class="flex items-end"><button type="submit" class="btn mt-4 btn-lg btn-primary mb-0" type="button">Suivant</button></div>
 				</form>

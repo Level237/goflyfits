@@ -24,7 +24,15 @@ class StepFourRequest extends FormRequest
         return [
             'height'=>'required',
             'weight'=>'required',
-            'full_shoulder_width'=>'required'
+            'full_shoulder_width'=>'required',
+            "size"=>"required",
+    "sleeves"=>"required",
+    "full_chest"=>"required",
+    "waist"=>"required",
+    "hips"=>"required",
+    "front_shoulder_width"=>"required",
+    "back_shoulder_width"=>"required",
+    "front_jacket_length"=>"required",
         ];
     }
 }
