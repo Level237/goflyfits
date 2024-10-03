@@ -191,6 +191,63 @@ public function stepFiveView(){
     //return $gender_user;
     return view('auth.register.step-five',compact('gender_user'));
 }
+
+        public function stepFive(Request $request){
+            $gender_user=Session::get('gender_user');
+            if($gender_user==1){
+                $neck=$request->neck;
+                $trouser_waist=$request->trouser_waist;
+                $crotch=$request->crotch;
+                $thigh=$request->thigh;
+                $throuser_length=$request->throuser_length;
+                $cuff=$request->cuff;
+                Session::put('neck',$neck);
+                Session::save();
+                Session::put('trouser_waist',$trouser_waist);
+                Session::save();
+                Session::put('crotch',$crotch);
+                Session::save();
+                Session::put('thigh',$thigh);
+                Session::save();
+                Session::put('throuser_length',$throuser_length);
+                Session::save();
+                Session::put('cuff',$cuff);
+                Session::save();
+            }
+
+            if($gender_user==0){
+                $hips=$request->hips;
+                $front_shoulder_width=$request->front_shoulder_width;
+                $back_shoulder_width=$request->back_shoulder_width;
+                $front_jacket_length=$request->front_jacket_length;
+                $neck=$request->neck;
+                $throuser_length=$request->throuser_length;
+                $cuff=$request->cuff;
+                $back_length=$request->back_length;
+                $bust=$request->bust;
+                Session::put('hips',$hips);
+                Session::save();
+                Session::put('front_shoulder_width',$front_shoulder_width);
+                Session::save();
+                Session::put('back_shoulder_width',$back_shoulder_width);
+                Session::save();
+                Session::put('front_jacket_length',$front_jacket_length);
+                Session::save();
+                Session::put('neck',$neck);
+                Session::save();
+                Session::put('cuff',$cuff);
+                Session::save();
+                Session::put('throuser_length',$throuser_length);
+                Session::save();
+                Session::put('bust',$bust);
+                Session::save();
+                Session::put('back_length',$back_length);
+                Session::save();
+            }
+
+
+           return $request;
+        }
     public function stepFinal(StepThreeRequest $request){
         if(Session::has('email') && Session::has('password')){
             $name=Session::get('name');

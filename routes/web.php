@@ -41,6 +41,7 @@ Route::post('step-three/country-information',[AuthStepController::class,'stepThr
 Route::get('step-four/measure-information',[AuthStepController::class,'stepFourView'])->name('stepFourView');
 Route::post('step-four/measure-information',[AuthStepController::class,"stepFour"])->name('stepFour');
 Route::get('step-five/measure-information',[AuthStepController::class,'stepFiveView'])->name('stepFiveView');
+Route::post('step-five/measure-information',[AuthStepController::class,'stepFive'])->name('stepFive');
 Route::post('step-final',[AuthStepController::class,"stepFinal"])->name("stepFinal");
 
 //List and search clothing

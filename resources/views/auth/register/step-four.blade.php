@@ -110,7 +110,7 @@ Main banner START -->
 		<div style="display: flex;justify-items:center;justify-content:center;align-items:center" class="row g-4 mt-4">
 			<div class="col-lg-12">
 				<!-- Title -->
-				<h1 class="text-center">Mesures Corporelles</h1>
+				<h1 class="text-center">Mesures Corporelles(1)</h1>
 
 				<!-- Contact form -->
 				<form method="POST" action="{{ route('stepFour') }}" class="mt-4">

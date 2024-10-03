@@ -24,14 +24,14 @@ return new class extends Migration
             //$table->string('back_shoulder_width');
             //$table->string('front_jacket_length');
             //$table->string('neck');
-            $table->string('trouser waist')->nullable();
+            $table->string('trouser_waist')->nullable();
             $table->string('crotch')->nullable();
             $table->string('thigh')->nullable();
             //$table->string('throuser_length');
             //$table->string('cuff');
 
-            //$table->string('back_length')->nullable();
-            $table->string('bust')->nullable();
+            $table->string('back_length')->nullable();
+            //$table->string('bust')->nullable();
             $table->string('point_bust')->nullable();
             $table->string('sleeve_length')->nullable();
             $table->string('arm')->nullable();
