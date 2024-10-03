@@ -249,7 +249,12 @@ public function stepFiveView(){
             }
 
 
-           return $request;
+           return to_route('stepFinalView');
+        }
+
+        public function stepFinalView(){
+            $categories=Category::all();
+            return view('auth.register.step-final',compact('categories'));
         }
     public function stepFinal(StepThreeRequest $request){
         if(Session::has('email') && Session::has('password')){
