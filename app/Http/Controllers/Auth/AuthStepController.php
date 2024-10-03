@@ -10,6 +10,7 @@ use App\Http\Requests\StepOneRequest;
 use App\Http\Requests\StepThreeRequest;
 use App\Http\Requests\StepTwoRequest;
 use App\Models\Category;
+use App\Models\Measure;
 use App\Models\Town;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
@@ -263,13 +264,17 @@ public function stepFiveView(){
         $password=Session::get('password');
         $phone_number=Session::get('phone_number');
         $town=Session::get('town');
+        $birthday=Session::get('birthday');
         $genderUser=Session::get('gender_user');
+        $full_name=Session::get('full_name');
         $preferences=$request->preferences;
         $user = User::create([
             'name' => $name,
             'email' => $email,
+            'birthday'=>$birthday,
             'password' => Hash::make($password),
             'town_id'=>$town,
+            'full_name'=>$full_name,
             'size'=>$request->size,
             'weight'=>$request->weight,
             'phone_number'=>$phone_number,
@@ -306,6 +311,47 @@ public function stepFiveView(){
         }
     }
 
+    public function saveMeasure(){
+
+        $gender_user=Session::get('gender_user');
+
+        if($gender_user==1){
+            $full_shoulder_width=Session::get('full_shoulder_width');
+            $sleeves=Session::get('sleeves');
+            $full_chest=Session::get('full_chest');
+            $waist=Session::get('waist');
+            $hips=Session::get('hips');
+            $front_shoulder_width=Session::get("front_shoulder_width");
+            $back_shoulder_width=Session::get("back_shoulder_width");
+            $front_jacket_length=Session::get('front_jacket_length');
+
+            $neck=Session::get('neck');
+            $trouser_waist=Session::get("trouser_waist");
+            $crotch=Session::get("crotch");
+            $thigh=Session::get("thigh");
+            $throuser_length=Session::get('throuser_length');
+            $cuff=Session::get("cuff");
+
+            $measure=new Measure;
+            $measure->full_shoulder_width=$full_shoulder_width;
+            $measure->sleeves=$sleeves;
+            $measure->full_chest=$full_chest;
+            $measure->waist=$waist;
+            $measure->hips=$hips;
+            $measure->front_shoulder_width=$front_shoulder_width;
+            $measure->back_shoulder_width=$back_shoulder_width;
+            $measure->front_jacket_length=$front_jacket_length;
+            $measure->neck=$neck;
+            $measure->trouser_waist=$trouser_waist;
+            $measure->crotch=$crotch;
+            $measure->thigh=$thigh;
+            $measure->throuser_length=$throuser_length;
+            $measure->cuff=$cuff;
+            $measure->save();
+            return $measure;
+        }
+
+    }
     public function randomColor(){
         $colors = array("red", "orange", "green", "brown", "chocolate","crimson","darkmagenta","mediumslateblue","tomato");
 

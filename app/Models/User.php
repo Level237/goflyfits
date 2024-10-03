@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Models\Role;
+use App\Models\Measure;
 use App\Models\Town;
 use App\Models\Category;
 use Laravel\Sanctum\HasApiTokens;
@@ -34,6 +35,7 @@ class User extends Authenticatable
         'gender_user',
         'isChoice',
         'role_id',
+        'measure_id',
         'color'
     ];
 
@@ -59,6 +61,10 @@ class User extends Authenticatable
 
     public function role():HasOne{
         return $this->hasOne(Role::class);
+    }
+
+    public function measure():HasOne{
+        return $this->hasOne(Measure::class);
     }
     public function town():HasOne{
         return $this->hasOne(Town::class);

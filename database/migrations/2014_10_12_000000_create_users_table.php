@@ -39,6 +39,12 @@ return new class extends Migration
             $table->string('phone_number')->unique();
             $table->rememberToken();
             $table->boolean("isChoice")->default(0);
+            $table->foreignIdFor(Measure::class)
+            ->constrained()
+            ->cascadeOnUpdate()
+            ->cascadeOnDelete();
+
+
             $table->boolean('gender_user');
             $table->string('weight')->nullable();
             $table->string('height')->nullable();
