@@ -174,94 +174,76 @@ Main banner START -->
                         @if($gender_user==0)
                         <div class="row">
                             <div class="col-lg-4 mb-4 form-control-bg-light">
-                                <label class="form-label">Quel est votre Taille? *</label>
-                                <select  class="form-control" name="height" id="">
-
-                                        <option value="1,50">1.50</option>
-
-
-                                </select>
-                                @error('height')
+                                <label class="form-label">Point Bust *</label>
+                                <input type="text" name="point_bust" class="form-control">
+                                @error('point_bust')
                             <div style="color:#c70609">{{ $message }}</div>
                             @enderror
                             </div>
                             <div class="col-lg-4 mb-4 form-control-bg-light">
-                                <label class="form-label">Quel est votre poids? *</label>
-                                <select  class="form-control" name="weight" id="">
-
-                                        <option value="1,50">55</option>
-                                        <option value="1,50">65</option>
-                                        <option value="1,50">75</option>
-                                        <option value="1,50">85</option>
-                                </select>
-                                @error('weight')
+                                <label class="form-label">Sleeve Length *</label>
+                                <input type="text" name="sleeve_length" class="form-control">
+                                @error('sleeve_length')
                             <div style="color:#c70609">{{ $message }}</div>
                             @enderror
                             </div>
                             <div class="col-lg-4 mb-4 form-control-bg-light">
-                                <label class="form-label">Hips *</label>
-                                <input type="text" name="hips" class="form-control">
-                                @error('hips')
+                                <label class="form-label">Arm *</label>
+                                <input type="text" name="arm" class="form-control">
+                                @error('arm')
                                 <div style="color:#c70609">{{ $message }}</div>
                                 @enderror
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-3 mb-4 form-control-bg-light">
-                                <label class="form-label">Front Shoulder Width*</label>
-                                <input type="text" name="front_shoulder_width" class="form-control">
-                                @error('front_shoulder_width')
+                                <label class="form-label">armHole*</label>
+                                <input type="text" name="armHole" class="form-control">
+                                @error('armHole')
                                 <div style="color:#c70609">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-lg-3 mb-4 form-control-bg-light">
-                                <label class="form-label">Back Shoulder Width*</label>
-                                <input type="text" name="back_shoulder_width" class="form-control">
-                                @error('back_shoulder_width')
+                                <label class="form-label">coat Length*</label>
+                                <input type="text" name="coat_length" class="form-control">
+                                @error('coat_length')
                                 <div style="color:#c70609">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-lg-3 mb-4 form-control-bg-light">
-                                <label class="form-label">Front Jacket Length *</label>
-                                <input type="text" name="front_jacket_length" class="form-control">
-                                @error('front_jacket_length')
+                                <label class="form-label">Skirt Length *</label>
+                                <input type="text" name="skirt_length" class="form-control">
+                                @error('skirt_length')
                                 <div style="color:#c70609">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-lg-3 mb-4 form-control-bg-light">
-                                <label class="form-label">bust *</label>
-                                <input type="text" name="bust" class="form-control">
-                                @error('bust')
+                                <label class="form-label">hight hip *</label>
+                                <input type="text" name="hight_hip" class="form-control">
+                                @error('hight_hip')
                                 <div style="color:#c70609">{{ $message }}</div>
                                 @enderror
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-3 mb-4 form-control-bg-light">
-                                <label class="form-label">Neck *</label>
-                                <input type="text" name="neck" class="form-control">
-                                @error('neck')
+                            <div class="col-lg-4 mb-4 form-control-bg-light">
+                                <label class="form-label">Inseam *</label>
+                                <input type="text" name="inseam" class="form-control">
+                                @error('inseam')
                                 <div style="color:#c70609">{{ $message }}</div>
                                 @enderror
                             </div>
-                            <div class="col-lg-3 mb-4 form-control-bg-light">
-                                <label class="form-label">Throuser Length *</label>
-                                <input type="text" name="throuser_length" class="form-control">
-                                @error('throuser_length')
+                            <div class="col-lg-4 mb-4 form-control-bg-light">
+                                <label class="form-label">Seat *</label>
+                                <input type="text" name="seat" class="form-control">
+                                @error('seat')
                                 <div style="color:#c70609">{{ $message }}</div>
                                 @enderror
                             </div>
-                            <div class="col-lg-3 mb-4 form-control-bg-light">
-                                <label class="form-label">cuff *</label>
-                                <input type="text" name="cuff" class="form-control">
-                                @error('cuff')
-                                <div style="color:#c70609">{{ $message }}</div>
-                                @enderror
-                            </div>
-                            <div class="col-lg-3 mb-4 bel form-control-bg-light">
-                                <label class="form-label">back_length *</label>
-                                <input type="text" name="Point Bust" class="form-control">
-                                @error('back_length')
+                            <div class="col-lg-4 mb-4 form-control-bg-light">
+                                <label class="form-label">Trouser Thigh*</label>
+                                <input type="text" name="trouser_thigh" class="form-control">
+                                @error('trouser_thigh')
                                 <div style="color:#c70609">{{ $message }}</div>
                                 @enderror
                             </div>

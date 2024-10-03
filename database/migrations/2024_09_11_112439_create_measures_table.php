@@ -31,7 +31,7 @@ return new class extends Migration
             //$table->string('cuff');
 
             $table->string('back_length')->nullable();
-            //$table->string('bust')->nullable();
+            $table->string('bust')->nullable();
             $table->string('point_bust')->nullable();
             $table->string('sleeve_length')->nullable();
             $table->string('arm')->nullable();
@@ -41,7 +41,6 @@ return new class extends Migration
             $table->string('hight_hip')->nullable();
             $table->string('inseam')->nullable();
             $table->string('seat')->nullable();
-            $table->string('inseam')->nullable();
             $table->string('trouser_thigh')->nullable();
             $table->timestamps();
         });

@@ -216,32 +216,35 @@ public function stepFiveView(){
             }
 
             if($gender_user==0){
-                $hips=$request->hips;
-                $front_shoulder_width=$request->front_shoulder_width;
-                $back_shoulder_width=$request->back_shoulder_width;
-                $front_jacket_length=$request->front_jacket_length;
-                $neck=$request->neck;
-                $throuser_length=$request->throuser_length;
-                $cuff=$request->cuff;
-                $back_length=$request->back_length;
-                $bust=$request->bust;
-                Session::put('hips',$hips);
+                $point_bust=$request->point_bust;
+                $sleeve_length=$request->sleeve_length;
+                $arm=$request->arm;
+                $armHole=$request->armHole;
+                $coat_length=$request->coat_length;
+                $skirt_length=$request->skirt_length;
+                $hight_hip=$request->hight_hip;
+                $inseam=$request->inseam;
+                $seat=$request->seat;
+                $trouser_thigh=$request->trouser_thigh;
+                Session::put('point_bust',$point_bust);
                 Session::save();
-                Session::put('front_shoulder_width',$front_shoulder_width);
+                Session::put('sleeve_length',$sleeve_length);
                 Session::save();
-                Session::put('back_shoulder_width',$back_shoulder_width);
+                Session::put('arm',$arm);
                 Session::save();
-                Session::put('front_jacket_length',$front_jacket_length);
+                Session::put('armHole',$armHole);
                 Session::save();
-                Session::put('neck',$neck);
+                Session::put('coat_length',$coat_length);
                 Session::save();
-                Session::put('cuff',$cuff);
+                Session::put('skirt_length',$skirt_length);
                 Session::save();
-                Session::put('throuser_length',$throuser_length);
+                Session::put('hight_hip',$hight_hip);
                 Session::save();
-                Session::put('bust',$bust);
+                Session::put('inseam',$inseam);
                 Session::save();
-                Session::put('back_length',$back_length);
+                Session::put('seat',$seat);
+                Session::save();
+                Session::put('trouser_thigh',$trouser_thigh);
                 Session::save();
             }
 
