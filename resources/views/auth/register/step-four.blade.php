@@ -212,7 +212,100 @@ Main banner START -->
                         @endif
 
                         @if($gender_user==0)
+                        <div class="row">
+                            <div class="col-lg-4 mb-4 form-control-bg-light">
+                                <label class="form-label">Quel est votre Taille? *</label>
+                                <select  class="form-control" name="height" id="">
 
+                                        <option value="1,50">1.50</option>
+
+
+                                </select>
+                                @error('height')
+                            <div style="color:#c70609">{{ $message }}</div>
+                            @enderror
+                            </div>
+                            <div class="col-lg-4 mb-4 form-control-bg-light">
+                                <label class="form-label">Quel est votre poids? *</label>
+                                <select  class="form-control" name="weight" id="">
+
+                                        <option value="1,50">55</option>
+                                        <option value="1,50">65</option>
+                                        <option value="1,50">75</option>
+                                        <option value="1,50">85</option>
+                                </select>
+                                @error('weight')
+                            <div style="color:#c70609">{{ $message }}</div>
+                            @enderror
+                            </div>
+                            <div class="col-lg-4 mb-4 form-control-bg-light">
+                                <label class="form-label">Hips *</label>
+                                <input type="text" name="hips" class="form-control">
+                                @error('hips')
+                                <div style="color:#c70609">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 mb-4 form-control-bg-light">
+                                <label class="form-label">Front Shoulder Width*</label>
+                                <input type="text" name="front_shoulder_width" class="form-control">
+                                @error('front_shoulder_width')
+                                <div style="color:#c70609">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-lg-3 mb-4 form-control-bg-light">
+                                <label class="form-label">Back Shoulder Width*</label>
+                                <input type="text" name="back_shoulder_width" class="form-control">
+                                @error('back_shoulder_width')
+                                <div style="color:#c70609">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-lg-3 mb-4 form-control-bg-light">
+                                <label class="form-label">Front Jacket Length *</label>
+                                <input type="text" name="front_jacket_length" class="form-control">
+                                @error('front_jacket_length')
+                                <div style="color:#c70609">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-lg-3 mb-4 form-control-bg-light">
+                                <label class="form-label">bust *</label>
+                                <input type="text" name="bust" class="form-control">
+                                @error('bust')
+                                <div style="color:#c70609">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 mb-4 form-control-bg-light">
+                                <label class="form-label">Neck *</label>
+                                <input type="text" name="neck" class="form-control">
+                                @error('neck')
+                                <div style="color:#c70609">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-lg-3 mb-4 form-control-bg-light">
+                                <label class="form-label">Throuser Length *</label>
+                                <input type="text" name="throuser_length" class="form-control">
+                                @error('throuser_length')
+                                <div style="color:#c70609">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-lg-3 mb-4 form-control-bg-light">
+                                <label class="form-label">cuff *</label>
+                                <input type="text" name="cuff" class="form-control">
+                                @error('cuff')
+                                <div style="color:#c70609">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-lg-3 mb-4 bel form-control-bg-light">
+                                <label class="form-label">back_length *</label>
+                                <input type="text" name="Point Bust" class="form-control">
+                                @error('back_length')
+                                <div style="color:#c70609">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
                         @endif
 					<!-- Button -->
 					<div style="display: flex;justify-content:end" class="flex items-end"><button type="submit" class="btn mt-4 btn-lg btn-primary mb-0" type="button">Suivant</button></div>

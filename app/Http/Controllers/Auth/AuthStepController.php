@@ -116,6 +116,10 @@ public function stepFour(Request $request){
 
     $gender_user=Session::get('gender_user');
     if($gender_user==1){
+        $hips=$request->hips;
+        $front_shoulder_width=$request->front_shoulder_width;
+        $back_shoulder_width=$request->back_shoulder_width;
+        $front_jacket_length=$request->front_jacket_length;
         $size=$request->full_shoulder_width;
         $sleeves=$request->sleeves;
         $full_chest=$request->full_chest;
@@ -128,25 +132,54 @@ public function stepFour(Request $request){
         Session::save();
         Session::put('waist',$waist);
         Session::save();
+        Session::put('hips',$hips);
+        Session::save();
+        Session::put('front_shoulder_width',$front_shoulder_width);
+        Session::save();
+        Session::put('back_shoulder_width',$back_shoulder_width);
+        Session::save();
+        Session::put('front_jacket_length',$front_jacket_length);
+        Session::save();
     }
+
+    if($gender_user==0){
+        $hips=$request->hips;
+        $front_shoulder_width=$request->front_shoulder_width;
+        $back_shoulder_width=$request->back_shoulder_width;
+        $front_jacket_length=$request->front_jacket_length;
+        $neck=$request->neck;
+        $throuser_length=$request->throuser_length;
+        $cuff=$request->cuff;
+        $back_length=$request->back_length;
+        $bust=$request->bust;
+        Session::put('hips',$hips);
+        Session::save();
+        Session::put('front_shoulder_width',$front_shoulder_width);
+        Session::save();
+        Session::put('back_shoulder_width',$back_shoulder_width);
+        Session::save();
+        Session::put('front_jacket_length',$front_jacket_length);
+        Session::save();
+        Session::put('neck',$neck);
+        Session::save();
+        Session::put('cuff',$cuff);
+        Session::save();
+        Session::put('throuser_length',$throuser_length);
+        Session::save();
+        Session::put('bust',$bust);
+        Session::save();
+        Session::put('back_length',$back_length);
+        Session::save();
+    }
+
+
     $height=$request->height;
     $weight=$request->weight;
 
-    $hips=$request->hips;
-    $front_shoulder_width=$request->front_shoulder_width;
-    $back_shoulder_width=$request->back_shoulder_width;
-    $front_jacket_length=$request->front_jacket_length;
+
     Session::put('height',$height);
     Session::save();
     Session::put('weight',$weight);
-    Session::save();
-    Session::put('hips',$hips);
-    Session::save();
-    Session::put('front_shoulder_width',$front_shoulder_width);
-    Session::save();
-    Session::put('back_shoulder_width',$back_shoulder_width);
-    Session::save();
-    Session::put('front_jacket_length',$front_jacket_length);
     Session::save();
     return to_route("stepFiveView");
 }

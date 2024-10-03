@@ -30,7 +30,7 @@ return new class extends Migration
             //$table->string('throuser_length');
             //$table->string('cuff');
 
-            $table->string('back_length')->nullable();
+            //$table->string('back_length')->nullable();
             $table->string('bust')->nullable();
             $table->string('point_bust')->nullable();
             $table->string('sleeve_length')->nullable();
