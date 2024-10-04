@@ -43,6 +43,7 @@ return new class extends Migration
             $table->boolean('gender_user');
             $table->string('weight')->nullable();
             $table->string('height')->nullable();
+            $table->string('size')->nullable();
             $table->string('color');
             $table->timestamps();
         });

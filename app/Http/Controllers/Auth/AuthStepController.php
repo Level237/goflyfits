@@ -278,6 +278,7 @@ public function stepFiveView(){
             'password' => Hash::make($password),
             'town_id'=>$town,
             'full_name'=>$full_name,
+            'size'=>$request->size,
             'weight'=>$request->weight,
             'phone_number'=>$phone_number,
             'color'=>$this->randomColor(),
