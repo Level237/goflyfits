@@ -13,6 +13,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+
+        $path = 'database/sql_files/measure.sql';
+        DB::unprepared(file_get_contents($path));
+        $this->command->info('measure table seeded!');
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
@@ -22,8 +26,8 @@ class DatabaseSeeder extends Seeder
         $this->call(TownSeeder::class);
         $this->call(RoleSeeder::class);
         $this->call(BrandSeeder::class);
-        //$this->call(AdminSeeder::class);
-        //$this->call(UserSeeder::class);
+        $this->call(AdminSeeder::class);
+        $this->call(UserSeeder::class);
         $this->call(CategorySeeder::class);
         $this->call(ClothingSeeder::class);
         $this->call(ClothingCategorySeeder::class);
@@ -31,5 +35,7 @@ class DatabaseSeeder extends Seeder
         $path = 'database/sql_files/category_user.sql';
         DB::unprepared(file_get_contents($path));
         $this->command->info('category table seeded!');
+
+
     }
 }

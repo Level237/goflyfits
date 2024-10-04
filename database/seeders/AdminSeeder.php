@@ -15,6 +15,8 @@ class AdminSeeder extends Seeder
     {
         User::create([
             'name'=>"Admin",
+            'full_name'=>"admin",
+            'birthday'=>"12/02/1995",
             'email'=>"admin@goflyfits.com",
             'role_id'=>1,
             'password'=>bcrypt('password'),
@@ -22,9 +24,11 @@ class AdminSeeder extends Seeder
             'country'=>"cameroon",
             'phone_number'=>"691594365",
             'isChoice'=>1,
+            'measure_id'=>1,
             'size'=>"xl",
             'gender_user'=>1,
             'weight'=>"78",
+            'height'=>"175",
             'color'=>"green"
         ],
         );
