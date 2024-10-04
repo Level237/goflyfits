@@ -268,10 +268,12 @@ public function stepFiveView(){
         $genderUser=Session::get('gender_user');
         $full_name=Session::get('full_name');
         $preferences=$request->preferences;
+        $measure=$this->saveMeasure();
         $user = User::create([
             'name' => $name,
             'email' => $email,
             'birthday'=>$birthday,
+            'measure_id'=>$measure->id,
             'password' => Hash::make($password),
             'town_id'=>$town,
             'full_name'=>$full_name,
