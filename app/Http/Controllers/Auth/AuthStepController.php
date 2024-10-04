@@ -99,7 +99,7 @@ public function stepThree(StepTwoRequest $request){
 
     $country=$request->country;
     $town=$request->town;
-    Session::put('name',$country);
+    Session::put('country',$country);
     Session::save();
     Session::put('town',$town);
     Session::save();
@@ -257,7 +257,7 @@ public function stepFiveView(){
             $categories=Category::all();
             return view('auth.register.step-final',compact('categories'));
         }
-    public function stepFinal(StepThreeRequest $request){
+    public function stepFinal(Request $request){
         if(Session::has('email') && Session::has('password')){
             $name=Session::get('name');
         $email=Session::get('email');
@@ -272,12 +272,12 @@ public function stepFiveView(){
         $user = User::create([
             'name' => $name,
             'email' => $email,
+            'full_name'=>$full_name,
             'birthday'=>$birthday,
             'measure_id'=>$measure->id,
             'password' => Hash::make($password),
             'town_id'=>$town,
             'full_name'=>$full_name,
-            'size'=>$request->size,
             'weight'=>$request->weight,
             'phone_number'=>$phone_number,
             'color'=>$this->randomColor(),

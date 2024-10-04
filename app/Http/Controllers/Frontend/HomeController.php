@@ -17,6 +17,7 @@ class HomeController extends Controller
             $isSearch=true;
         }
         $categories=Category::all();
+
         if($request->session()->has("preferences")){
             $clothings=Clothing::join('category_clothing','category_clothing.clothing_id','clothing.id')
             ->join('categories','categories.id','category_clothing.category_id')
