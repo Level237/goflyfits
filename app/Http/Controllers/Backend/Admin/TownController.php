@@ -23,6 +23,7 @@ class TownController extends Controller
      */
     public function create()
     {
+        $gender=Session::get('gender');
         return view('admin.towns.create');
     }
 
