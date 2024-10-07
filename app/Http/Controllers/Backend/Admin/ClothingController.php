@@ -9,6 +9,7 @@ use App\Models\Category;
 use App\Models\Clothing;
 use App\Models\Town;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use Intervention\Image\Laravel\Facades\Image;
 
 class ClothingController extends Controller
@@ -29,6 +30,7 @@ class ClothingController extends Controller
     {
         $categories=Category::all();
         $brands=Brand::all();
+        $gender=Session::get('gender');
         $towns=Town::all();
         return view('admin.clothes.create',compact('categories','towns','brands'));
     }
@@ -130,6 +132,18 @@ class ClothingController extends Controller
         return back();
     }
 
+    public function selectGenderView(){
+
+        return view('admin.clothes.select-gender');
+    }
+
+    public function selectGender(Request $request){
+
+        Session::put("gender",$request->gender);
+        Session::save();
+
+        return to_route('admin.clothings.create');
+    }
     function slugify($string, $delimiter = '-') {
         $oldLocale = setlocale(LC_ALL, '0');
         setlocale(LC_ALL, 'en_US.UTF-8');

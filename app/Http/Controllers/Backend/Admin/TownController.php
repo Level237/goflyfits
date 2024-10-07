@@ -23,8 +23,8 @@ class TownController extends Controller
      */
     public function create()
     {
-        $gender=Session::get('gender');
-        return view('admin.towns.create');
+
+        return view('admin.towns.create',compact('gender'));
     }
 
     /**
@@ -39,18 +39,7 @@ class TownController extends Controller
         return to_route('admin.towns.index');
     }
 
-    public function selectGenderView(){
 
-        return view('admin.clothes.select-gender');
-    }
-
-    public function selectGender(Request $request){
-
-        Session::put("gender",$request->gender);
-        Session::save();
-
-        return to_route('admin.clothings.create');
-    }
     /**
      * Display the specified resource.
      */

@@ -117,10 +117,12 @@ Main content START -->
 					<!-- Owner Detail END -->
 
 					<!-- Cab Detail START -->
-					<div class="card shadow">
+
+
+                    <div class="card shadow">
 						<!-- Card header -->
 						<div class="card-header border-bottom">
-							<h5 class="mb-0">Media & Categorie</h5>
+							<h5 class="mb-0">Media</h5>
 						</div>
 
 						<!-- Card body -->
