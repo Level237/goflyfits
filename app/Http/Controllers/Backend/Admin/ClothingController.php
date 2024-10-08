@@ -48,6 +48,7 @@ class ClothingController extends Controller
         $clothing->description=$request->description;
         $resizeImageAndGetImageName=$this->resizeImage($request->file("image"));
         $clothing->price=$request->price;
+        $clothing->measure_id=$measure->id;
         $clothing->brand_id=$request->brand_id;
         $clothing->size=$request->size;
         $clothing->town_id=$request->town_id;
