@@ -425,6 +425,13 @@ Main content START -->
                                 <div style="color:#c70609">{{ $message }}</div>
                                 @enderror
 								</div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Hips *</label>
+                                    <input type="text" name="hips" class="form-control">
+                                    @error('hips')
+                                    <div style="color:#c70609">{{ $message }}</div>
+                                    @enderror
+								</div>
                                 @endif
 								<!-- State -->
 

@@ -184,47 +184,27 @@ class ClothingController extends Controller
             return $measure;
         }
         if($gender_user==0){
-            $hips=Session::get("hips");
-            $front_shoulder_width=Session::get("front_shoulder_width");
-            $back_shoulder_width=Session::get("back_shoulder_width");
-            $front_jacket_length=Session::get("front_jacket_length");
-            $neck=Session::get("neck");
-            $throuser_length=Session::get("throuser_length");
-            $cuff=Session::get("cuff");
-            $back_length=Session::get("back_length");
-            $bust=Session::get("bust");
-
-            $point_bust=Session::get("point_bust");
-            $sleeve_length=Session::get("sleeve_length");
-            $arm=Session::get("arm");
-            $armHole=Session::get("armHole");
-            $coat_length=Session::get("coat_length");
-            $skirt_length=Session::get("skirt_length");
-            $hight_hip=Session::get("hight_hip");
-            $inseam=Session::get("inseam");
-            $seat=Session::get("seat");
-            $trouser_thigh=Session::get("trouser_thigh");
 
             $measure=new Measure;
-            $measure->hips=$hips;
-            $measure->front_shoulder_width=$front_shoulder_width;
-            $measure->back_shoulder_width=$back_shoulder_width;
-            $measure->front_jacket_length=$front_jacket_length;
-            $measure->neck=$neck;
-            $measure->throuser_length=$throuser_length;
-            $measure->cuff=$cuff;
-            $measure->back_length=$back_length;
-            $measure->bust=$bust;
-            $measure->point_bust=$point_bust;
-            $measure->sleeve_length=$sleeve_length;
-            $measure->arm=$arm;
-            $measure->armHole=$armHole;
-            $measure->coat_length=$coat_length;
-            $measure->skirt_length=$skirt_length;
-            $measure->hight_hip=$hight_hip;
-            $measure->inseam=$inseam;
-            $measure->seat=$seat;
-            $measure->trouser_thigh=$trouser_thigh;
+            $measure->hips=$request->hips;
+            $measure->front_shoulder_width=$request->front_shoulder_width;
+            $measure->back_shoulder_width=$request->back_shoulder_width;
+            $measure->front_jacket_length=$request->front_jacket_length;
+            $measure->neck=$request->neck;
+            $measure->throuser_length=$request->throuser_length;
+            $measure->cuff=$request->cuff;
+            $measure->back_length=$request->back_length;
+            $measure->bust=$request->bust;
+            $measure->point_bust=$request->point_bust;
+            $measure->sleeve_length=$request->sleeve_length;
+            $measure->arm=$request->arm;
+            $measure->armHole=$request->armHole;
+            $measure->coat_length=$request->coat_length;
+            $measure->skirt_length=$request->skirt_length;
+            $measure->hight_hip=$request->hight_hip;
+            $measure->inseam=$request->inseam;
+            $measure->seat=$request->seat;
+            $measure->trouser_thigh=$request->trouser_thigh;
             $measure->save();
 
             return $measure;
