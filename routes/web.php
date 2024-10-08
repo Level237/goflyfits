@@ -59,7 +59,10 @@ Route::middleware(['auth','admin'])->name('admin.')->prefix('admin')->group(func
     Route::resource('categories',CategoryController::class);
     Route::resource('brands',BrandController::class);
     Route::resource('towns',TownController::class);
+    Route::get('select-gender',[TownController::class,"selectGenderView"])->name('selectGenderView');
+    Route::post('select-gender',[TownController::class,"selectGender"])->name('selectGender');
     });
+
 
     Route::middleware(['auth','customer'])->name('customer.')->prefix('customer')->group(function(){
         Route::get('dashboard',[CustomerDashboardController::class,'index'])->name('dashboard');

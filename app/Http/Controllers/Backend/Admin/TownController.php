@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Town;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class TownController extends Controller
 {
@@ -37,6 +38,18 @@ class TownController extends Controller
         return to_route('admin.towns.index');
     }
 
+    public function selectGenderView(){
+
+        return view('admin.clothes.select-gender');
+    }
+
+    public function selectGender(Request $request){
+
+        Session::put("gender",$request->gender);
+        Session::save();
+
+        return to_route('admin.clothings.create');
+    }
     /**
      * Display the specified resource.
      */
