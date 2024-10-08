@@ -7,6 +7,7 @@ use App\Http\Requests\ClothingRequest;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Clothing;
+use App\Models\Measure;
 use App\Models\Town;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -38,11 +39,12 @@ class ClothingController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(ClothingRequest $request)
+    public function store(Request $request)
     {
         $clothing=new Clothing;
         $clothing->title=$request->title;
         $clothing->gender=$request->gender;
+        $measure=$this->saveMeasure($request);
         $clothing->description=$request->description;
         $resizeImageAndGetImageName=$this->resizeImage($request->file("image"));
         $clothing->price=$request->price;
@@ -154,5 +156,78 @@ class ClothingController extends Controller
         $clean = trim($clean, $delimiter);
         setlocale(LC_ALL, $oldLocale);
         return $clean;
+    }
+
+    public function saveMeasure($request){
+
+        $gender_user=Session::get('gender_user');
+
+        if($gender_user==1){
+
+            $measure=new Measure;
+            $measure->full_shoulder_width=$request->full_shoulder_width;
+            $measure->sleeves=$request->sleeves;
+            $measure->full_chest=$request->full_chest;
+            $measure->waist=$request->waist;
+            $measure->hips=$request->hips;
+            $measure->front_shoulder_width=$request->front_shoulder_width;
+            $measure->back_shoulder_width=$request->back_shoulder_width;
+            $measure->front_jacket_length=$request->front_jacket_length;
+            $measure->neck=$request->neck;
+            $measure->trouser_waist=$request->trouser_waist;
+            $measure->crotch=$request->crotch;
+            $measure->thigh=$request->thigh;
+            $measure->throuser_length=$request->throuser_length;
+            $measure->cuff=$request->cuff;
+            $measure->save();
+            return $measure;
+        }
+        if($gender_user==0){
+            $hips=Session::get("hips");
+            $front_shoulder_width=Session::get("front_shoulder_width");
+            $back_shoulder_width=Session::get("back_shoulder_width");
+            $front_jacket_length=Session::get("front_jacket_length");
+            $neck=Session::get("neck");
+            $throuser_length=Session::get("throuser_length");
+            $cuff=Session::get("cuff");
+            $back_length=Session::get("back_length");
+            $bust=Session::get("bust");
+
+            $point_bust=Session::get("point_bust");
+            $sleeve_length=Session::get("sleeve_length");
+            $arm=Session::get("arm");
+            $armHole=Session::get("armHole");
+            $coat_length=Session::get("coat_length");
+            $skirt_length=Session::get("skirt_length");
+            $hight_hip=Session::get("hight_hip");
+            $inseam=Session::get("inseam");
+            $seat=Session::get("seat");
+            $trouser_thigh=Session::get("trouser_thigh");
+
+            $measure=new Measure;
+            $measure->hips=$hips;
+            $measure->front_shoulder_width=$front_shoulder_width;
+            $measure->back_shoulder_width=$back_shoulder_width;
+            $measure->front_jacket_length=$front_jacket_length;
+            $measure->neck=$neck;
+            $measure->throuser_length=$throuser_length;
+            $measure->cuff=$cuff;
+            $measure->back_length=$back_length;
+            $measure->bust=$bust;
+            $measure->point_bust=$point_bust;
+            $measure->sleeve_length=$sleeve_length;
+            $measure->arm=$arm;
+            $measure->armHole=$armHole;
+            $measure->coat_length=$coat_length;
+            $measure->skirt_length=$skirt_length;
+            $measure->hight_hip=$hight_hip;
+            $measure->inseam=$inseam;
+            $measure->seat=$seat;
+            $measure->trouser_thigh=$trouser_thigh;
+            $measure->save();
+
+            return $measure;
+        }
+
     }
 }

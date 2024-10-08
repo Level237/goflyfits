@@ -269,10 +269,17 @@ Main content START -->
                                 @enderror
 								</div>
 
-                                <div class="col-md-12">
+                                <div class="col-md-6">
                                     <label class="form-label">Cuff*</label>
                                 <input type="text" name="cuff" class="form-control">
                                 @error('cuff')
+                                <div style="color:#c70609">{{ $message }}</div>
+                                @enderror
+								</div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Hips *</label>
+                                <input type="text" name="hips" class="form-control">
+                                @error('hips')
                                 <div style="color:#c70609">{{ $message }}</div>
                                 @enderror
 								</div>
