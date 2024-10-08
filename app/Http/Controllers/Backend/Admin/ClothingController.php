@@ -32,7 +32,7 @@ class ClothingController extends Controller
         $brands=Brand::all();
         $gender=Session::get('gender');
         $towns=Town::all();
-        return view('admin.clothes.create',compact('categories','towns','brands'));
+        return view('admin.clothes.create',compact('categories','towns','brands','gender'));
     }
 
     /**
