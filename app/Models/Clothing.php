@@ -20,7 +20,7 @@ class Clothing extends Model
         'size',
         'source',
         'gender',
-
+        "measure_id",
         'town_id',
         'brand_id',
         'slug',

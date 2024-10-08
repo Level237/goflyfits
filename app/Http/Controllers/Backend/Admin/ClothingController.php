@@ -39,11 +39,14 @@ class ClothingController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ClothingRequest $request)
     {
-        $clothing=new Clothing;
+
+        if(Session::has('gender')){
+            $clothing=new Clothing;
+            $gender=Session::get('gender');
         $clothing->title=$request->title;
-        $clothing->gender=$request->gender;
+        $clothing->gender=$gender;
         $measure=$this->saveMeasure($request);
         $clothing->description=$request->description;
         $resizeImageAndGetImageName=$this->resizeImage($request->file("image"));
@@ -63,6 +66,11 @@ class ClothingController extends Controller
                 }
                 return to_route('admin.clothings.index');
         }
+        }else{
+
+            return to_route('admin.selectGenderView');
+        }
+
     }
 
     public function resizeImage($image){

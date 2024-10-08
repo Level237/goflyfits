@@ -174,7 +174,7 @@ Main content START -->
 						<div class="card-body">
 							<div class="row g-3">
 								<!-- Car name -->
-								@if($gender===1)
+								@if($gender==1)
                                 <div class="col-md-6">
                                     <label class="form-label">Full shoulder width *</label>
                                     <input type="text" name="full_shoulder_width" class="form-control">

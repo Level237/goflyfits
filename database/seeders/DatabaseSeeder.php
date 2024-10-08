@@ -29,8 +29,8 @@ class DatabaseSeeder extends Seeder
         $this->call(AdminSeeder::class);
         $this->call(UserSeeder::class);
         $this->call(CategorySeeder::class);
-        $this->call(ClothingSeeder::class);
-        $this->call(ClothingCategorySeeder::class);
+        //$this->call(ClothingSeeder::class);
+        //$this->call(ClothingCategorySeeder::class);
 
         $path = 'database/sql_files/category_user.sql';
         DB::unprepared(file_get_contents($path));

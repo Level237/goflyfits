@@ -31,7 +31,6 @@ class ClothingRequest extends FormRequest
             "brand_id"=>['required'],
             'categories'=>"required",
             "image"=>"required|image|mimes:jpg",
-            'gender'=>['required']
         ];
     }
 }
