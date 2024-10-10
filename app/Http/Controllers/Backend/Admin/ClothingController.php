@@ -29,11 +29,17 @@ class ClothingController extends Controller
      */
     public function create()
     {
-        $categories=Category::all();
-        $brands=Brand::all();
-        $gender=Session::get('gender');
-        $towns=Town::all();
-        return view('admin.clothes.create',compact('categories','towns','brands','gender'));
+        if(Session::has('gender')){
+            $categories=Category::all();
+            $brands=Brand::all();
+            $gender=Session::get('gender');
+            $towns=Town::all();
+            return view('admin.clothes.create',compact('categories','towns','brands','gender'));
+        }else{
+
+            return to_route('admin.selectGender');
+        }
+
     }
 
     /**
@@ -59,7 +65,7 @@ class ClothingController extends Controller
         //$image_path = $request->file('image')->store('clothings', 'public');
         $clothing->clothing_profile="clothings/".$resizeImageAndGetImageName;
         if($clothing->save()){
-
+                Session::forget('gender');
                 foreach($request->categories as $categorie){
 
                     $clothing->categories()->attach($categorie);
