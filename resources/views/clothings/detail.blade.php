@@ -147,51 +147,100 @@
                         </div>
                         <!-- Driver and cab detail END -->
 
-                        <!-- Inclusion & Exclusion START -->
-                        <div class="card bg-transparent">
+                        <div class="card border">
                             <!-- Card header -->
-                            <div class="card-header border-bottom bg-transparent px-0 pt-0">
-                                <h4 class="mb-0">Inclusion & Exclusion</h4>
+                            <div class="card-header border-bottom d-flex justify-content-between">
+                                <!-- Title -->
+                                <h5 class="mb-0">Measures Details</h5>
                             </div>
 
                             <!-- Card body START -->
-                            <div class="card-body pt-4 p-0">
-                                <!-- Detail START -->
-                                <div class="row g-3">
-                                    <!-- List -->
+                            <div class="card-body">
+                                <!-- Hotel item START -->
+                                <div class="row">
+                                    <!-- Info -->
                                     <div class="col-sm-6">
-                                        <h5>Included in your price</h5>
-                                        <ul class="list-group list-group-borderless mb-0">
-                                            <li class="list-group-item mb-0 pb-0"><i class="fa-solid fa-check text-success me-1"></i>
-                                                State tax
-                                            </li>
-                                            <li class="list-group-item mb-0 pb-0"><i class="fa-solid fa-check text-success me-1"></i>
-                                                Toll charge
-                                            </li>
-                                            <li class="list-group-item mb-0 pb-0"><i class="fa-solid fa-check text-success me-1"></i>
-                                                Driver Allowance
-                                            </li>
-                                            <li class="list-group-item mb-0 pb-0"><i class="fa-solid fa-check text-success me-1"></i>
-                                                Only one pickup and drop
-                                            </li>
-                                        </ul>
+                                        <img style="width: 200px" src="{{ asset('assets/images/measure/full_shoulder_width.png') }}" alt="">
                                     </div>
-
-                                    <!-- List -->
+                                    <!-- Review -->
                                     <div class="col-sm-6">
-                                        <h5>Extra charge</h5>
-                                        <ul class="list-group list-group-borderless mb-0">
-                                            <li class="list-group-item mb-0 pb-0"><i class="bi bi-x-lg text-danger me-1"></i>
-                                                Fare beyond 600kms
-                                            </li>
-                                            <li class="list-group-item mb-0 pb-0"><i class="bi bi-x-lg text-danger me-1"></i>
-                                                Airport entry charge
-                                            </li>
-                                        </ul>
+                                        <h5 class="mb-2 mt-4 text-center">Full Shoulder width</h5>
+                                        <h5 class="text-success mt-3 text-center mb-0">{{ $clothing->measure->full_shoulder_width }}</h5>
                                     </div>
                                 </div>
-                                <!-- Detail END -->
+                                <!-- Hotel item END -->
+
+                                <hr> <!-- Divider -->
+
+                                <!-- Hotel item START -->
+                                <div class="row">
+                                    <!-- Info -->
+                                    <div class="col-sm-6">
+                                        <img style="width: 200px" src="{{ asset('assets/images/measure/sleeves.png') }}" alt="">
+                                    </div>
+                                    <!-- Review -->
+                                    <div class="col-sm-6">
+                                        <h5 class="mb-2 mt-4 text-center">Sleeves</h5>
+                                        <h5 class="text-success mt-3 text-center mb-0">{{ $clothing->measure->sleeves }}</h5>
+                                    </div>
+                                </div>
+                                <!-- Hotel item END -->
+
+                                <hr> <!-- Divider -->
+
+                                <!-- Hotel item START -->
+                                <div class="row">
+                                    <!-- Info -->
+                                    <div class="col-sm-6">
+                                        <img style="width: 200px" src="{{ asset('assets/images/measure/full_chess.png') }}" alt="">
+                                    </div>
+                                    <!-- Review -->
+                                    <div class="col-sm-6">
+                                        <h5 class="mb-2 mt-4 text-center">Full Chest</h5>
+                                        <h5 class="text-success mt-3 text-center mb-0">{{ $clothing->measure->full_chest }}</h5>
+                                    </div>
+                                </div>
+                                <hr> <!-- Divider -->
+                                <!-- Hotel item END -->
+                                <div class="row">
+                                    <!-- Info -->
+                                    <div class="col-sm-6">
+                                        <img style="width: 200px" src="{{ asset('assets/images/measure/waist-removebg-preview.png') }}" alt="">
+                                    </div>
+                                    <!-- Review -->
+                                    <div class="col-sm-6">
+                                        <h5 class="mb-2 mt-4 text-center">Waist</h5>
+                                        <h5 class="text-success mt-3 text-center mb-0">{{ $clothing->measure->waist }}</h5>
+                                    </div>
+                                </div>
+                                <hr> <!-- Divider -->
+                                <!-- Hotel item END -->
+                                <div class="row">
+                                    <!-- Info -->
+                                    <div class="col-sm-6">
+                                        <img style="width: 200px" src="{{ asset('assets/images/measure/hips-removebg-preview.png') }}" alt="">
+                                    </div>
+                                    <!-- Review -->
+                                    <div class="col-sm-6">
+                                        <h5 class="mb-2 mt-4 text-center">Hips/seat</h5>
+                                        <h5 class="text-success mt-3 text-center mb-0">{{ $clothing->measure->hips }}</h5>
+                                    </div>
+                                </div>
+                                <hr> <!-- Divider -->
+                                <!-- Hotel item END -->
+                                <div class="row">
+                                    <!-- Info -->
+                                    <div class="col-sm-6">
+                                        <img style="width: 200px" src="{{ asset('assets/images/measure/hips-removebg-preview.png') }}" alt="">
+                                    </div>
+                                    <!-- Review -->
+                                    <div class="col-sm-6">
+                                        <h5 class="mb-2 mt-4 text-center">Hips/seat</h5>
+                                        <h5 class="text-success mt-3 text-center mb-0">{{ $clothing->measure->hips }}</h5>
+                                    </div>
+                                </div>
                             </div>
+
                             <!-- Card body END -->
                         </div>
                         <!-- Inclusion & Exclusion END -->

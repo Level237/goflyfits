@@ -3,10 +3,11 @@
 namespace App\Models;
 
 use App\Models\Town;
+use App\Models\Measure;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Clothing extends Model
@@ -40,5 +41,9 @@ class Clothing extends Model
     public function brand(){
 
         return $this->belongsTo(Brand::class);
+    }
+
+    public function measure(){
+        return $this->belongsTo(Measure::class);
     }
 }
