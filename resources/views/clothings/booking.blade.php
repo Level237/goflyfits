@@ -207,123 +207,122 @@ Booking clothing
                                                     </div>
                                                     <!-- Review -->
                                                     <div class="col-sm-4">
-                                                        <h6 class="mb-0">{{ $clothing->brand->brand_title }}</h6>
+                                                        <h6 class="mb-0">@if($clothing->gender==1)
+                                                            Homme
+
+                                                            @else
+                                                            Femme
+                                                        @endif</h6>
 
                                                     </div>
                                                 </div>
 
-                                                <hr> <!-- Divider -->
-                                                <!-- Hotel item START -->
-                                                <div class="row">
-                                                    <!-- Info -->
-                                                    <div class="col-sm-8">
-                                                        <h6>Park Plaza Lodge Hotel</h6>
-                                                        <h6 class="mb-1 fw-light"><span class="text-secondary">Room:</span> Deluxe Pool View with Breakfast</h6>
-                                                        <ul class="list-inline mb-0">
-                                                            <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
-                                                            <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
-                                                            <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
-                                                            <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
-                                                            <li class="list-inline-item me-0 small"><i class="fas fa-star-half-alt text-warning"></i></li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- Review -->
-                                                    <div class="col-sm-4">
-                                                        <h6 class="mb-0">14 April 2022</h6>
-                                                        <p class="text-success mb-0">Breakfast Included</p>
-                                                    </div>
-                                                </div>
-                                                <!-- Hotel item END -->
 
-                                                <hr> <!-- Divider -->
 
-                                                <!-- Hotel item START -->
-                                                <div class="row">
-                                                    <!-- Info -->
-                                                    <div class="col-sm-8">
-                                                        <h6>Pride moon Village Resort & Spa</h6>
-                                                        <h6 class="mb-1 fw-light"><span class="text-secondary">Room:</span> Deluxe Pool View with Breakfast</h6>
-                                                        <ul class="list-inline mb-0">
-                                                            <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
-                                                            <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
-                                                            <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
-                                                            <li class="list-inline-item me-0 small"><i class="fas fa-star text-warning"></i></li>
-                                                            <li class="list-inline-item me-0 small"><i class="fas fa-star-half-alt text-warning"></i></li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- Review -->
-                                                    <div class="col-sm-4">
-                                                        <h6 class="mb-0">16 April 2022</h6>
-                                                        <p class="text-success mb-0">Breakfast Included</p>
-                                                    </div>
-                                                </div>
                                                 <!-- Hotel item END -->
 
                                             </div>
+
                                             <!-- Card body END -->
                                         </div>
-                                        <!-- Hotel detail END -->
-
-                                        <!-- Cab detail START -->
                                         <div class="card border">
                                             <!-- Card header -->
                                             <div class="card-header border-bottom d-flex justify-content-between">
                                                 <!-- Title -->
-                                                <h5 class="mb-0">Transfer Details</h5>
-                                                <a href="#" class="btn btn-link p-0 mb-0 text-primary-hover text-reset text-decoration-underline">View details</a>
+                                                <h5 class="mb-0">Measures Details</h5>
                                             </div>
 
                                             <!-- Card body START -->
                                             <div class="card-body">
-                                                <div class="d-flex gap-1 justify-content-between flex-wrap">
-                                                    <!-- Title -->
-                                                    <h6 class="mb-0">Private Transfer</h6>
+                                                <!-- Hotel item START -->
+                                                <div class="row">
                                                     <!-- Info -->
-                                                    <p class="mb-0">Vehicle type: <span class="h6 fw-light">Sedan - AC</span></p>
-                                                    <!-- Date -->
-                                                    <h6 class="mb-0 fw-normal">12 April 2022</h6>
+                                                    <div class="col-sm-6">
+                                                        <img style="width: 200px" src="{{ asset('assets/images/measure/full_shoulder_width.png') }}" alt="">
+                                                    </div>
+                                                    <!-- Review -->
+                                                    <div class="col-sm-6">
+                                                        <h5 class="mb-2 mt-4 text-center">Full Shoulder width</h5>
+                                                        <h5 class="text-success mt-3 text-center mb-0">{{ $clothing->measure->full_shoulder_width }}</h5>
+                                                    </div>
+                                                </div>
+                                                <!-- Hotel item END -->
+
+                                                <hr> <!-- Divider -->
+
+                                                <!-- Hotel item START -->
+                                                <div class="row">
+                                                    <!-- Info -->
+                                                    <div class="col-sm-6">
+                                                        <img style="width: 200px" src="{{ asset('assets/images/measure/sleeves.png') }}" alt="">
+                                                    </div>
+                                                    <!-- Review -->
+                                                    <div class="col-sm-6">
+                                                        <h5 class="mb-2 mt-4 text-center">Sleeves</h5>
+                                                        <h5 class="text-success mt-3 text-center mb-0">{{ $clothing->measure->sleeves }}</h5>
+                                                    </div>
+                                                </div>
+                                                <!-- Hotel item END -->
+
+                                                <hr> <!-- Divider -->
+
+                                                <!-- Hotel item START -->
+                                                <div class="row">
+                                                    <!-- Info -->
+                                                    <div class="col-sm-6">
+                                                        <img style="width: 200px" src="{{ asset('assets/images/measure/full_chess.png') }}" alt="">
+                                                    </div>
+                                                    <!-- Review -->
+                                                    <div class="col-sm-6">
+                                                        <h5 class="mb-2 mt-4 text-center">Full Chest</h5>
+                                                        <h5 class="text-success mt-3 text-center mb-0">{{ $clothing->measure->full_chest }}</h5>
+                                                    </div>
+                                                </div>
+                                                <hr> <!-- Divider -->
+                                                <!-- Hotel item END -->
+                                                <div class="row">
+                                                    <!-- Info -->
+                                                    <div class="col-sm-6">
+                                                        <img style="width: 200px" src="{{ asset('assets/images/measure/waist-removebg-preview.png') }}" alt="">
+                                                    </div>
+                                                    <!-- Review -->
+                                                    <div class="col-sm-6">
+                                                        <h5 class="mb-2 mt-4 text-center">Waist</h5>
+                                                        <h5 class="text-success mt-3 text-center mb-0">{{ $clothing->measure->waist }}</h5>
+                                                    </div>
+                                                </div>
+                                                <hr> <!-- Divider -->
+                                                <!-- Hotel item END -->
+                                                <div class="row">
+                                                    <!-- Info -->
+                                                    <div class="col-sm-6">
+                                                        <img style="width: 200px" src="{{ asset('assets/images/measure/hips-removebg-preview.png') }}" alt="">
+                                                    </div>
+                                                    <!-- Review -->
+                                                    <div class="col-sm-6">
+                                                        <h5 class="mb-2 mt-4 text-center">Hips/seat</h5>
+                                                        <h5 class="text-success mt-3 text-center mb-0">{{ $clothing->measure->hips }}</h5>
+                                                    </div>
+                                                </div>
+                                                <hr> <!-- Divider -->
+                                                <!-- Hotel item END -->
+                                                <div class="row">
+                                                    <!-- Info -->
+                                                    <div class="col-sm-6">
+                                                        <img style="width: 200px" src="{{ asset('assets/images/measure/hips-removebg-preview.png') }}" alt="">
+                                                    </div>
+                                                    <!-- Review -->
+                                                    <div class="col-sm-6">
+                                                        <h5 class="mb-2 mt-4 text-center">Hips/seat</h5>
+                                                        <h5 class="text-success mt-3 text-center mb-0">{{ $clothing->measure->hips }}</h5>
+                                                    </div>
                                                 </div>
                                             </div>
+
                                             <!-- Card body END -->
                                         </div>
-                                        <!-- Cab detail END -->
+                                        <!-- Hotel detail END -->
 
-                                        <!-- Cancellation & Date change START -->
-                                        <div class="card border">
-                                            <!-- Card header -->
-                                            <div class="card-header border-bottom">
-                                                <!-- Title -->
-                                                <h5 class="mb-0">Cancellation & Date change</h5>
-                                            </div>
-
-                                            <!-- Card body START -->
-                                            <div class="card-body">
-                                                <ul class="list-group list-group-borderless">
-                                                    <li class="list-group-item">
-                                                        <span class="h6 fw-normal me-1 mb-0"><i class="bi bi-dot"></i>10 days:</span>
-                                                        <span>100%</span>
-                                                    </li>
-                                                    <li class="list-group-item">
-                                                        <span class="h6 fw-normal me-1 mb-0"><i class="bi bi-dot"></i>10 to 15 days:</span>
-                                                        <span>75% + Non Refundable Component</span>
-                                                    </li>
-                                                    <li class="list-group-item">
-                                                        <span class="h6 fw-normal me-1 mb-0"><i class="bi bi-dot"></i>15 to 30 days:</span>
-                                                        <span>30% + Non Refundable Component</span>
-                                                    </li>
-                                                    <li class="list-group-item">
-                                                        <span class="h6 fw-normal me-1 mb-0"><i class="bi bi-dot"></i>10Hotel / Air:</span>
-                                                        <span>100% in case of non-refundable ticket / Hotel Room</span>
-                                                    </li>
-                                                    <li class="list-group-item">
-                                                        <span class="h6 fw-normal me-1 mb-0"><i class="bi bi-dot"></i>10Cruise / Visa:</span>
-                                                        <span>On Actuals</span>
-                                                    </li>
-                                                </ul>
-                                                <p class="mt-2">All Prices are in Indian Rupees and are subject to change without prior notice.<br>In the case FIT flight inclusive package, the full amount of the flight will be payable at the time of booking.</p>
-                                            </div>
-                                            <!-- Card body END -->
-                                        </div>
                                         <!-- Cancellation & Date change END -->
 
                                         <!-- Step 1 button -->
@@ -353,7 +352,7 @@ Booking clothing
                                         <div class="card border">
                                             <!-- Card header -->
                                             <div class="card-header border-bottom">
-                                                <h5 class="mb-0">Traveler 1</h5>
+                                                <h5 class="mb-0">Customer</h5>
                                             </div>
 
                                             <!-- Card body START -->
@@ -370,35 +369,13 @@ Booking clothing
                                                         </div>
                                                     </div>
 
-                                                    <!-- First Name -->
-                                                    <div class="col-md-5">
-                                                        <div class="form-control-bg-light">
-                                                            <label class="form-label">First name</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </div>
+
 
                                                     <!-- Last name -->
-                                                    <div class="col-md-5">
+                                                    <div class="col-md-10">
                                                         <div class="form-control-bg-light">
                                                             <label class="form-label">Last name</label>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- DOB -->
-                                                    <div class="col-md-6">
-                                                        <div class="form-control-bg-light">
-                                                            <label class="form-label">Date of birth</label>
-                                                            <input type="text" class="form-control flatpickr" data-date-format="d M Y">
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- Passport number -->
-                                                    <div class="col-md-6">
-                                                        <div class="form-control-bg-light">
-                                                            <label class="form-label">Passport number</label>
-                                                            <input type="text" class="form-control">
+                                                            <input value="{{ auth()->user()->full_name }}" type="text" class="form-control">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -417,7 +394,7 @@ Booking clothing
                                                     <div class="col-md-6">
                                                         <div class="form-control-bg-light">
                                                             <label class="form-label">Mobile Number</label>
-                                                            <input type="text" class="form-control">
+                                                            <input value="{{ auth()->user()->phone_number }}" type="text" class="form-control">
                                                         </div>
                                                     </div>
 
@@ -425,7 +402,7 @@ Booking clothing
                                                     <div class="col-md-6">
                                                         <div class="form-control-bg-light">
                                                             <label class="form-label">Email id</label>
-                                                            <input type="email" class="form-control">
+                                                            <input value="{{ auth()->user()->email }}" type="email" class="form-control">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -457,9 +434,9 @@ Booking clothing
                                             <div class="card-header border-bottom d-sm-flex justify-content-between align-items-center">
                                                 <h5 class="mb-2 mb-sm-0">Credit or Debit Card</h5>
                                                 <ul class="list-inline my-0">
-                                                    <li class="list-inline-item"> <a href="#"><img src="assets/images/element/visa.svg" class="h-30px" alt=""></a></li>
-                                                    <li class="list-inline-item"> <a href="#"><img src="assets/images/element/mastercard.svg" class="h-30px" alt=""></a></li>
-                                                    <li class="list-inline-item"> <a href="#"><img src="assets/images/element/expresscard.svg" class="h-30px" alt=""></a></li>
+                                                    <li class="list-inline-item"> <a href="#"><img src="{{ asset('assets/images/element/visa.svg') }}" class="h-30px" alt=""></a></li>
+                                                    <li class="list-inline-item"> <a href="#"><img src="{{ asset('assets/images/element/mastercard.svg') }}" class="h-30px" alt=""></a></li>
+                                                    <li class="list-inline-item"> <a href="#"><img src="{{ asset('assets/images/element/expresscard.svg') }}" class="h-30px" alt=""></a></li>
                                                 </ul>
                                             </div>
 
@@ -545,89 +522,41 @@ Booking clothing
 
                         <!-- Right sidebar START -->
                         <aside class="col-xl-4">
-                            <div class="vstack gap-4">
-                                <!-- Price summary START -->
-                                <div class="card border">
-                                    <!-- card header -->
-                                    <div class="card-header border-bottom">
-                                        <h5 class="card-title mb-0">Price Summary</h5>
-                                    </div>
+                            <div data-sticky="" data-margin-top="80" data-sticky-for="1199">
+                                <div class="card card-body bg-light p-4">
+                                    <!-- Title -->
+                                    <h6 class="text-danger fw-normal">Hurry! Limited cars left</h6>
 
-                                    <!-- Card body -->
-                                    <div class="card-body">
-                                        <ul class="list-group list-group-borderless">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center pt-0">
-                                                <span class="h6 fw-light mb-0">Base Price</span>
-                                                <span class="fs-5">$28,660</span>
-                                            </li>
-                                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                                <span class="h6 fw-light mb-0">Total Discount<span class="badge text-bg-danger smaller mb-0 ms-2">10% off</span></span>
-                                                <span class="fs-5 text-success">-$2,560</span>
-                                            </li>
-                                            <li class="list-group-item d-flex justify-content-between align-items-center pb-0">
-                                                <span class="h6 fw-light mb-0">Taxes % Fees</span>
-                                                <span class="fs-5">$350</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <!-- Card footer -->
-                                    <div class="card-footer border-top">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <span class="h5 mb-0">Payable Now</span>
-                                            <span class="h5 mb-0">$22,500</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Price summary END -->
-
-                                <!-- Book online START -->
-                                <div class="card border">
-                                    <!-- card header -->
-                                    <div class="card-header border-bottom">
-                                        <h5 class="card-title mb-0">Sign In Now To Book An Online </h5>
-                                    </div>
-
-                                    <!-- Card body -->
-                                    <div class="card-body">
-                                        <!-- Input item -->
-                                        <div class="form-control-bg-light">
-                                            <label class="form-label">Email id</label>
-                                            <input type="email" class="form-control form-control-lg" placeholder="Enter your email">
-                                        </div>
-
-                                        <!-- Input item -->
-                                        <div class="mt-4 form-control-bg-light">
-                                            <label class="form-label">Mobile number</label>
-                                            <input type="text" class="form-control form-control-lg" placeholder="Enter your mobile number">
-                                        </div>
-
-                                        <!-- Check item -->
-                                        <div class="mt-4 form-check form-check-light mb-0">
-                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                            <label class="form-check-label" for="exampleCheck1">I Already Have Booking Account</label>
-                                        </div>
-
-                                        <!-- Button -->
-                                        <div class="d-grid mt-4">
-                                            <button class="btn btn-primary next-btn mb-0">Book as Guest</button>
-                                        </div>
-
+                                    <!-- List -->
+                                    <ul class="list-group list-group-borderless mb-0">
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <span class="h6 fw-light mb-0">Base Price</span>
+                                            <span class="h6 fw-light mb-0">${{ $clothing->price }}</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <span class="h6 fw-light mb-0">State Tax</span>
+                                            <span class="h6 fw-light mb-0">$1</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <span class="h6 fw-light mb-0">day</span>
+                                            <span class="h6 fw-light mb-0">24 hours</span>
+                                        </li>
+                                        <li class="list-group-item py-0"><hr class="my-0"></li>
                                         <!-- Divider -->
-                                        <div class="position-relative my-4">
-                                            <hr>
-                                            <p class="small position-absolute top-50 start-50 translate-middle bg-mode text-center">Or via social media</p>
-                                        </div>
+                                        <li class="list-group-item d-flex justify-content-between pb-0">
+                                            <span class="h5 fw-normal mb-0">Total</span>
+                                            <span class="h5 fw-normal mb-0">
+                                                @php
+                                                    $price=$clothing->price + 1
+                                                @endphp
+                                                ${{ $price }}
+                                            </span>
+                                        </li>
+                                    </ul>
 
-                                        <!-- Social media button -->
-                                        <div class="d-grid gap-2 d-md-block text-center">
-                                            <button class="btn btn-sm bg-facebook mb-0" type="button"><i class="fa-brands fa-facebook-f me-2"></i>Facebook</button>
-                                            <button class="btn btn-sm bg-google mb-0" type="button"><i class="fa-brands fa-google me-2"></i>Google</button>
-                                        </div>
-                                    </div>
+
                                 </div>
-                                <!-- Book online END -->
-                            </div> <!-- Row END -->
+                            </div>
                         </aside>
                         <!-- Right sidebar END -->
 
