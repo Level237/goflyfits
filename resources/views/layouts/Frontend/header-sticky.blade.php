@@ -3,7 +3,7 @@
 	<nav class="navbar navbar-dark navbar-expand-xl">
 		<div class="container">
 			<!-- Logo START -->
-			<a class="navbar-brand" href="index.html-1.htm">
+			<a class="navbar-brand" href="{{ route('homepage') }}">
 				<img class="navbar-brand-item" src="{{ asset('assets/images/logo2.png') }}" alt="logo">
 			</a>
 			<!-- Logo END -->

@@ -17,8 +17,10 @@ class SearchController extends Controller
             $clothings=Clothing::join('category_clothing','category_clothing.clothing_id','clothing.id')
             ->join('categories','categories.id','category_clothing.category_id')
             ->join('towns','towns.id','clothing.town_id')
+            ->join('measures','measures.id','measure_id')
             ->where('category_clothing.category_id',$category->id)
             ->where('towns.id',$town->id)
+            ->where('size',auth()->user()->size)
             ->get();
             $category_name=$category->category_title;
 
