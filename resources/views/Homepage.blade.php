@@ -537,7 +537,7 @@ Client END -->
                     <!-- Card body START -->
                     <div class="card-body">
                         <!-- Title -->
-                        <h5 class="card-title me-2"><a href="directory-detail.html.htm">{{ $clothing->title }}</a></h5>
+                        <h5 class="card-title me-2"><a href="{{ route('clothing.show',$clothing->slug) }}">{{ $clothing->title }}</a></h5>
 
                         <!-- Address and Contact -->
                         <ul class="list-group list-group-borderless mb-0">

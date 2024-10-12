@@ -147,6 +147,7 @@
                         </div>
                         <!-- Driver and cab detail END -->
 
+                        @if($clothing->gender==1)
                         <div class="card border">
                             <!-- Card header -->
                             <div class="card-header border-bottom d-flex justify-content-between">
@@ -243,6 +244,8 @@
 
                             <!-- Card body END -->
                         </div>
+                        @endif
+
                         <!-- Inclusion & Exclusion END -->
                         <div class="border-bottom bg-transparent">
 
