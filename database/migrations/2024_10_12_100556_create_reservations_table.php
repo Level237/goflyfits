@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\User;
+use App\Models\Payment;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -12,16 +12,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('payments', function (Blueprint $table) {
+        Schema::create('reservations', function (Blueprint $table) {
             $table->id();
-            $table->string('price');
-
-            $table->foreignIdFor(User::class)
+            $table->string('reservedOf');
+            $table->string('reservedTo');
+            $table->foreignIdFor(Payment::class)
             ->constrained()
-            ->restrictOnUpdate()
+            ->restrictOnDelete()
             ->restrictOnUpdate();
 
-            $table->string('means_payment');
+
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('payments');
+        Schema::dropIfExists('reservations');
     }
 };
