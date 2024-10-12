@@ -10,7 +10,7 @@ GoFlyFits
 
 
 
-    <section class="position-relative py-8 py-lg-9" style="background-image:url(assets/images/bg/bg.jpg); background-position: center left; background-size: cover;">
+    <section class="position-relative py-9 py-lg-9" style="background-image:url(assets/images/bg/bg.jpg); background-position: center left; background-size: cover;">
         <!-- Background dark overlay -->
         <div class="bg-overlay bg-dark opacity-8"></div>
         <div class="container z-index-9 position-relative">

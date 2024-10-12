@@ -9,14 +9,15 @@
 			<!-- Logo END -->
 
       <!-- Responsive navbar toggler -->
-			<button class="navbar-toggler ms-auto me-3 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+
+            @auth
+            <button class="navbar-toggler ms-auto me-3 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-animation">
 					<span></span>
 					<span></span>
 					<span></span>
 				</span>
 			</button>
-            @auth
             <!-- Main navbar START -->
 			<div class="navbar-collapse collapse" id="navbarCollapse">
 				<ul class="navbar-nav navbar-nav-scroll mx-auto">
