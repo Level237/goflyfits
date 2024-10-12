@@ -16,10 +16,15 @@ class Payment extends Model
         'price',
         'user_id',
         "means_payment",
+        "clothing_id"
     ];
 
     public function reservation():HasOne{
 
         return $this->hasOne(Reservation::class);
+    }
+
+    public function clothing():HasOne{
+        return $this->hasOne(Clothing::class);
     }
 }

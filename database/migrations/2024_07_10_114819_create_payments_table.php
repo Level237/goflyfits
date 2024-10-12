@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Clothing;
 use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -21,6 +22,10 @@ return new class extends Migration
             ->restrictOnUpdate()
             ->restrictOnUpdate();
 
+            $table->foreignIdFor(Clothing::class)
+            ->constrained()
+            ->restrictOnUpdate()
+            ->restrictOnUpdate();
             $table->string('means_payment');
             $table->timestamps();
         });

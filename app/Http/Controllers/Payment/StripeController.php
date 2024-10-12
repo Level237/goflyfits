@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Payment;
 use Stripe;
 use App\Http\Controllers\Controller;
+use App\Models\Payment;
+use App\Models\Reservation;
 use Exception;
 use Illuminate\Http\Request;
 
@@ -31,6 +33,22 @@ class StripeController extends Controller
                 'source' => $res->id,
                 'description' => $request->description
               ]);
+
+              if($response->status=='succeeded'){
+
+                $payment=Payment::create([
+                    'user_id'=>auth()->user()->id,
+                    'price'=>$request->price,
+                    'means_payment'=>"visa",
+                    "clothing_id"=>$request->clothing_id
+                ]);
+
+                Reservation::create([
+                    'reservedOf'=>$request->reservedOf,
+                    'reservedTo'=>$request->reservedTo,
+                    'payment_id'=>$payment->id
+                ]);
+              }
         }catch(Exception $e){
             return response()->json(['response'=>$e->getMessage()],500);
         }
