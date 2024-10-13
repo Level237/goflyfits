@@ -9,6 +9,9 @@ use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\Frontend\ClothingController;
+use App\Http\Controllers\Frontend\SearchController;
+use App\Http\Controllers\Payment\StripeController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
@@ -36,6 +39,13 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
+
+    Route::get('payment',[StripeController::class,"pay"])->name('pay.stripe');
+    Route::get('all/clothings',[ClothingController::class,'allClothing'])->name('all.clothing');
+Route::get('clothings',[ClothingController::class,'getClothing'])->name('getClothing');
+Route::get('search',[SearchController::class,'search'])->name('search');
+//Detail clothing
+Route::get('clothing/{slug}',[ClothingController::class,'show'])->name('clothing.show');
     Route::get('verify-email', EmailVerificationPromptController::class)
                 ->name('verification.notice');
 

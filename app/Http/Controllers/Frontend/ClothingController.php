@@ -41,7 +41,9 @@ class ClothingController extends Controller
         //return $clothings;
         return view('clothings.list',compact('clothings','category_name','categories'));
     }
-    public function show(){
-
+    public function show(string $slug)
+    {
+        $clothing=Clothing::where('slug',$slug)->first();
+        return view('clothings.detail',compact('clothing'));
     }
 }

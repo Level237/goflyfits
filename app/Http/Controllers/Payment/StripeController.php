@@ -18,7 +18,7 @@ class StripeController extends Controller
 
             $res=$stripe->tokens->create([
                 'card' => [
-                    'number' =>$request->number,
+                    'number' =>$request->card_number,
                     'exp_month' =>$request->exp_month,
                     'exp_year' =>$request->exp_year,
                     'cvc' => $request->cvc,

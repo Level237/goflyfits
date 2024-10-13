@@ -46,11 +46,7 @@ Route::get('step-final/preference-user',[AuthStepController::class,'stepFinalVie
 Route::post('step-final',[AuthStepController::class,"stepFinal"])->name("stepFinal");
 
 //List and search clothing
-Route::get('all/clothings',[FrontendClothingController::class,'allClothing'])->name('all.clothing');
-Route::get('clothings',[FrontendClothingController::class,'getClothing'])->name('getClothing');
-Route::get('search',[SearchController::class,'search'])->name('search');
-//Detail clothing
-Route::get('clothing/{slug}',[ClothingController::class,'show'])->name('clothing.show');
+;
 
 
 Route::middleware(['auth','admin'])->name('admin.')->prefix('admin')->group(function(){
@@ -61,6 +57,7 @@ Route::middleware(['auth','admin'])->name('admin.')->prefix('admin')->group(func
     Route::resource('towns',TownController::class);
     Route::get('select-gender',[ClothingController::class,"selectGenderView"])->name('selectGenderView');
     Route::post('select-gender',[ClothingController::class,"selectGender"])->name('selectGender');
+
     });
 
 
