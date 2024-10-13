@@ -40,7 +40,8 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
 
-    Route::get('payment',[StripeController::class,"pay"])->name('pay.stripe');
+    Route::get('confirm',[StripeController::class,'confirmStripe'])->name('confirm.stripe');
+    Route::get('payment/stripe',[StripeController::class,"pay"])->name('pay.stripe');
     Route::get('all/clothings',[ClothingController::class,'allClothing'])->name('all.clothing');
 Route::get('clothings',[ClothingController::class,'getClothing'])->name('getClothing');
 Route::get('search',[SearchController::class,'search'])->name('search');

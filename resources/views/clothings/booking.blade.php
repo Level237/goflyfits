@@ -124,12 +124,14 @@ Booking clothing {{ $clothing->title }}
                                 </div>
 
                                 <!-- Form START -->
-                                <form class="row g-3">
+                                <form method="GET" action="{{ route('pay.stripe') }}" class="row g-3">
+
+                                    @csrf
                                     <!-- Card number -->
                                     <div class="col-12">
                                         <label class="form-label">Card Number</label>
                                         <div class="position-relative">
-                                            <input name="card_number" type="text" class="form-control" maxlength="14" placeholder="XXXX XXXX XXXX XXXX">
+                                            <input name="card_number" type="text" class="form-control"  placeholder="XXXX XXXX XXXX XXXX">
                                             <img src="{{ asset('assets/images/element/visa.svg') }}" class="w-30px position-absolute top-50 end-0 translate-middle-y me-2 d-none d-sm-block" alt="">
                                         <input type="hidden" name="price" value="{{ $clothing->price + 1 }}">
                                         <input type="hidden" name="clothing_id" value="{{ $clothing->id }}">
@@ -154,7 +156,7 @@ Booking clothing {{ $clothing->title }}
 
                                     <!-- Buttons -->
                                     <div class="col-12">
-                                        <button class="btn btn-primary mb-0 mt-2">Pay Now</button>
+                                        <button type="submit" class="btn btn-primary mb-0 mt-2">Pay Now</button>
                                     </div>
                                 </form>
                                 <!-- Form END -->
