@@ -50,7 +50,8 @@ class BrandController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $brand=Brand::find($id);
+        return view('admin.brands.edit',compact('brand'));
     }
 
     /**
@@ -58,7 +59,11 @@ class BrandController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $brand=Brand::find($id);
+        $brand->brand_title=$request->brand_title;
+        $brand->save();
+
+        return to_route('admin.brands.index')->with('success','Marque mis a jour avec success');
     }
 
     /**

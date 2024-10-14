@@ -20,8 +20,15 @@ Listes des categories
         <div class="card shadow">
             <!-- Card header START -->
             <div class="card-header border-bottom">
-                <h5 class="card-header-title">Bookings</h5>
+                <h5 class="card-header-title">Category</h5>
             </div>
+            @if(Session::get("success"))
+            <a href="#" class="badge bg-success p-3 bg-opacity-10 text-success"><i class="fas fa-circle me-2 small fw-bold"></i>{{ Session::get("success") }}</a>
+           @endif
+
+           @if(Session::get("danger"))
+                <a href="#" class="badge bg-danger p-3 bg-opacity-10 text-danger"><i class="fas fa-circle me-2 small fw-bold"></i>{{ Session::get("danger") }}</a>
+           @endif
             <!-- Card header END -->
 
             <!-- Card body START -->

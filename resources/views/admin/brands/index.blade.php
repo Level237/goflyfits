@@ -20,10 +20,16 @@ Listes des marques
         <div class="card shadow">
             <!-- Card header START -->
             <div class="card-header border-bottom">
-                <h5 class="card-header-title">Bookings</h5>
+                <h5 class="card-header-title">Marques</h5>
             </div>
             <!-- Card header END -->
+            @if(Session::get("success"))
+            <a href="#" class="badge bg-success p-3 bg-opacity-10 text-success"><i class="fas fa-circle me-2 small fw-bold"></i>{{ Session::get("success") }}</a>
+           @endif
 
+           @if(Session::get("danger"))
+                <a href="#" class="badge bg-danger p-3 bg-opacity-10 text-danger"><i class="fas fa-circle me-2 small fw-bold"></i>{{ Session::get("danger") }}</a>
+           @endif
             <!-- Card body START -->
             <div class="card-body">
                 <!-- Search and select START -->
@@ -89,8 +95,7 @@ Listes des marques
                 <!-- Data item -->
                 <div class="col">
 
-                    <a href="" class="btn btn-sm btn-light mb-0"><i class="fa-solid fa-edit"></i></a>
-                    <a href="#" class="btn btn-sm btn-light mb-0"><i class="fa-solid fa-eye"></i></a>
+                    <a href="{{ route('admin.brands.edit',$brand->id) }}" class="btn btn-sm btn-light mb-0"><i class="fa-solid fa-edit"></i></a>
                     <form method="POST" action="{{ route('admin.brands.destroy',$brand->id) }}" onsubmit="return confirm('Are you sure?')">
                         @csrf
                         @method('delete')

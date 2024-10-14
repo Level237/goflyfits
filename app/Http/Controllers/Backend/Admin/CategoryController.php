@@ -75,6 +75,6 @@ class CategoryController extends Controller
         $category=Category::find($id);
         $category->delete();
 
-        return back();
+        return back()->with('danger','category suprimer avec success');;
     }
 }
