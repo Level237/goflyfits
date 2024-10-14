@@ -125,7 +125,12 @@ Main banner START -->
 
                                         <option value="1,50">1.50</option>
 
-
+                                        <option value="1,55">1.55</option>
+                                        <option value="1,60">1.60</option>
+                                        <option value="1,65">1.65</option>
+                                        <option value="1,70">1.70</option>
+                                        <option value="1,75">1.75</option>
+                                        <option value="1,80">1.80</option>
                                 </select>
                                 @error('height')
                             <div style="color:#c70609">{{ $message }}</div>
@@ -217,7 +222,14 @@ Main banner START -->
                                 <label class="form-label">Quel est votre Taille? *</label>
                                 <select  class="form-control" name="height" id="">
 
-                                        <option value="1,50">1.50</option>
+                                    <option value="1,50">1.50</option>
+
+                                    <option value="1,55">1.55</option>
+                                    <option value="1,60">1.60</option>
+                                    <option value="1,65">1.65</option>
+                                    <option value="1,70">1.70</option>
+                                    <option value="1,75">1.75</option>
+                                    <option value="1,80">1.80</option>
 
 
                                 </select>

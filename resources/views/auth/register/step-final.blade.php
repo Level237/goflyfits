@@ -101,7 +101,7 @@
 <!-- =======================
 Main banner START -->
 <section class="pt-4 pt-md-5">
-	<div class="container mt-8">
+	<div class="container mt-4">
 		<!-- Content and form START -->
 		<div class="row g-4">
 			<div class="col-lg-6 ">

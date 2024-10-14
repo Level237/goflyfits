@@ -51,16 +51,7 @@ class AuthStepController extends Controller
 
     public function stepOneView(){
 
-        if(Session::has('full_name') && Session::has('name') && Session::has('gender_user')){
-            Session::forget("full_name");
-            Session::forget("name");
-            Session::forget("gender_user");
-            Session::forget("phone_number");
-            Session::forget('email');
-            Session::forget('town');
-            Session::forget("birthday");
 
-       }
 
            return view('auth.register.step-one');
 
