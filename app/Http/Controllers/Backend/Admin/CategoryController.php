@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Clothing;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -34,7 +35,7 @@ class CategoryController extends Controller
         $category->category_title=$request->category_title;
         $category->save();
 
-        return to_route('admin.categories.index');
+        return to_route('admin.categories.index')->with('success','category ajouter avec success');;
     }
 
     /**
@@ -50,7 +51,8 @@ class CategoryController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $category=Category::find($id);
+        return view('admin.categories.edit',compact('category'));
     }
 
     /**
@@ -58,7 +60,11 @@ class CategoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $category=Category::find($id);
+        $category->category_title=$request->category_title;
+        $category->save();
+
+        return to_route('admin.categories.index')->with('success','category mis a jour avec success');
     }
 
     /**
