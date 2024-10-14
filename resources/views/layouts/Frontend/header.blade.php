@@ -148,11 +148,20 @@
 
 						<!-- Links -->
 						<li> <hr class="dropdown-divider"></li>
-						<li><a class="dropdown-item" href="#"><i class="bi bi-bookmark-check fa-fw me-2"></i>My Bookings</a></li>
-						<li><a class="dropdown-item" href="#"><i class="bi bi-heart fa-fw me-2"></i>My Wishlist</a></li>
-						<li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Settings</a></li>
+
+                        @if(auth()->user()->role_id==2)
+                        <li><a class="dropdown-item" href="{{ route('customer.reservations') }}"><i class="bi bi-bookmark-check fa-fw me-2"></i>Mes Reservations</a></li>
+						<li><a class="dropdown-item" href="{{ route('customer.preferences') }}"><i class="bi bi-heart fa-fw me-2"></i>Mes Préferences</a></li>
+						<li><a class="dropdown-item" href="{{ route('customer.dashboard') }}"><i class="bi bi-gear fa-fw me-2"></i>Dashboard</a></li>
 						<li><a class="dropdown-item" href="#"><i class="bi bi-info-circle fa-fw me-2"></i>Help Center</a></li>
 						<li>
+                        @endif
+                        @if(auth()->user()->role_id==1)
+                        <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}"><i class="bi bi-bookmark-check fa-fw me-2"></i>Dashboard</a></li>
+						<li><a class="dropdown-item" href="{{ route('admin.clothings.index') }}"><i class="bi bi-heart fa-fw me-2"></i>Clothings</a></li>
+						<li><a class="dropdown-item" href="#"><i class="bi bi-info-circle fa-fw me-2"></i>Help Center</a></li>
+						<li>
+                        @endif
                             <form method="POST" action="{{ route('logout') }}" id="logout-form">
                                 @csrf
                               </form>
