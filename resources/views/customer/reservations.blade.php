@@ -51,18 +51,25 @@ Reservations
 
                         <!-- Title -->
                         <h5 class="card-title mb-1"><a href="hotel-detail.html.htm">{{ $reservation->title }}</a></h5>
-                        <small><i class="bi bi-geo-alt me-2"></i></small>
+                        <div class="ms-2">
+
+                                <div style="font-size: 11px" class="badge bg-primary mt-3  p-2 text-dark">{{ $reservation->category_title }}</div>
+
+                        </div>
+                        <div class="mt-3 mb-3">
+                            <small><i class="bi bi-geo-alt me-2"></i>{{ $reservation->reservedOf }} To {{ $reservation->reservedTo }}</small>
+                        </div>
 
                         <!-- Price and Button -->
                         <div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
                             <!-- Button -->
                             <div class="d-flex align-items-center">
-                                <h5 class="fw-bold mb-0 me-1">$980</h5>
+                                <h5 class="fw-bold mb-0 me-1">${{ $reservation->price }}</h5>
                                 <span class="mb-0 me-2">/day</span>
                             </div>
                             <!-- Price -->
                             <div class="mt-3 mt-sm-0">
-                                <a href="hotel-detail.html.htm" class="btn btn-sm btn-dark w-100 mb-0">View hotel</a>
+                                <a href="{{ route('clothing.show',$reservation->slug) }}" class="btn btn-sm btn-dark w-100 mb-0">View Clothing</a>
                             </div>
                         </div>
                     </div>

@@ -13,6 +13,9 @@ class ReservationController extends Controller
         $reservations=Reservation::join('payments','payments.id','reservations.payment_id')
         ->join('clothing','clothing.id','payments.clothing_id')
         ->join('users','users.id','payments.user_id')
+        ->join('category_clothing','category_clothing.clothing_id','clothing.id')
+        ->join('categories','categories.id','category_clothing.category_id')
+        ->select('categories.category_title','clothing.clothing_profile','clothing.title','clothing.price','clothing.slug','reservedOf','reservedTo')
         ->where('users.id',auth()->user()->id)
         ->get();
 
