@@ -34,7 +34,7 @@
 								<a class="dropdown-item dropdown-toggle" href="#">Par Category</a>
 								<ul class="dropdown-menu" data-bs-popper="none">
                                     @foreach ($categories as $category)
-                                    <li> <a class="dropdown-item" href="clothings?category={{ $category->category_title }}">{{ $category->category_title }}</a></li>
+                                    <li> <a class="dropdown-item" href="/clothings?category={{ $category->category_title }}">{{ $category->category_title }}</a></li>
                                     @endforeach
 								</ul>
 							</li>
@@ -43,8 +43,9 @@
 							<li class="dropdown-submenu dropend">
 								<a class="dropdown-item dropdown-toggle" href="#">Par Ville</a>
 								<ul class="dropdown-menu" data-bs-popper="none">
-									<li> <a class="dropdown-item" href="index-flight.html.htm">douala</a></li>
-									<li> <a class="dropdown-item" href="flight-list.html.htm">yaoundé</a></li>
+									<li> <a class="dropdown-item" href="clothings?town=douala">douala</a></li>
+									<li> <a class="dropdown-item" href="clothings?town=yaoundé">yaoundé</a></li>
+                                    <li> <a class="dropdown-item" href="clothings?town=bafoussam">bafoussam</a></li>
 								</ul>
 							</li>
 							<li> <a class="dropdown-item" href="{{ route('all.clothing') }}">All Clothings</a></li>

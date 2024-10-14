@@ -37,7 +37,7 @@
                         <a class="nav-link" href="{{ route('customer.preferences') }}"><i class="bi bi-ticket-perforated fa-fw me-2"></i>Mes préferences</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="account-settings.html.htm"><i class="bi bi-gear fa-fw me-2"></i>Settings</a>
+                        <a class="nav-link" href="{{ route('customer.reservations') }}"><i class="bi bi-gear fa-fw me-2"></i>Mes Reservations</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="account-delete.html.htm"><i class="bi bi-trash fa-fw me-2"></i>Delete Profile</a>

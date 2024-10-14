@@ -9,6 +9,7 @@ use App\Http\Controllers\Backend\Customer\DashboardController as CustomerDashboa
 use App\Http\Controllers\Backend\Customer\PaymentController;
 use App\Http\Controllers\Backend\Customer\PreferenceController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\Customer\ReservationController;
 use App\Http\Controllers\Frontend\ClothingController as FrontendClothingController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\HomeController;
@@ -67,6 +68,7 @@ Route::middleware(['auth','admin'])->name('admin.')->prefix('admin')->group(func
         Route::get('preferences',[PreferenceController::class,'index'])->name('preferences');
         Route::put('preferences',[PreferenceController::class,'update'])->name('preferences.update');
         Route::get('preferences/edit',[PreferenceController::class,'edit'])->name('preferences.edit');
+        Route::get('reservations',[ReservationController::class,'index'])->name('reservations');
         });
 
 
