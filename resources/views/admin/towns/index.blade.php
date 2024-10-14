@@ -20,7 +20,7 @@ Listes des villes
         <div class="card shadow">
             <!-- Card header START -->
             <div class="card-header border-bottom">
-                <h5 class="card-header-title">Bookings</h5>
+                <h5 class="card-header-title">Villes</h5>
             </div>
             <!-- Card header END -->
 
@@ -90,7 +90,6 @@ Listes des villes
                 <div class="col">
 
                     <a href="" class="btn btn-sm btn-light mb-0"><i class="fa-solid fa-edit"></i></a>
-                    <a href="#" class="btn btn-sm btn-light mb-0"><i class="fa-solid fa-eye"></i></a>
                     <form method="POST" action="{{ route('admin.towns.destroy',$town->id) }}" onsubmit="return confirm('Are you sure?')">
                         @csrf
                         @method('delete')
