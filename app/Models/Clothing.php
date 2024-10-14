@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Town;
 use App\Models\Measure;
+use App\Models\Payment;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -45,5 +46,9 @@ class Clothing extends Model
 
     public function measure(){
         return $this->belongsTo(Measure::class);
+    }
+
+    public function payment(){
+        return $this->hasMany(Payment::class);
     }
 }

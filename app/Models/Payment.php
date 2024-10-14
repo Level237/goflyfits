@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Payment extends Model
 {
@@ -24,7 +25,7 @@ class Payment extends Model
         return $this->hasOne(Reservation::class);
     }
 
-    public function clothing():HasOne{
-        return $this->hasOne(Clothing::class);
+    public function clothing():BelongsTo{
+        return $this->belongsTo(Clothing::class);
     }
 }

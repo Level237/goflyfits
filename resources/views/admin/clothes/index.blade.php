@@ -22,7 +22,13 @@ Listes des vetements
             <div class="card-header border-bottom">
                 <h5 class="card-header-title">Bookings</h5>
             </div>
-            <!-- Card header END -->
+            @if(Session::get("success"))
+            <a href="#" class="badge bg-success p-3 bg-opacity-10 text-success"><i class="fas fa-circle me-2 small fw-bold"></i>{{ Session::get("success") }}</a>
+           @endif
+
+           @if(Session::get("danger"))
+                <a href="#" class="badge bg-danger p-3 bg-opacity-10 text-danger"><i class="fas fa-circle me-2 small fw-bold"></i>{{ Session::get("danger") }}</a>
+           @endif
 
             <!-- Card body START -->
             <div class="card-body">
@@ -106,7 +112,7 @@ Listes des vetements
                 <div class="col">
 
                     <a href="{{ route('admin.clothings.edit',$cloth->id) }}" class="btn btn-sm btn-light mb-0"><i class="fa-solid fa-edit"></i></a>
-                    <a href="#" class="btn btn-sm btn-light mb-0"><i class="fa-solid fa-eye"></i></a>
+                    <a href="{{ route('clothing.show',$cloth->slug) }}" class="btn btn-sm btn-light mb-0"><i class="fa-solid fa-eye"></i></a>
                     <form method="POST" action="{{ route('admin.clothings.destroy',$cloth->id) }}" onsubmit="return confirm('Are you sure?')">
                         @csrf
                         @method('delete')

@@ -132,7 +132,7 @@ class ClothingController extends Controller
         $clothing->categories()->sync($request->categories);
         $clothing->save();
 
-        return to_route('admin.clothings.index');
+        return to_route('admin.clothings.index')->with('success','vetement ajouter avec success');
     }
 
     /**
@@ -141,12 +141,17 @@ class ClothingController extends Controller
     public function destroy(string $id)
     {
         $clothing=Clothing::find($id);
-        $clothing->delete();
+
+        $clothing->measure()->delete();
         foreach($clothing->categories as $category){
             $clothing->categories->detach($category->id);
         }
 
-        return back();
+        //if($clothing->payment()){
+            //return back()->with('danger',"ce vetement ne peut pas etre suprimer car il y'a un payment en cours pour ce vetement");
+        //}
+        $clothing->delete();
+        return back()->with('danger','vetement suprimer avec success');
     }
 
     public function selectGenderView(){
